@@ -39,12 +39,12 @@ export default {
   },
   methods:{
     revealCaseImg: (image) => {
-      document.querySelector("#case-preview").style.backgroundImage = 'url("' + image + '")';
-      // document.querySelector("#case-preview").style.opacity = "1";
+      document.querySelector("#case-img").style.backgroundImage = 'url("' + image + '")';
+      document.querySelector("#case-img").style.opacity = "1";
     },
     hideCaseImg: () => {
-      // document.querySelector("#case-preview").style.opacity = "0";
-      // document.querySelector("#case-preview").style.transform = "scale(1, 1)";
+      document.querySelector("#case-img").style.opacity = "0";
+      document.querySelector("#case-img").style.transform = "scale(1, 1)";
     }
   }
   
@@ -54,8 +54,91 @@ export default {
 
 <template>
 
-  <div id="container" class="">
-    <h1> Work View </h1>
+  <div id="page-wrapper">
+    <div id="case-title" class="section"></div>
+    <div id="case-img" class="section"></div>
+    <div id="case-links" class="section">
+      <router-link to="/gamel" class="work-link" @mouseover=' text1 = "inline"; line1 = "9em"' @mouseleave="hideCaseImg(); text1 = 'none'; line1 = '0'">
+        <h2>Gamél</h2> 
+        <div class="line" :style="{ 'width': line1 }"></div>
+        <h2 :style="{ 'display': text1}">Web Design</h2>
+        <p class="responsive"> 
+          <b>Web Design</b><br>
+          Web portfolio concept and development on Wordpress Elementor with custom code additions. Launch: 06/2022
+        </p>
+        <img class="responsive" src="/src/assets/cases/gamel/_Gamel5.png" alt="gamel">
+      </router-link>
+      <router-link to="/hitech" class="work-link" @mouseover=' text2 = "inline"; line2 = "9em"' @mouseleave="hideCaseImg(); text2 = 'none'; line2 = '0'">
+        <h2>HiTech</h2> 
+        <div class="line" :style="{ 'width': line2 }"></div>
+        <h2 :style="{ 'display': text2}">Web Design</h2>
+        <p class="responsive"> 
+          <b>Web Design</b><br>
+          Web concept and development on Wordpress Elementor with custom code additions, MySQL database connection and File transfer protocol for the Engineering Faculty student association at Jönköping University. Launch: 09/2021
+        </p>
+        <img class="responsive" src="/src/assets/cases/hitech/_Hitech5.jpg" alt="hitech">
+      </router-link>
+      <router-link to="/concreate" class="work-link" @mouseover=' text3 = "inline"; line3 = "9em"' @mouseleave="; text3 = 'none'; line3 = '0'">
+        <h2>Concreate</h2> 
+        <div class="line" :style="{ 'width': line3 }"></div>
+        <h2 :style="{ 'display': text3}">Graphic Design</h2>
+        <p class="responsive"> 
+          <b>Graphic Design</b><br>
+          An exploration of brutalist style across Graphic Design, Architecture, Typography and Web Design. 
+        </p>
+        <img class="responsive" src="/src/assets/cases/concreate/Zine1.jpg" alt="concreate">
+      </router-link>
+      <router-link to="/skilled" class="work-link" @mouseover=' text4 = "inline"; line4 = "9em"' @mouseleave=" text4 = 'none'; line4 = '0'">
+        <h2>Skilled</h2> 
+        <div class="line" :style="{ 'width': line4 }"></div>
+        <h2 :style="{ 'display': text4}">UX/UI Design</h2>
+        <p class="responsive"> 
+          <b>UX/UI Design</b><br>
+          Flat duotone UI/UX design concept with icon design for a fictional education platform application.             
+        </p>
+        <img class="responsive" src="/src/assets/cases/skilled/_Skilled2.jpg" alt="skilled">
+      </router-link>
+      <router-link to="/todo" class="work-link" @mouseover=' text5 = "inline"; line5 = "9em"' @mouseleave=" text5 = 'none'; line5 = '0'">
+        <h2>To-Do</h2> 
+        <div class="line" :style="{ 'width': line5 }"></div>
+        <h2 :style="{ 'display': text5}">Client-Server Code</h2>
+        <p class="responsive"> 
+          <b>Back-end</b><br>
+          The PHP project is connected to a MySQL database holding information of a responsive neo morphism glass interface design application.            
+        </p>
+        <img class="responsive" src="/src/assets/cases/taskmanager/_Task2.jpg" alt="todo">
+      </router-link>
+      <router-link to="/baio" class="work-link" @mouseover=' text6 = "inline"; line6 = "9em"' @mouseleave=" text6 = 'none'; line6 = '0'">
+        <h2>Baio</h2> 
+        <div class="line" :style="{ 'width': line6 }"></div>
+        <h2 :style="{ 'display': text6}">Brand & UI Design</h2>
+        <p class="responsive"> 
+          <b>Branding & UX/UI Design</b><br>
+          Flat responsive UI/UX design concept with minimalistic vector line illustrations. 
+        </p>
+        <img class="responsive" src="/src/assets/cases/baio/PSD_01-1536x1024.png" alt="baio">
+      </router-link>
+      <router-link to="/stickyprojects" class="work-link" @mouseover=' text7 = "inline"; line7 = "9em"' @mouseleave=" text7 = 'none'; line7 = '0'">
+        <h2>Sticky Projects</h2> 
+        <div class="line" :style="{ 'width': line7 }"></div>
+        <h2 :style="{ 'display': text7}"> Rest API </h2>
+        <p class="responsive"> 
+          <b>UX/UI Design</b><br>
+          The digital interface for sticky notes is a Vue.js single page application connected to a SQLite database by a RestAPI in Node Express. User login is JSON web token verified.
+        </p>
+        <img class="responsive" src="/src/assets/cases/stickyprojects/_Sticky2.jpg" alt="stickyprojects">
+      </router-link>
+      <router-link to="/niogin" class="work-link" @mouseover=' text8 = "inline"; line8 = "9em"' @mouseleave=" text8 = 'none'; line8 = '0'">
+        <h2>Nio Gin</h2> 
+        <div class="line" :style="{ 'width': line8 }"></div>
+        <h2 :style="{ 'display': text8}"> Package Design </h2>
+        <p class="responsive"> 
+          <b>Package Design</b><br>
+          Brand and Package Design Concept for Swedish Norrland and Midsummer Gin. 
+        </p>
+        <img class="responsive" src="/src/assets/cases/niogin/GIN_BOTTLE_MOCKUP_0.jpg" alt="niogin">
+      </router-link>
+    </div>
     <!-- <div id="work-img" class="desktop">
         <svg class="blob"  preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" width="100%" id="blobSvg">
         <path  id="d" fill="black">
@@ -75,89 +158,6 @@ export default {
     </div> -->
   </div>
 
-  <!-- <div id="work-links">
-          <router-link to="/gamel" class="work-link" @mouseover=' text1 = "inline"; line1 = "9em"' @mouseleave="hideCaseImg(); text1 = 'none'; line1 = '0'">
-            <h2>Gamél</h2> 
-            <div class="line" :style="{ 'width': line1 }"></div>
-            <h2 :style="{ 'display': text1}">Web Design</h2>
-            <p class="responsive"> 
-              <b>Web Design</b><br>
-              Web portfolio concept and development on Wordpress Elementor with custom code additions. Launch: 06/2022
-            </p>
-            <img class="responsive" src="/src/assets/cases/gamel/_Gamel5.png" alt="gamel">
-          </router-link>
-          <router-link to="/hitech" class="work-link" @mouseover=' text2 = "inline"; line2 = "9em"' @mouseleave="hideCaseImg(); text2 = 'none'; line2 = '0'">
-            <h2>HiTech</h2> 
-            <div class="line" :style="{ 'width': line2 }"></div>
-            <h2 :style="{ 'display': text2}">Web Design</h2>
-            <p class="responsive"> 
-              <b>Web Design</b><br>
-              Web concept and development on Wordpress Elementor with custom code additions, MySQL database connection and File transfer protocol for the Engineering Faculty student association at Jönköping University. Launch: 09/2021
-            </p>
-            <img class="responsive" src="/src/assets/cases/hitech/_Hitech5.jpg" alt="hitech">
-          </router-link>
-          <router-link to="/concreate" class="work-link" @mouseover=' text3 = "inline"; line3 = "9em"' @mouseleave="; text3 = 'none'; line3 = '0'">
-            <h2>Concreate</h2> 
-            <div class="line" :style="{ 'width': line3 }"></div>
-            <h2 :style="{ 'display': text3}">Graphic Design</h2>
-            <p class="responsive"> 
-              <b>Graphic Design</b><br>
-              An exploration of brutalist style across Graphic Design, Architecture, Typography and Web Design. 
-            </p>
-            <img class="responsive" src="/src/assets/cases/concreate/Zine1.jpg" alt="concreate">
-          </router-link>
-          <router-link to="/skilled" class="work-link" @mouseover=' text4 = "inline"; line4 = "9em"' @mouseleave=" text4 = 'none'; line4 = '0'">
-            <h2>Skilled</h2> 
-            <div class="line" :style="{ 'width': line4 }"></div>
-            <h2 :style="{ 'display': text4}">UX/UI Design</h2>
-            <p class="responsive"> 
-              <b>UX/UI Design</b><br>
-              Flat duotone UI/UX design concept with icon design for a fictional education platform application.             
-            </p>
-            <img class="responsive" src="/src/assets/cases/skilled/_Skilled2.jpg" alt="skilled">
-          </router-link>
-          <router-link to="/todo" class="work-link" @mouseover=' text5 = "inline"; line5 = "9em"' @mouseleave=" text5 = 'none'; line5 = '0'">
-            <h2>To-Do</h2> 
-            <div class="line" :style="{ 'width': line5 }"></div>
-            <h2 :style="{ 'display': text5}">Client-Server Code</h2>
-            <p class="responsive"> 
-              <b>Back-end</b><br>
-              The PHP project is connected to a MySQL database holding information of a responsive neo morphism glass interface design application.            
-            </p>
-            <img class="responsive" src="/src/assets/cases/taskmanager/_Task2.jpg" alt="todo">
-          </router-link>
-          <router-link to="/baio" class="work-link" @mouseover=' text6 = "inline"; line6 = "9em"' @mouseleave=" text6 = 'none'; line6 = '0'">
-            <h2>Baio</h2> 
-            <div class="line" :style="{ 'width': line6 }"></div>
-            <h2 :style="{ 'display': text6}">Brand & UI Design</h2>
-            <p class="responsive"> 
-              <b>Branding & UX/UI Design</b><br>
-              Flat responsive UI/UX design concept with minimalistic vector line illustrations. 
-            </p>
-            <img class="responsive" src="/src/assets/cases/baio/PSD_01-1536x1024.png" alt="baio">
-          </router-link>
-          <router-link to="/stickyprojects" class="work-link" @mouseover=' text7 = "inline"; line7 = "9em"' @mouseleave=" text7 = 'none'; line7 = '0'">
-            <h2>Sticky Projects</h2> 
-            <div class="line" :style="{ 'width': line7 }"></div>
-            <h2 :style="{ 'display': text7}"> Rest API </h2>
-            <p class="responsive"> 
-              <b>UX/UI Design</b><br>
-              The digital interface for sticky notes is a Vue.js single page application connected to a SQLite database by a RestAPI in Node Express. User login is JSON web token verified.
-            </p>
-            <img class="responsive" src="/src/assets/cases/stickyprojects/_Sticky2.jpg" alt="stickyprojects">
-          </router-link>
-          <router-link to="/niogin" class="work-link" @mouseover=' text8 = "inline"; line8 = "9em"' @mouseleave=" text8 = 'none'; line8 = '0'">
-            <h2>Nio Gin</h2> 
-            <div class="line" :style="{ 'width': line8 }"></div>
-            <h2 :style="{ 'display': text8}"> Package Design </h2>
-            <p class="responsive"> 
-              <b>Package Design</b><br>
-              Brand and Package Design Concept for Swedish Norrland and Midsummer Gin. 
-            </p>
-            <img class="responsive" src="/src/assets/cases/niogin/GIN_BOTTLE_MOCKUP_0.jpg" alt="niogin">
-          </router-link>
-  </div>
-   -->
 
 </template>
 
@@ -195,31 +195,27 @@ export default {
 }
 @media (min-width: 992px) {
   
-  #container{
+  #page-wrapper{
     width: 100vw;
     height: 100vh;
     border: 1px solid;
-    display: fixed;
-    background-color: blue;
+    display: flex;
+    flex-direction: row;
   }
-  h1{
-    left: 5vw;
-    top: 15vh;
-  }
-  h2{
-    margin: 0;
-  }
-  #work-links{
-    box-sizing: border-box;
-    width: 100vw;
+  .section{
     height: 100vh;
-    padding: 10vh 0 10vh 0;
+    width: 33vw;
+    border: 1px solid;
+    padding: 10vh 5vw;
+    box-sizing: border-box;
+  }
+  #case-links{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    z-index: 100;
+    justify-content: center;
   }
-  .work-link{
+  
+  /* .work-link{
     display: flex;
     padding-left: 60vw;
     transition: all .7s ease;
@@ -236,35 +232,12 @@ export default {
     height: .9rem;
     transition: width .7s ease;
   }
-  #case-preview{
-    position: absolute;
-    left: 80vw;
-    height: 80vh;
-    width: 20vw;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+  
   #work-img{
-    position: absolute;
-    box-sizing: border-box;
-    margin-left: 30vw;
-    height: 70vh;
-    width: 35vw;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
     opacity: 1;
     transition: all 1s ease;
-  }
-  #blobSvg{
-    background-color: white;
-    mix-blend-mode: screen; 
-  }
-  #d{
-    filter: blur(10px);
-    /* transform: scale(1.5, 1.5); */
-    transform-origin: top left;
-  }
+  } */
+  
 }
 
 </style>

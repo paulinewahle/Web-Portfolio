@@ -24,7 +24,7 @@ export default{
         document.getElementById("home-title").style.opacity = "1";
         document.getElementById("scrollbutton").style.opacity = "1";
       }
-      else if (document.documentElement.scrollTop > 700){
+      else if (document.documentElement.scrollTop > 400){
         document.getElementById("scroll-percentage").style.opacity = "1";
         document.getElementById("scrollbutton").style.opacity = "0";
         document.getElementById("home-title").style.opacity = "0";

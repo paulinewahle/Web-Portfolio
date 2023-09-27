@@ -47,11 +47,11 @@ export default{
             clearcoatRoughness: 0,
             transparent: true,
             transmission: .5,
-            opacity: .7,
+            opacity: 1,
             reflectivity: 0.1,
             refractionRatio: 0.985,
             ior: 0.9,
-            //normalMap: normalTexture
+            normalMap: normalTexture
         })
 
         // Mesh
@@ -125,13 +125,13 @@ export default{
         loader.load(hdrTextureURL, function(texture){
             texture.mapping = THREE. EquirectangularReflectionMapping;
             //scene.background = texture;
-            // scene.environment = texture;
+             scene.environment = texture;
 
         })
 
         //Animate
         const clock = new THREE.Clock()
-        document.addEventListener('mousemove', onDocumentMouseMove)
+        // document.addEventListener('mousemove', onDocumentMouseMove)
 
         let mouseX = 0
         let mouseY = 0
@@ -143,10 +143,10 @@ export default{
         const windowX = window.innerWidth / 2;
         const windowY = window.innerHeight / 2;
 
-        function onDocumentMouseMove(event){
-            mouseX = (event.clientX - windowX)
-            mouseY = (event.clientY - windowY)
-        }
+        // function onDocumentMouseMove(event){
+        //     mouseX = (event.clientX - windowX)
+        //     mouseY = (event.clientY - windowY)
+        // }
 
 
         const tick = () =>
@@ -161,7 +161,7 @@ export default{
             // sphere.rotation.x += .5 * (targetX - sphere.rotation.x)
 
             // Update objects
-            //sphere.rotation.y = .22 * elapsedTime
+            sphere.rotation.y = .22 * elapsedTime
 
             // Update Orbital Controls
             // controls.update()
@@ -194,13 +194,13 @@ export default{
             scrollTrigger: {
             trigger: ".start-view",
             start: "top top",
-            end: "center top",
+            end: "bottomtop top",
             duration: 2.5, 
             yoyoEase: true,
             scrub: true,
             toggleActions: "restart pause reverse none"
         },
-            opacity: 1,
+            opacity: 0,
         });
         gsap.to(".webgl", {
             scrollTrigger: {
@@ -215,18 +215,7 @@ export default{
         },
             scale: 4
         });
-        gsap.to(sphere.material, {
-            scrollTrigger: {
-            trigger: "#nav",
-            start: "top center",
-            end: "center bottom",
-            duration: 2.5, 
-            yoyoEase: true,
-            scrub: true,
-            toggleActions: "restart pause reverse none"
-        },
-            opacity: .5,
-        });
+        
         
         // requestAnimationFrame(animate);
         // renderer.render(scene, camera);
