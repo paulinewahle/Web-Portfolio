@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "Articulat";
+  src: url("./fonts/Articulat CF v3.2 OTF/ArticulatCF-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Articulat Thin";
+  src: url("./fonts/Articulat CF v3.2 OTF/ArticulatCF-Thin.otf") format("opentype");
+}
+@media (min-width: 200px) {
+  .desktop {
+    display: none;
+  }
+  .responsive {
+    display: block;
+  }
+  * {
+    color: #292929;
+    font-family: "Articulat", sans-serif;
+  }
+  body {
+    background-color: white;
+    width: 90vw;
+    padding: 6vh 3vw 3vw 3vw;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  h1 {
+    font-weight: 100;
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-weight: 200;
+    margin: 0;
+    font-size: 1rem;
+  }
+  h3 {
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  a {
+    text-decoration: none;
+    font-style: italic;
+  }
+  a, p {
+    font-weight: 200;
+    font-size: 0.5rem;
+  }
+  p {
+    text-indent: 10%;
+  }
+  a, button {
+    background: none;
+    border-bottom: 1px solid #292929;
+  }
+  input, textarea, button, select, a {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .arrow {
+    display: inline;
+  }
+  .resp-case-img, video {
+    width: 100%;
+    margin: 10% 0;
+  }
+  .resp-case-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+@media (min-width: 992px) {
+  .desktop {
+    display: inline-block;
+  }
+  .responsive {
+    display: none !important;
+  }
+  * {
+    cursor: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+  }
+  *::-moz-selection {
+    background-color: #292929;
+    color: white;
+  }
+  *::selection {
+    background-color: #292929;
+    color: white;
+  }
+  *::-moz-selection {
+    background-color: #292929;
+    color: white;
+  }
+  *::-o-selection {
+    background-color: #292929;
+    color: white;
+  }
+  *::-ms-selection {
+    background-color: #292929;
+    color: white;
+  }
+  *::-webkit-selection {
+    background-color: #292929;
+    color: white;
+  }
+  *::-webkit-scrollbar {
+    display: none;
+  }
+  body {
+    color: #292929;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+  }
+  h1 {
+    line-height: 0.8em;
+    font-size: 6rem;
+    z-index: 50;
+  }
+  h2 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  a, p {
+    font-size: 1em;
+  }
+  a {
+    border: none;
+  }
+}/*# sourceMappingURL=main.css.map */
