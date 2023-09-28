@@ -34,7 +34,7 @@ export default {
 
 <template>
     
-    <body>
+    
     <Header :links="links"></Header>    
     <!-- <SideNav :links="links" :caseNav="caseNav"/> -->
     
@@ -44,7 +44,7 @@ export default {
         
     </RouterView>
         
-    </body>
+    
 </template>
 
 <style scoped>

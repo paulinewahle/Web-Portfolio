@@ -32,11 +32,11 @@ export default {
 </script>
 
 <template>
-<body>
+
   
   <div id="container">
     
-    <div id="about-my">
+    <div id="about-links" class="section">
       
       <div id="links-wrapper">
         <div @mouseover="width2 = '80%'" @mouseleave="width2 = '40%'">
@@ -60,11 +60,11 @@ export default {
         </a>
     </div>
 
-    <div id="profile">
-      <div id="profile-img"></div>
+    <div id="about-img" class="section">
+      <div class="center-img"></div>
     </div>
 
-    <div id="about-me">
+    <div id="about-text" class="section">
       
       <p>
         Hello, I’m Pauline Wahle - creative designer and developer.<br> Coming from a German degree in graphic and object design, I continued to focus on digital spaces with studies in user experience and front-end development. Always considering usability aspects, I find it fascinating to explore and reimagine digital spaces in new ways that surprise, entertain, simplify and create lasting impressions. By taking opportunities to establish original ideas, each design can get a unique look and feel. With a wholistic design sense of shape and space from experience in both disciplines, the lines between conventional and interactive design are blurry, both can profit from each other. My basis for both design and development is creative thinking, to stay flexible, keep moving and find alternative paths. 
@@ -76,7 +76,7 @@ export default {
     </div>
 
   </div>
-</body>
+
 </template>
 
 <style scoped>
@@ -86,30 +86,19 @@ export default {
 }
 @media (min-width: 992px) {
   #container{
-    width: 100vw;
-    height: 100vh;
+    width: 90vw;
+    height: 80vh;
     display: flex;
     flex-direction: row;
-    /* overflow: hidden; */
+    overflow-y: hidden;
   }
-  #about-my, #about-me, #profile{
-    position: relative;
-    height: 100vh;
-    width: 33vw;
-    padding: 15vh 2.5vw 10vh 5vw;
-    box-sizing: border-box;
-  }
-  #about-my{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  #profile-img{
+  .center-img{
     height: 100%;
     width: 100%;
-    background-image: url("src/assets/img/profile.jpg");
     background-position: center center;
     background-size: cover;
+    transition: all .5s ease;
+    background-image: url("src/assets/img/profile.jpg");
   }
   p{
     font-size: .9rem;

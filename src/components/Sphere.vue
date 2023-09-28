@@ -49,7 +49,6 @@ export default{
             transmission: .5,
             opacity: 1,
             reflectivity: 0.1,
-            refractionRatio: 0.985,
             ior: 0.9,
             normalMap: normalTexture
         })
@@ -130,18 +129,18 @@ export default{
         })
 
         //Animate
-        const clock = new THREE.Clock()
+        // const clock = new THREE.Clock()
         // document.addEventListener('mousemove', onDocumentMouseMove)
 
-        let mouseX = 0
-        let mouseY = 0
+        // let mouseX = 0
+        // let mouseY = 0
 
-        let targetX = 0
-        let targetY = 0
-        let targetZ = 0
+        // let targetX = 0
+        // let targetY = 0
+        // let targetZ = 0
 
-        const windowX = window.innerWidth / 2;
-        const windowY = window.innerHeight / 2;
+        // const windowX = window.innerWidth / 2;
+        // const windowY = window.innerHeight / 2;
 
         // function onDocumentMouseMove(event){
         //     mouseX = (event.clientX - windowX)
@@ -151,17 +150,16 @@ export default{
 
         const tick = () =>
         {
-            targetX = mouseX * .001;
-            targetY = mouseY * .001;
-            const elapsedTime = clock.getElapsedTime()
+            // targetX = mouseX * .001;
+            // targetY = mouseY * .001;
+            // const elapsedTime = clock.getElapsedTime()
 
             // Update objects
-
             // sphere.rotation.y += .5 * (targetY - sphere.rotation.y)
             // sphere.rotation.x += .5 * (targetX - sphere.rotation.x)
 
             // Update objects
-            sphere.rotation.y = .22 * elapsedTime
+            // sphere.rotation.y = .22 * elapsedTime
 
             // Update Orbital Controls
             // controls.update()
@@ -194,7 +192,7 @@ export default{
             scrollTrigger: {
             trigger: ".start-view",
             start: "top top",
-            end: "bottomtop top",
+            end: "bottom top",
             duration: 2.5, 
             yoyoEase: true,
             scrub: true,
@@ -257,7 +255,7 @@ body{
     top: 0;
     left: 0;
     outline: none;
-    z-index: 100;
+    z-index: 2;
 }
 
 

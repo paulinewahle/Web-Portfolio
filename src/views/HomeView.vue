@@ -39,7 +39,7 @@ export default{
       let scrollTop = window.scrollY;
       let docHeight = document.body.offsetHeight;
       let scrollPercent = scrollTop / docHeight;
-      let scrollPercentRounded = Math.round(scrollPercent * 200);
+      let scrollPercentRounded = Math.round(scrollPercent * 101);
       percentLabel.innerHTML = scrollPercentRounded;
     });
   }
@@ -48,7 +48,7 @@ export default{
 
 <template>
   
-  <body>
+  
     <main>
       <div class="home-view start-view" id="scroll-top">
         <h1 id="home-title">
@@ -58,8 +58,8 @@ export default{
           <br> 
           Frontend <br> Code
         </h1>
-          <a href="#nav" class="desktop" id="scrollbutton">Scroll to continue . . .</a>
-          
+          <a href="#work" class="desktop" id="scrollbutton">Scroll to continue . . .</a>
+      
           <p id="scroll-percentage" class="desktop">
             <span id="percent">0</span>%
           </p>
@@ -82,22 +82,21 @@ export default{
           </div>
       </div> -->
     </main>
-    <WorkView />
+    <aside id="work">
+      <WorkView />
+    </aside>
+    
     <Sphere />
-  </body>
+  
 
 </template>
 
 <style scoped>
 @media (min-width: 200px) {
-  body{
+  /* body{
     max-height: 100vh;
-  }
-  main{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
+  } */
+ 
   .home-view{
     height: 80vh;
     width: 80vw;
@@ -138,9 +137,8 @@ export default{
 }
 @media (min-width: 992px) {
   
-  body{
+  main{
     max-height: 200vh;
-    background-color: #fafafa;
   }
   .home-view{
     height: 100vh;
@@ -155,7 +153,9 @@ export default{
   #home-title{
     position: fixed;
     text-align: left;
+    height: 20vh;
     left: 5vw;
+    top: 40vh;
   }
   #home-title-line{
     height: 2px;

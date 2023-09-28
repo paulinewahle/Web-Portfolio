@@ -53,9 +53,9 @@ export default {
 
 <template>
     <header class="header">
-        <RouterLink to="/"><h1> Pauline Wahle</h1></RouterLink>
+        <RouterLink to="/home"><h1> Pauline Wahle</h1></RouterLink>
         <nav>
-            <RouterLink to="/work" class="work navlink"> Work </RouterLink>
+            <a href="/home#work" class="work navlink"> Work </a>
             <RouterLink to="/about" class="about navlink"> About </RouterLink>
         </nav>
     </header>
@@ -178,12 +178,14 @@ export default {
     
    .header{
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     padding: 5vh 10vw 0 5vw;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    z-index: 1000;
+    z-index: 4;
    }
    h1, a{
     font-family: 'Articulat', sans-serif;

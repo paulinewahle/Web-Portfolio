@@ -102,7 +102,7 @@ export default{
         filter: blur(7px);  
         transition: scale 0.3s ease-in-out;
         position: fixed;
-        z-index: 1000;
+        z-index: 5;
         display: flex;
         justify-content: center;
         align-items: center;
