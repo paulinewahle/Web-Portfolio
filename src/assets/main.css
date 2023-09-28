@@ -36,11 +36,13 @@
     font-size: 5em;
   }
   h2 {
+    font-family: "Articulat Thin", sans-serif;
     font-weight: 200;
     margin: 0;
     font-size: 1rem;
   }
   h3 {
+    font-family: "Articulat Thin", sans-serif;
     font-weight: bold;
     margin: 0;
     text-transform: uppercase;
@@ -123,8 +125,9 @@
     overscroll-behavior: none;
     color: #292929;
     margin: 0;
-    padding: 20vh 5vw 3vh 5vw;
+    padding: 20vh 5vw 20vh 5vw;
     box-sizing: border-box;
+    height: 100vh;
     width: 100vw;
   }
   h1 {
@@ -137,11 +140,12 @@
     margin: 0;
   }
   h3 {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   a, p {
-    font-size: 1em;
+    font-size: 0.9em;
     border: none;
+    margin: 0;
   }
   a:hover {
     font-family: "Articulat Italic", sans-serif;

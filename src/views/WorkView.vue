@@ -110,7 +110,6 @@ export default {
 
 <style scoped>
 @media (min-width: 200px){
-
   
   #case-links{
     justify-content: space-between;
@@ -122,6 +121,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 5%;
   }
   p{
     font-size: .5em;
@@ -144,7 +144,7 @@ export default {
     margin-top: 10vh;;
   }
   #case-links{
-    padding: 0 5%;
+    padding: 0 0 0 5%;
   }
   #case-img{
     height: 100%;
