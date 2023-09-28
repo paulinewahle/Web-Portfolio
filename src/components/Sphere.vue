@@ -179,7 +179,7 @@ export default{
         gsap.to(sphere.rotation, {
             scrollTrigger: {
             trigger: ".start-view",
-            start: "top top",
+            start: "",
             end: "bottom top",
             duration: 2.5, 
             yoyoEase: true,
@@ -191,7 +191,7 @@ export default{
         gsap.to(sphere.material, {
             scrollTrigger: {
             trigger: ".start-view",
-            start: "top top",
+            start: "",
             end: "bottom top",
             duration: 2.5, 
             yoyoEase: true,

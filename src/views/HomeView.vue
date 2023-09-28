@@ -39,7 +39,7 @@ export default{
       let scrollTop = window.scrollY;
       let docHeight = document.body.offsetHeight;
       let scrollPercent = scrollTop / docHeight;
-      let scrollPercentRounded = Math.round(scrollPercent * 101);
+      let scrollPercentRounded = Math.round(scrollPercent * 79);
       percentLabel.innerHTML = scrollPercentRounded;
     });
   }
@@ -54,7 +54,7 @@ export default{
         <h1 id="home-title">
           UI/UX <br> Design
           <br> <br>
-          <div id="home-title-line"> </div>
+          <div class="line"> </div>
           <br> 
           Frontend <br> Code
         </h1>
@@ -136,9 +136,12 @@ export default{
   }
 }
 @media (min-width: 992px) {
-  
+  body{
+    padding: 0 !important;
+  }
   main{
     max-height: 200vh;
+    border: 1px solid;
   }
   .home-view{
     height: 100vh;
@@ -156,11 +159,6 @@ export default{
     height: 20vh;
     left: 5vw;
     top: 40vh;
-  }
-  #home-title-line{
-    height: 2px;
-    width: 100%;
-    background-color: black;
   }
   #scrollbutton{
     position: fixed;

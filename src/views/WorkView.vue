@@ -146,6 +146,11 @@ export default {
   #case-links{
     padding: 0 0 0 5%;
   }
+  #case-text{
+    margin-top: 5%;
+    font-size: 1rem;
+    text-indent: 0;
+  }
   #case-img{
     height: 100%;
     width: 100%;
@@ -157,10 +162,7 @@ export default {
   #case-title{
     font-size: 5rem;
   }
-  #case-text{
-    font-size: 1rem;
-    text-indent: 0;
-  }
+ 
 }
 
 </style>
