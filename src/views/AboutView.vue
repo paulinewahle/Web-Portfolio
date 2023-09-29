@@ -69,7 +69,7 @@ export default {
 
     </div>
     <div class="section">
-      <div id="about-img"></div>
+      <div id="about-img" class="soft-img"></div>
     </div>
 
     <div id="about-text" class="section">
@@ -123,7 +123,8 @@ export default {
   #about-site{
     position: absolute;
     top: 90vh;
-    left: 70vw;
+    left: 5vw;
+    width: 25vw;
   }
 }
 

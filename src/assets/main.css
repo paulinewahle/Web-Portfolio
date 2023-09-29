@@ -20,6 +20,7 @@
   * {
     color: #292929;
     font-family: "Articulat Regular", sans-serif;
+    box-sizing: border-box;
   }
   body {
     background-color: #fafafa;
@@ -76,6 +77,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+  }
+  .soft-img {
+    box-shadow: 0px 0px 7px 5px #fafafa inset;
+    -webkit-box-shadow: 0px 0px 7px 5px #fafafa inset;
+    -moz-box-shadow: 0px 0px 7px 5px #fafafa inset;
   }
 }
 @media (min-width: 992px) {
@@ -154,7 +160,7 @@
   .line {
     height: 2px;
     width: 100%;
-    background-color: black;
+    background-color: #292929;
   }
   .section {
     height: 100%;

@@ -74,7 +74,7 @@ export default {
       <p id="case-text"></p>
     </div>
     <div class="section">
-      <div id="case-img"></div>
+      <div id="case-img" class="soft-img"></div>
     </div>
     <div id="case-links" class="section">
       <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/gamel/mobile-gamel1.jpg"); revealCaseTitle("Gamél"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
