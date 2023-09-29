@@ -48,29 +48,23 @@ export default {
         <div class="line"></div>
         <div>
           <h3> Code </h3>
-          
           <a target="_blank" href="https://codepen.io/PaulineWahle" class="about-link" @mouseover="width3 = '80%'" @mouseleave="width3 = '40%'"><p> Github <p class="responsive arrow">&#8227;</p> </p></a>
           <a target="_blank" href="https://codepen.io/PaulineWahle" class="about-link"><p> CodePen<p class="responsive arrow">&#8227;</p> </p></a>
         </div>
         <div class="line"></div>
         <div @mouseover="width1 = '80%'" @mouseleave="width1 = '40%'">
-          <h3> Experience <br>& Education </h3>
+          <h3> Experience & Education </h3>
           <a  target="_blank" href="https://www.linkedin.com/in/paulinewahle/" class="about-link"><p> LinkedIn<p class="responsive arrow">&#8227;</p> </p></a>
         </div>
       </div>
 
-      
       <div target="_blank" href = "mailto:pauline.wahle@web.de" @mouseover="width1 = '80%'" @mouseleave="width1 = '40%'">
         <div class="line"></div>  
         <h3> Get In Touch<span class="responsive">:</span></h3>
           <a class="about-link"><p> Pauline.wahle@web.de<p class="responsive arrow">&#8227;</p> </p></a>
       </div>
-
-
     </div>
-    <div class="section">
-      <div id="about-img" class="soft-img"></div>
-    </div>
+    
 
     <div id="about-text" class="section">
       <p>
@@ -78,8 +72,12 @@ export default {
       </p> 
     </div>
 
+    <div class="section">
+      <div id="about-img" class="soft-img"></div>
+    </div>
+
       <div id="about-site" :style="{ 'font-size': '.7em' }">
-        <div class="line"></div>
+        
           <p>
           <b>About this site</b> <br> 
           This is a Vue.js project designed and developed by ©Pauline Wahle, 2023. 

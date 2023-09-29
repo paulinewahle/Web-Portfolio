@@ -19,10 +19,10 @@ export default{
         
         //Loading
         const textureLoader = new THREE.TextureLoader();
-        const normalMap = new URL('../assets/textures/Glass_Frosted_001_normal.jpg', import.meta.url);
+        const normalMap = new URL('../assets/textures/Blue_Ice_001_NORM.jpg', import.meta.url);
         const normalTexture = textureLoader.load(normalMap);
 
-        const hdrTextureURL = new URL('../assets/surfaces/paint.hdr', import.meta.url);
+        const hdrTextureURL = new URL('../assets/surfaces/swirl.hdr', import.meta.url);
 
         // Debug
         //const gui = new dat.GUI()
@@ -209,7 +209,6 @@ export default{
             yoyoEase: true,
             scrub: true,
             toggleActions: "restart pause reverse none",
-
         },
             scale: 4
         });
