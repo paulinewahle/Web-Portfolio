@@ -86,7 +86,7 @@ export default{
       <WorkView />
     </aside>
     
-    <Sphere />
+    <!-- <Sphere /> -->
   
 
 </template>

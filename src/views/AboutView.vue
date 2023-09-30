@@ -36,36 +36,7 @@ export default {
   
   <main>
     
-    <div id="about-links" class="section">
-      
-      <div id="links-wrapper">
-        <div class="line"></div>
-        <div @mouseover="width2 = '80%'" @mouseleave="width2 = '40%'">
-          <h3> Design </h3>
-          <a target="_blank" class="about-link"><p> Behance <p class="responsive arrow">&#8227;</p> </p></a>
-          <a target="_blank" class="about-link"><p> Pinterest <p class="responsive arrow">&#8227;</p> </p></a>
-        </div>
-        <div class="line"></div>
-        <div>
-          <h3> Code </h3>
-          <a target="_blank" href="https://codepen.io/PaulineWahle" class="about-link" @mouseover="width3 = '80%'" @mouseleave="width3 = '40%'"><p> Github <p class="responsive arrow">&#8227;</p> </p></a>
-          <a target="_blank" href="https://codepen.io/PaulineWahle" class="about-link"><p> CodePen<p class="responsive arrow">&#8227;</p> </p></a>
-        </div>
-        <div class="line"></div>
-        <div @mouseover="width1 = '80%'" @mouseleave="width1 = '40%'">
-          <h3> Experience & Education </h3>
-          <a  target="_blank" href="https://www.linkedin.com/in/paulinewahle/" class="about-link"><p> LinkedIn<p class="responsive arrow">&#8227;</p> </p></a>
-        </div>
-      </div>
-
-      <div target="_blank" href = "mailto:pauline.wahle@web.de" @mouseover="width1 = '80%'" @mouseleave="width1 = '40%'">
-        <div class="line"></div>  
-        <h3> Get In Touch<span class="responsive">:</span></h3>
-          <a class="about-link"><p> Pauline.wahle@web.de<p class="responsive arrow">&#8227;</p> </p></a>
-      </div>
-    </div>
     
-
     <div id="about-text" class="section">
       <p>
         Hello, I’m Pauline Wahle - creative designer and developer.<br> Coming from a German degree in graphic and object design, I continued to focus on digital spaces with studies in user experience and front-end development. Always considering usability aspects, I find it fascinating to explore and reimagine digital spaces in new ways that surprise, entertain, simplify and create lasting impressions. By taking opportunities to establish original ideas, each design can get a unique look and feel. With a wholistic design sense of shape and space from experience in both disciplines, the lines between conventional and interactive design are blurry, both can profit from each other. My basis for both design and development is creative thinking, to stay flexible, keep moving and find alternative paths. 
@@ -76,6 +47,43 @@ export default {
       <div id="about-img" class="soft-img"></div>
     </div>
 
+    <div id="about-links" class="section">
+      <div id="links-wrapper">
+        <div class="line"></div>
+        <div class="link-container">
+          <h2> Design </h2>
+          <div class="so-me-link">
+            <a target="_blank" class="about-link"><p> Behance <p class="responsive arrow">&#8227;</p> </p></a>
+            <a target="_blank" class="about-link"><p> Pinterest <p class="responsive arrow">&#8227;</p> </p></a>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div  class="link-container">
+          <h2> Code </h2>
+          <div class="so-me-link">
+            <a target="_blank" href="https://codepen.io/PaulineWahle" class="about-link" @mouseover="width3 = '80%'" @mouseleave="width3 = '40%'"><p> Github <p class="responsive arrow">&#8227;</p> </p></a>
+            <a target="_blank" href="https://codepen.io/PaulineWahle" class="about-link"><p> CodePen<p class="responsive arrow">&#8227;</p> </p></a>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div @mouseover="width1 = '80%'" @mouseleave="width1 = '40%'" class="link-container">
+          <h2> Experience </h2>
+          <div class="so-me-link">
+            <a  target="_blank" href="https://www.linkedin.com/in/paulinewahle/" class="about-link"><p> LinkedIn<p class="responsive arrow">&#8227;</p> </p></a>
+          </div>
+          </div>
+      </div>
+
+      <div  href = "mailto:pauline.wahle@web.de">
+        <div class="line"></div>  
+        <div  class="link-container">
+          <h2> Get In Touch<span class="responsive">:</span></h2>
+          <div class="so-me-link">
+            <a target="_blank" class="about-link"><p>Pauline.wahle@web.de<p class="responsive arrow">&#8227;</p> </p></a>
+          </div>
+        </div>
+      </div>
+    </div>
       <div id="about-site" :style="{ 'font-size': '.7em' }">
         
           <p>
@@ -104,7 +112,18 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0 5% 0 0;
+    padding: 0 0 0 5%;
+  }
+  .link-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+  }
+  .so-me-link{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
   }
   #about-img{
     height: 100%;
@@ -116,12 +135,12 @@ export default {
   }
   #about-text{
     height: 100%;
-    padding: 0 0 0 5%;
+    padding: 0 5% 0 0;
   }
   #about-site{
     position: absolute;
     top: 90vh;
-    left: 5vw;
+    left: 70vw;
     width: 25vw;
   }
 }

@@ -48,6 +48,9 @@
     margin: 0;
     text-transform: uppercase;
   }
+  h4 {
+    font-family: "Articulat Thin", sans-serif;
+  }
   a {
     text-decoration: none;
     font-family: "Articulat Regular", sans-serif;

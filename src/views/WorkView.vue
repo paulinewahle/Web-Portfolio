@@ -70,38 +70,46 @@ export default {
 
   <div id="page-wrapper">
     <div id="descr" class="section">
-      <h1 id="case-title"></h1>
-      <p id="case-text"></p>
+      <h3> Selected Work</h3>
+      <div>
+        <h1 id="case-title"></h1>
+        <p id="case-text"></p>
+      </div>
     </div>
     <div class="section">
       <div id="case-img" class="soft-img"></div>
     </div>
     <div id="case-links" class="section">
-      <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/gamel/mobile-gamel1.jpg"); revealCaseTitle("Gamél"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
-       <h2>Gamél</h2> <p> Webdesign</p>
-      </router-link>
-      <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/gamel/mobile-gamel2.jpg"); revealCaseTitle("HiTech"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
-        <h2>Concreate</h2> <p> Webdesign</p>
-      </router-link>
-      <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/gamel/mobile-gamel3.jpg"); revealCaseTitle("Concreate"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
+      <div>
+        <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/gamel/mobile-gamel1.jpg"); revealCaseTitle("Gamél"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
         <h2>Gamél</h2> <p> Webdesign</p>
-      </router-link>
-      <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/surfaces/greenlong.jpg"); revealCaseTitle("Gamél"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
-        <h2>Gamél</h2> <p> Webdesign</p>
-      </router-link>
-      <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/surfaces/greenlong.jpg"); revealCaseTitle("Gamél"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
-        <h2>Gamél</h2> <p> Webdesign</p>
-      </router-link>
-      <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/surfaces/greenlong.jpg"); revealCaseTitle("Gamél"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
-        <h2>Gamél</h2> <p> Webdesign</p>
-      </router-link>
-      <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/surfaces/greenlong.jpg"); revealCaseTitle("Gamél"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
-        <h2>Gamél</h2> <p> Webdesign</p>
-      </router-link>
-      <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/surfaces/greenlong.jpg"); revealCaseTitle("Gamél"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
-        <h2>Gamél</h2> <p> Webdesign</p>
-      </router-link>
+        </router-link>
+        <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/gamel/mobile-gamel2.jpg"); revealCaseTitle("HiTech"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
+          <h2>Concreate</h2> <p> Webdesign</p>
+        </router-link>
+        <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/gamel/mobile-gamel3.jpg"); revealCaseTitle("Concreate"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
+          <h2>Gamél</h2> <p> Webdesign</p>
+        </router-link>
+        <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/surfaces/greenlong.jpg"); revealCaseTitle("Gamél"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
+          <h2>Gamél</h2> <p> Webdesign</p>
+        </router-link>
+        <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/surfaces/greenlong.jpg"); revealCaseTitle("Gamél"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
+          <h2>Gamél</h2> <p> Webdesign</p>
+        </router-link>
+        <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/surfaces/greenlong.jpg"); revealCaseTitle("Gamél"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
+          <h2>Gamél</h2> <p> Webdesign</p>
+        </router-link>
+        
+      </div>
+      <div id="more-links">
+        <h4>More Projects </h4> 
+        <div>
+          <a href="/"> <img src="/src/assets/img/behance.png" alt="behance" width="50"></a>
+          <a href="/"> <img src="/src/assets/img/dribble.png" alt="dribble" width="50"></a>
+        </div>
+      </div>
     </div>
+    
     
   </div>
 
@@ -117,11 +125,14 @@ export default {
   .work-link{
     font-style: normal; 
     font-size: 1.5rem;
-    border-bottom: 1px solid;
+    border-top: 2px solid #272727;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     padding: 0 5%;
+  }
+  .work-link:last-child{
+    border-bottom: 2px solid;
   }
   p{
     font-size: .5em;
@@ -141,10 +152,24 @@ export default {
     box-sizing: border-box;
   }
   #descr{
-    margin-top: 10vh;;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
-  #case-links{
+  #case-links, #more-links{
     padding: 0 0 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #more-links{
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+  }
+  img{
+    display: inline;
+    padding: 0 0 0 20%;
   }
   #case-text{
     margin-top: 5%;
