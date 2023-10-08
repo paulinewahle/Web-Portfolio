@@ -36,17 +36,15 @@ export default {
   
   <main>
     
-    
-    <div id="about-text" class="section">
-      <p>
-        Hello, I’m Pauline Wahle - creative designer and developer.<br> Coming from a German degree in graphic and object design, I continued to focus on digital spaces with studies in user experience and front-end development. Always considering usability aspects, I find it fascinating to explore and reimagine digital spaces in new ways that surprise, entertain, simplify and create lasting impressions. By taking opportunities to establish original ideas, each design can get a unique look and feel. With a wholistic design sense of shape and space from experience in both disciplines, the lines between conventional and interactive design are blurry, both can profit from each other. My basis for both design and development is creative thinking, to stay flexible, keep moving and find alternative paths. 
-      </p> 
-    </div>
-
     <div class="section">
-      <div id="about-img" class="soft-img"></div>
+      
     </div>
-
+    
+    <div id="about" class="section">
+      <div class="line"></div>
+      <div id="about-img"></div>
+      <p id="about-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
     <div id="about-links" class="section">
       <div id="links-wrapper">
         <div class="line"></div>
@@ -84,14 +82,15 @@ export default {
         </div>
       </div>
     </div>
-      <div id="about-site" :style="{ 'font-size': '.7em' }">
-        
-          <p>
-          <b>About this site</b> <br> 
-          This is a Vue.js project designed and developed by ©Pauline Wahle, 2023. 
-          </p>
-          <i><a target="_blank" href="https://github.com/paulinewahle/WebPortfolio"> View the code on Github </a></i>
-      </div>
+
+    <div id="about-site" :style="{ 'font-size': '.7em' }">
+      
+        <p>
+        <b>About this site</b> <br> 
+        This is a Vue.js project designed and developed by ©Pauline Wahle, 2023. 
+        </p>
+        <i><a target="_blank" href="https://github.com/paulinewahle/WebPortfolio"> View the code on Github </a></i>
+    </div>
   </main>
 
 </template>
@@ -112,7 +111,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0 0 0 5%;
+    padding: 0 0 0 0;
   }
   .link-container{
     display: flex;
@@ -126,21 +125,26 @@ export default {
     justify-content: space-between;
   }
   #about-img{
-    height: 100%;
-    width: 100%;
+    height: 40%;
+    width: 50%;
     background-image: url('/src/assets/img/profile.jpg');
     background-position: center top;
     background-size: cover;
-    transition: all .5s ease;
+  }
+  #about{
+    height: 100%;
+    padding: 0 0 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   #about-text{
-    height: 100%;
-    padding: 0 5% 0 0;
+    padding: 0 20% 0 0;
   }
   #about-site{
     position: absolute;
     top: 90vh;
-    left: 70vw;
+    left: 65vw;
     width: 25vw;
   }
 }

@@ -77,7 +77,7 @@ export default {
       </div>
     </div>
     <div class="section">
-      <div id="case-img" class="soft-img"></div>
+      <div id="case-img" ></div>
     </div>
     <div id="case-links" class="section">
       <div>
@@ -104,8 +104,8 @@ export default {
       <div id="more-links">
         <h4>More Projects </h4> 
         <div>
-          <a href="/"> <img src="/src/assets/img/behance.png" alt="behance" width="50"></a>
-          <a href="/"> <img src="/src/assets/img/dribble.png" alt="dribble" width="50"></a>
+          <a href="/"> <img src="/src/assets/img/behance.svg" alt="behance" width="30"></a>
+          <a href="/"> <img src="/src/assets/img/dribble.svg" alt="dribble" width="30"></a>
         </div>
       </div>
     </div>
@@ -154,7 +154,7 @@ export default {
   #descr{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   #case-links, #more-links{
     padding: 0 0 0 5%;
