@@ -70,17 +70,6 @@ export default{
       </div>
 
       
-      <!-- <div class="home-view desktop" id="nav">
-        <div id="nav-links-home" class="desktop">
-          <router-link to="/work" class="desktop">
-            work
-          </router-link>
-          <a class="desktop">-</a>
-          <router-link to="/about" class="desktop">
-            about
-          </router-link>
-          </div>
-      </div> -->
     </main>
     <aside id="work">
       <WorkView />

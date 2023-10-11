@@ -81,7 +81,7 @@ export default {
     </div>
     <div id="case-links" class="section">
       <div>
-        <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/gamel/mobile-gamel1.jpg"); revealCaseTitle("Gamél"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
+        <router-link to="/gamel" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/gamel/mobile-gamel1.jpg"); revealCaseTitle("Gamél"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
         <h2>Gamél</h2> <p> Webdesign</p>
         </router-link>
         <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/gamel/mobile-gamel2.jpg"); revealCaseTitle("HiTech"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
@@ -104,8 +104,8 @@ export default {
       <div id="more-links">
         <h4>More Projects </h4> 
         <div>
-          <a href="/"> <img src="/src/assets/img/behance.svg" alt="behance" width="30"></a>
-          <a href="/"> <img src="/src/assets/img/dribble.svg" alt="dribble" width="30"></a>
+          <a href="/"> <img src="/src/assets/img/dribble.svg" alt="dribble"   width="40"></a>
+          <a href="/"> <img src="/src/assets/img/behance.svg" alt="behance" width="40"></a>
         </div>
       </div>
     </div>

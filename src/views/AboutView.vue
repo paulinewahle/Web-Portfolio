@@ -1,5 +1,5 @@
 <script>
-import PageNumberStyle from '@/assets/pagenumbers.css'
+
 
 export default {
   props:{
@@ -52,6 +52,7 @@ export default {
           <h2> Design </h2>
           <div class="so-me-link">
             <a target="_blank" class="about-link"><p> Behance <p class="responsive arrow">&#8227;</p> </p></a>
+            <a target="_blank" class="about-link"><p> Dribble <p class="responsive arrow">&#8227;</p> </p></a>
             <a target="_blank" class="about-link"><p> Pinterest <p class="responsive arrow">&#8227;</p> </p></a>
           </div>
         </div>
@@ -121,12 +122,15 @@ export default {
   }
   .so-me-link{
     display: flex;
-    width: 40%;
-    justify-content: space-between;
+    width: 50%;
+    justify-content: flex-end;
+  }
+  a{
+    margin: 0 5%;
   }
   #about-img{
-    height: 40%;
-    width: 50%;
+    height: 38%;
+    width: 40%;
     background-image: url('/src/assets/img/profile.jpg');
     background-position: center top;
     background-size: cover;

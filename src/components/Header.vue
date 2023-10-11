@@ -53,9 +53,9 @@ export default {
 
 <template>
     <header class="header">
-        <RouterLink to="/home"><h1> Pauline Wahle</h1></RouterLink>
+        <RouterLink to="/home">Pauline Wahle</RouterLink>
         <nav>
-            <a href="/home#work" class="work navlink"> Work </a>
+            <RouterLink to="/home#work" class="work navlink"> Work </RouterLink>
             <RouterLink to="/about" class="about navlink"> About </RouterLink>
         </nav>
     </header>
@@ -181,11 +181,12 @@ export default {
     top: 0;
     left: 0;
     width: 100vw;
-    padding: 5vh 10vw 0 5vw;
+    padding: 2vh 10vw 0 5vw;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     z-index: 4;
+    
    }
    h1, a{
     font-family: 'Articulat', sans-serif;
@@ -194,6 +195,7 @@ export default {
     margin: 0;
     text-transform: uppercase;
     font-style: normal;
+    padding: 3vh;
    }
    nav{
     width: 15%;
@@ -201,6 +203,7 @@ export default {
     justify-content: flex-end;
    }
    .navlink{
+   
     margin-left: 50%;
    }
 }

@@ -19,14 +19,14 @@ export default{
         textCursor.style.left = e.clientX + "px";
         textCursor.style.top = e.clientY + "px";
 
-        // let rightScreen = window.screen.width/2
-        // let leftScreen = window.screen.width/2
-        // if(e.pageX < rightScreen){
-        //     document.querySelector(".text-cursor").textContent = "Back";
-        // }
-        // else if(e.screenX > leftScreen){
-        //     document.querySelector(".text-cursor").textContent = "Next";
-        // }
+        let rightScreen = window.screen.width/2
+        let leftScreen = window.screen.width/2
+        if(e.pageX < rightScreen){
+            document.querySelector(".text-cursor").textContent = "Back";
+        }
+        else if(e.screenX > leftScreen){
+            document.querySelector(".text-cursor").textContent = "Next";
+        }
         }
        
         this.links.forEach((link) => {
@@ -40,7 +40,7 @@ export default{
             textCursor.style.display = "block";
         });
         link.addEventListener("mouseover", () => {
-            blob.style.scale = 8;
+            blob.style.scale = 10;
             blob.style.filter = "blur(1px)";
             mouseCursor.style.backgroundColor = "white";
             document.getElementById("d").style.fill = "white";
@@ -123,12 +123,12 @@ export default{
         display: block;
         filter: blur(0px);
         position: fixed;
-        transition:  all .2s ease;
+        transition:  all .1s ease;
         z-index: 1001;
         pointer-events: none;
-        font-size: 20px;
-        font-style: italic;
-        color: black;
+        font-size: 1em;
+        text-transform: uppercase;
+        color: #fafafa;
     }
 }
 </style>
