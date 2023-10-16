@@ -1,11 +1,18 @@
 <script lang>
 
 export default {
-    props: [
-        'casename',
-        'casetext',
-        'casecontent1'
-    ],
+    props: {
+        casename: String,
+        casetext: String,
+        content1: String,
+        content2: String,
+        content3: String,
+        content4: String,
+    },
+    // props:[
+    //     'casename'
+    // ],
+
   components: {
   },
   data() {
@@ -19,27 +26,27 @@ export default {
       show7: false,
       show8: false,
       show9: false,
-      currentTransition: ''
+      currentTransition: '',
     }
   },
   mounted(){
-    
+
     document.querySelector("#page-container").style.display = "block";
     document.querySelector("#page-container").style.opacity = "1";
 
-    const hideTextCursor = () => {
-      document.querySelector(".text-cursor").style.opacity = "0";
+    const hideArrowCursor = () => {
+      document.querySelector(".arrow-cursor").style.opacity = "0";
       document.querySelector(".cursor").style.scale = "1";
     }
-    const showTextCursor = () => {
-      document.querySelector(".text-cursor").style.opacity = "1";
-      document.querySelector(".cursor").style.scale = "5";
+    const showArrowCursor = () => {
+      document.querySelector(".arrow-cursor").style.opacity = "1";
+      document.querySelector(".cursor").style.scale = "0";
     }
 
-    document.querySelector("#page-container").addEventListener("mouseover", showTextCursor);
-    document.querySelector("#page-container").addEventListener("mouseleave", hideTextCursor);
-    document.querySelector("#page-numbers").addEventListener("mouseover", hideTextCursor);
-    document.querySelector("#page-numbers").addEventListener("mouseleave", showTextCursor);
+    document.querySelector("#page-container").addEventListener("mouseover", showArrowCursor);
+    document.querySelector("#page-container").addEventListener("mouseleave", hideArrowCursor);
+    document.querySelector("#page-numbers").addEventListener("mouseover", hideArrowCursor);
+    document.querySelector("#page-numbers").addEventListener("mouseleave", showArrowCursor);
     
 
     const mouseDown = (e) => {
@@ -153,22 +160,21 @@ export default {
     </div>
   </div>
   <div class="desktop">
+    <router-link to="/home#work" class="back"> Back to selected work</router-link>
+    
     <div id="page-container">
-        
         <h1>{{casename}}</h1>
         <p>{{casetext}}</p>
         
         <Transition :name="this.currentTransition">
         <div v-if="show1" class="page" id="page1">
-            <video  autoplay loop muted>
-                {{casecontent1}}
-            </video>
+            <img :src="content2" alt="">
         </div>
         </Transition>
         <Transition :name="this.currentTransition">
         <div v-if="show2" class="page" id="page2">
         <video  autoplay loop muted>
-            <source src="{{casecontent1}}">
+            <source :src="content1">
         </video>
         </div>
         </Transition>
@@ -250,15 +256,15 @@ export default {
     position: absolute;
     box-sizing: border-box;
     height: inherit;
-    width: 60%;
-    left: 30vw;
+    width: 90vw;
     overflow: hidden;
     padding: 0;
     display: flex;
     align-items: center;
+    justify-content: end;
   }
-  .img, video{
-    width: 100%;
+  img, video{
+    height: 100%;
     margin: 0;
   }
   #page-numbers{
@@ -266,11 +272,10 @@ export default {
     top: 90vh;
     left: 73vw;
     width: 50%;
-    border: 1px solid;
     display: flex;
   }
   button{
-    border: 1px solid;
+    border: none;
     margin: 1%;
     width: 2vw;
     display: flex;
@@ -279,6 +284,11 @@ export default {
   .line{
     width: 0;
   }
+  .back{
+    position: absolute;
+    top: 15vh;
+  }
+  
 
 }
 

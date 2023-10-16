@@ -9,23 +9,25 @@ export default{
     mounted(){
 
         let mouseCursor = document.querySelector(".cursor");
-        let textCursor = document.querySelector(".text-cursor");
+        let arrowCursor = document.querySelector(".arrow-cursor");
         let blob = document.querySelector(".blob");
 
         window.addEventListener("mousemove", mouseFollow);
         function mouseFollow(e) {
         mouseCursor.style.left = e.clientX + "px";
         mouseCursor.style.top = e.clientY + "px";
-        textCursor.style.left = e.clientX + "px";
-        textCursor.style.top = e.clientY + "px";
+        arrowCursor.style.left = e.clientX + "px";
+        arrowCursor.style.top = e.clientY + "px";
 
         let rightScreen = window.screen.width/2
         let leftScreen = window.screen.width/2
         if(e.pageX < rightScreen){
-            document.querySelector(".text-cursor").textContent = "Back";
+            document.querySelector(".arrow-cursor").classList.add("left");
+            document.querySelector(".arrow-cursor").classList.remove("right");
         }
         else if(e.screenX > leftScreen){
-            document.querySelector(".text-cursor").textContent = "Next";
+            document.querySelector(".arrow-cursor").classList.add("right");
+            document.querySelector(".arrow-cursor").classList.remove("left");
         }
         }
        
@@ -37,7 +39,8 @@ export default{
             mouseCursor.style.backgroundColor = "black";
             document.getElementById("d").style.fill = "black";
             mouseCursor.style.mixBlendMode = "normal";
-            textCursor.style.display = "block";
+            mouseCursor.style.display = "none";
+            arrowCursor.style.display = "block";
         });
         link.addEventListener("mouseover", () => {
             blob.style.scale = 10;
@@ -45,7 +48,8 @@ export default{
             mouseCursor.style.backgroundColor = "white";
             document.getElementById("d").style.fill = "white";
             mouseCursor.style.mixBlendMode = "difference";
-            textCursor.style.display = "none";
+            arrowCursor.style.display = "none";
+            mouseCursor.style.display = "block";
         });
         });
     },
@@ -55,9 +59,7 @@ export default{
 
 
 <template>
-    <div class="text-cursor desktop">
-        <span></span>
-    </div>
+    <div class="arrow-cursor desktop"></div>
     <div class="cursor desktop">
         <svg class="blob" viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
             <path id="d" fill="black"> 
@@ -81,7 +83,7 @@ export default{
 
 <style scoped>
 @media (min-width: 200px) {
-    .text-cursor{
+    .arrow-cursor{
         font-size: 0;
     }
 }
@@ -116,19 +118,30 @@ export default{
         transform-origin: center center;
         filter: blur(7px);  
         transition: all 0.3s ease-in-out;
-        transition-property: scale, filter, transform;
+        transition-property: scale, filter;
     }
 
-    .text-cursor{
+    .arrow-cursor{
         display: block;
         filter: blur(0px);
         position: fixed;
         transition:  all .1s ease;
         z-index: 1001;
         pointer-events: none;
-        font-size: 1em;
         text-transform: uppercase;
         color: #fafafa;
+        width: 50px;
+        height: 50px;
+        transform: rotate(45deg);
     }
+    .left{
+        border-left: 3px solid black;
+        border-bottom: 3px solid black;
+    }
+    .right{
+        border-right: 3px solid black;
+        border-top: 3px solid black;
+    }
+    
 }
 </style>

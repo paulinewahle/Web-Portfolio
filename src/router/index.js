@@ -3,6 +3,7 @@ import LoadingView from '/src/views/LoadingView.vue'
 import HomeView from '/src/views/HomeView.vue'
 import AboutView from '/src/views/AboutView.vue'
 import WorkView from '/src/views/WorkView.vue'
+import NordikView from '/src/views/cases/NordikView.vue'
 import ConcreateView from '/src/views/cases/ConcreateView.vue'
 import BaioView from '/src/views/cases/BaioView.vue'
 import NioginView from '/src/views/cases/NioginView.vue'
@@ -36,6 +37,11 @@ const router = createRouter({
       path: '/work',
       name: 'work',
       component: WorkView,
+    },
+    {
+      path: '/nordik',
+      name: 'nordik',
+      component: NordikView
     },
     {
       path: '/concreate',

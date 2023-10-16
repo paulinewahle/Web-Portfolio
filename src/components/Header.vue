@@ -186,7 +186,6 @@ export default {
     display: flex;
     justify-content: space-between;
     z-index: 4;
-    
    }
    h1, a{
     font-family: 'Articulat', sans-serif;
@@ -195,7 +194,7 @@ export default {
     margin: 0;
     text-transform: uppercase;
     font-style: normal;
-    padding: 3vh;
+    padding: 3vh 3vh 3vh 0;
    }
    nav{
     width: 15%;
@@ -203,8 +202,8 @@ export default {
     justify-content: flex-end;
    }
    .navlink{
-   
     margin-left: 50%;
+    padding: 3vh;
    }
 }
 </style>

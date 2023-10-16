@@ -81,17 +81,17 @@ export default {
     </div>
     <div id="case-links" class="section">
       <div>
-        <router-link to="/gamel" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/gamel/mobile-gamel1.jpg"); revealCaseTitle("Gamél"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
-        <h2>Gamél</h2> <p> Webdesign</p>
+        <router-link to="/nordik" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/nordik/Nordik.jpg"); revealCaseTitle("Gamél"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
+        <h2>Nordik</h2> <p> Webdesign</p>
         </router-link>
         <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/gamel/mobile-gamel2.jpg"); revealCaseTitle("HiTech"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
-          <h2>Concreate</h2> <p> Webdesign</p>
+          <h2>Skilled</h2> <p> Webdesign</p>
         </router-link>
-        <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/gamel/mobile-gamel3.jpg"); revealCaseTitle("Concreate"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
-          <h2>Gamél</h2> <p> Webdesign</p>
+        <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/concreate/Desktop - 16.png"); revealCaseTitle("Concreate"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
+          <h2>Concreate</h2> <p> GraphicDesign</p>
         </router-link>
         <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/surfaces/greenlong.jpg"); revealCaseTitle("Gamél"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
-          <h2>Gamél</h2> <p> Webdesign</p>
+          <h2>Hitech</h2> <p> Webdesign</p>
         </router-link>
         <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/src/assets/surfaces/greenlong.jpg"); revealCaseTitle("Gamél"); revealCaseText("Agency web design")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
           <h2>Gamél</h2> <p> Webdesign</p>
@@ -180,7 +180,8 @@ export default {
     height: 100%;
     width: 100%;
     background-position: center center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     transition: all .5s ease;
     filter: blur(10px);
   }
