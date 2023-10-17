@@ -8,6 +8,9 @@ export default {
         content2: String,
         content3: String,
         content4: String,
+        content5: String,
+        content6: String,
+        content7: String,
     },
     // props:[
     //     'casename'
@@ -24,8 +27,6 @@ export default {
       show5: false,
       show6: false,
       show7: false,
-      show8: false,
-      show9: false,
       currentTransition: '',
     }
   },
@@ -82,14 +83,6 @@ export default {
             this.show7 = false,
             this.show6 = true
           }
-          else if(this.show8 === true){
-            this.show8 = false,
-            this.show7 = true
-          }
-          else if(this.show9 === true){
-            this.show9 = false,
-            this.show8 = true
-          }
         }
         else if(x > screenHalf){
           this.currentTransition = 'right';
@@ -119,14 +112,6 @@ export default {
           }
           else if(this.show7 === true){
             this.show7 = false,
-            this.show8 = true
-          }
-          else if(this.show8 === true){
-            this.show8 = false,
-            this.show9 = true
-          }
-          else if(this.show9 === true){
-            this.show9 = false,
             this.show1 = true
           }
         }           
@@ -168,62 +153,69 @@ export default {
         
         <Transition :name="this.currentTransition">
         <div v-if="show1" class="page" id="page1">
-            <img :src="content2" alt="">
+          <video  autoplay loop muted>
+            <source :src="content1">
+          </video>
+          <img :src="content1" alt="">
         </div>
         </Transition>
         <Transition :name="this.currentTransition">
         <div v-if="show2" class="page" id="page2">
-        <video  autoplay loop muted>
-            <source :src="content1">
-        </video>
+          <video  autoplay loop muted>
+            <source :src="content2">
+          </video>
+          <img :src="content2" alt="">
         </div>
         </Transition>
         <Transition  :name="this.currentTransition">
         <div v-if="show3" class="page" id="page3">
-        <div alt="zine-image" class="img img1"></div>
+          <video  autoplay loop muted>
+            <source :src="content3">
+          </video>
+          <img :src="content3" alt="">
         </div>
         </Transition>
         <Transition :name="this.currentTransition">
         <div v-if="show4" class="page" id="page4">
-        <div alt="zine-image" class="img img2"></div>
+          <video  autoplay loop muted>
+            <source :src="content4">
+          </video>
+          <img :src="content4" alt="">
         </div>
         </Transition>
         <Transition :name="currentTransition">
         <div v-if="show5" class="page" id="page5">
-        <div alt="zine-image" class="img img3"></div>
+          <video  autoplay loop muted>
+            <source :src="content5">
+          </video>
+          <img :src="content5" alt="">
         </div>
         </Transition>
         <Transition :name="this.currentTransition">
         <div v-if="show6" class="page" id="page6">
-        <div alt="zine-image" class="img img4"></div>
+          <video  autoplay loop muted>
+            <source :src="content6">
+          </video>
+          <img :src="content6" alt="">
         </div>
         </Transition>
         <Transition :name="this.currentTransition">
         <div v-if="show7" class="page" id="page7">
-        <div alt="zine-image" class="img img5"></div>
-        </div>
-        </Transition>
-        <Transition :name="this.currentTransition">
-        <div v-if="show8" class="page" id="page8">
-        <div alt="zine-image" class="img img6"></div>
-        </div>
-        </Transition>
-        <Transition :name="this.currentTransition">
-        <div v-if="show9" class="page" id="page9">
-        <div alt="zine-image" class="img img7"></div>
+          <video  autoplay loop muted>
+            <source :src="content7">
+          </video>
+          <img :src="content7" alt="">
         </div>
         </Transition>
     </div>
     <div id="page-numbers">
-      <button @click="show2 = false; show3 = false; show4 = false; show5 = false; show6 = false; show7 = false; show8 = false; show9 = false; show1 = true;" id="page-number-1">1 <div class="line"></div></button>
-      <button @click="show1 = false; show3 = false; show4 = false; show5 = false; show6 = false; show7 = false; show8 = false; show9 = false; show2 = true;" id="page-number-2">2</button>
-      <button @click="show1 = false; show2 = false; show4 = false; show5 = false; show6 = false; show7 = false; show8 = false; show9 = false; show3 = true;" id="page-number-3">3</button>
-      <button @click="show1 = false; show2 = false; show3 = false; show5 = false; show6 = false; show7 = false; show8 = false; show9 = false; show4 = true;" id="page-number-4">4</button>
-      <button @click="show1 = false; show2 = false; show3 = false; show4 = false; show6 = false; show7 = false; show8 = false; show9 = false; show5 = true;" id="page-number-5">5</button>
-      <button @click="show1 = false; show2 = false; show3 = false; show4 = false; show5 = false; show7 = false; show8 = false; show9 = false; show6 = true;" id="page-number-6">6</button>
-      <button @click="show1 = false; show2 = false; show3 = false; show4 = false; show5 = false; show6 = false; show8 = false; show9 = false; show7 = true;" id="page-number-7">7</button>
-      <!--<button @click="show1 = false; show2 = false; show3 = false; show4 = false; show5 = false; show6 = false; show7 = false; show9 = false; show8 = true;" id="page-number-8">8</button>
-      <button @click="show1 = false; show2 = false; show3 = false; show4 = false; show5 = false; show6 = false; show7 = false; show8 = false; show9 = true;" id="page-number-9">9</button> -->
+      <button @click="show2 = false; show3 = false; show4 = false; show5 = false; show6 = false; show7 = false; show1 = true;" id="page-number-1">1 <div class="line"></div></button>
+      <button @click="show1 = false; show3 = false; show4 = false; show5 = false; show6 = false; show7 = false; show2 = true;" id="page-number-2">2</button>
+      <button @click="show1 = false; show2 = false; show4 = false; show5 = false; show6 = false; show7 = false; show3 = true;" id="page-number-3">3</button>
+      <button @click="show1 = false; show2 = false; show3 = false; show5 = false; show6 = false; show7 = false; show4 = true;" id="page-number-4">4</button>
+      <button @click="show1 = false; show2 = false; show3 = false; show4 = false; show6 = false; show7 = false; show5 = true;" id="page-number-5">5</button>
+      <button @click="show1 = false; show2 = false; show3 = false; show4 = false; show5 = false; show7 = false; show6 = true;" id="page-number-6">6</button>
+      <button @click="show1 = false; show2 = false; show3 = false; show4 = false; show5 = false; show6 = false; show7 = true;" id="page-number-7">7</button>
     </div>
   </div>
 
@@ -237,36 +229,45 @@ export default {
   h1, p{
     position: absolute;
     left: 5vw;
+    z-index: 100;
   }
   h1{
-    top: 50vh;
+    top: 40vh;
+    left: 0;
   }
   p{
-    top: 65vh;
+    top: 55vh;
+    left: 0;
     width: 20%;
     text-indent: none;
   }
   #page-container{
-    width: 90vw;
-    height: 60vh;
+    /* width: 90vw;
+    height: 90vh; */
     box-sizing: border-box;
     overflow: hidden;
+    top: 10vh;
+    height: 80vh;
+    width: 90vw;
+    position: absolute;
   }
   .page{
     position: absolute;
     box-sizing: border-box;
-    height: inherit;
-    width: 90vw;
     overflow: hidden;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: end;
+    height: 80vh;
+    width: 90vw;
   }
   img, video{
     height: 100%;
+    width: auto;
     margin: 0;
   }
+
   #page-numbers{
     position: absolute;
     top: 90vh;
@@ -286,7 +287,8 @@ export default {
   }
   .back{
     position: absolute;
-    top: 15vh;
+    top: 90vh;
+    text-decoration: underline;
   }
   
 

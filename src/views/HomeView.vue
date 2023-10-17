@@ -11,7 +11,7 @@ export default{
     WorkView
   },
   mounted() {
-    document.querySelector(".text-cursor").style.opacity = "0";
+    document.querySelector(".arrow-cursor").style.opacity = "0";
     setTimeout(() => {
       this.isLoading = false;
     }, 15000);

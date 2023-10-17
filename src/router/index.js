@@ -5,13 +5,10 @@ import AboutView from '/src/views/AboutView.vue'
 import WorkView from '/src/views/WorkView.vue'
 import NordikView from '/src/views/cases/NordikView.vue'
 import ConcreateView from '/src/views/cases/ConcreateView.vue'
-import BaioView from '/src/views/cases/BaioView.vue'
-import NioginView from '/src/views/cases/NioginView.vue'
 import HitechView from '/src/views/cases/HitechView.vue'
 import GamelView from '/src/views/cases/GamelView.vue'
 import SkilledView from '/src/views/cases/SkilledView.vue'
-import StickyprojectsView from '/src/views/cases/StickyprojectsView.vue'
-import TodoView from '/src/views/cases/TodoView.vue'
+
 
 
 
@@ -49,16 +46,6 @@ const router = createRouter({
       component: ConcreateView
     },
     {
-      path: '/baio',
-      name: 'baio',
-      component: BaioView
-    },
-    {
-      path: '/niogin',
-      name: 'niogin',
-      component: NioginView
-    },
-    {
       path: '/hitech',
       name: 'hitech',
       component: HitechView
@@ -72,17 +59,7 @@ const router = createRouter({
       path: '/skilled',
       name: 'skilled',
       component: SkilledView
-    },
-    {
-      path: '/stickyprojects',
-      name: 'stickyprojects',
-      component: StickyprojectsView
-    },
-    {
-      path: '/todo',
-      name: 'todo',
-      component: TodoView
-    },
+    }
     
   ]
 })

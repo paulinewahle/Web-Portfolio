@@ -152,7 +152,7 @@
     font-size: 1.5rem;
   }
   a, p {
-    font-size: 0.9em;
+    font-size: 0.9rem;
     border: none;
     margin: 0;
   }
@@ -172,5 +172,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+}
+@media (min-width: 2000px) {
+  h1 {
+    font-size: 10rem;
+  }
+  p, a, button {
+    font-size: 2.5rem;
   }
 }/*# sourceMappingURL=main.css.map */

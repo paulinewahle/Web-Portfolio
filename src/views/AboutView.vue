@@ -20,8 +20,7 @@ export default {
   },
   mounted(){
     let container = document.querySelector("#container")
-    document.querySelector(".text-cursor").style.opacity = "0"
-    this.caseNav.push("hideSoMe")
+    document.querySelector(".arrow-cursor").style.opacity = "0"
   },
   methods:{
  
@@ -36,8 +35,14 @@ export default {
   
   <main>
     
-    <div class="section">
-      
+    <div class="section" :style="{ 'justify-content': 'flex-end' }"> 
+      <div id="about-site">
+        <p :style="{ 'font-size': '.7rem' }">
+        About this site<br> 
+        This is a Vue.js project designed and developed by ©Pauline Wahle, 2023. <br>No content is used for commercial purposes.
+        </p>
+        <i ><a :style="{ 'font-size': '.7rem' }" target="_blank" href="https://github.com/paulinewahle/WebPortfolio"> View the code on Github </a></i>
+    </div>
     </div>
     
     <div id="about" class="section">
@@ -82,15 +87,6 @@ export default {
           </div>
         </div>
       </div>
-    </div>
-
-    <div id="about-site" :style="{ 'font-size': '.7em' }">
-      
-        <p>
-        <b>About this site</b> <br> 
-        This is a Vue.js project designed and developed by ©Pauline Wahle, 2023. 
-        </p>
-        <i><a target="_blank" href="https://github.com/paulinewahle/WebPortfolio"> View the code on Github </a></i>
     </div>
   </main>
 
@@ -146,10 +142,7 @@ export default {
     padding: 0 20% 0 0;
   }
   #about-site{
-    position: absolute;
-    top: 90vh;
-    left: 65vw;
-    width: 25vw;
+    width: 50%;
   }
 }
 

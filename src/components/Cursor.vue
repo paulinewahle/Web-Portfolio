@@ -39,7 +39,7 @@ export default{
             mouseCursor.style.backgroundColor = "black";
             document.getElementById("d").style.fill = "black";
             mouseCursor.style.mixBlendMode = "normal";
-            mouseCursor.style.display = "none";
+            //mouseCursor.style.display = "none";
             arrowCursor.style.display = "block";
         });
         link.addEventListener("mouseover", () => {
@@ -113,7 +113,7 @@ export default{
 
     .blob{
         position: absolute;
-        margin-left: 50px; 
+        margin-left: 25px;
         transform: scale(1, 1);
         transform-origin: center center;
         filter: blur(7px);  
@@ -133,14 +133,16 @@ export default{
         width: 50px;
         height: 50px;
         transform: rotate(45deg);
+        margin-top: -25px;
+        margin-left: -25px;
     }
     .left{
-        border-left: 3px solid black;
-        border-bottom: 3px solid black;
+        border-left: 2px solid black;
+        border-bottom: 2px solid black;
     }
     .right{
-        border-right: 3px solid black;
-        border-top: 3px solid black;
+        border-right: 2px solid black;
+        border-top: 2px solid black;
     }
     
 }
