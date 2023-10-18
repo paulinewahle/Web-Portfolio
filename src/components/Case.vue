@@ -57,62 +57,76 @@ export default {
           this.currentTransition = 'left';
           if(this.show1 === true){
             this.show1 = false,
-            this.show7 = true
+            this.show7 = true,
+            document.querySelector('#page-number-1').classList.add("active-page-btn");
           }
           else if(this.show2 === true){
             this.show2 = false,
-            this.show1 = true
+            this.show1 = true,
+            document.querySelector('#page-number-2').classList.add("active-page-btn");
           }
           else if(this.show3 === true){
             this.show3 = false,
-            this.show2 = true
+            this.show2 = true,
+            document.querySelector('#page-number-3').classList.add("active-page-btn");
           }
           else if(this.show4 === true){
             this.show4 = false,
-            this.show3 = true
+            this.show3 = true,
+            document.querySelector('#page-number-4').classList.add("active-page-btn");
           }
           else if(this.show5 === true){
             this.show5 = false,
-            this.show4 = true
+            this.show4 = true,
+            document.querySelector('#page-number-5').classList.add("active-page-btn");
           }
           else if(this.show6 === true){
             this.show6 = false,
-            this.show5 = true
+            this.show5 = true,
+            document.querySelector('#page-number-6').classList.add("active-page-btn");
           }
           else if(this.show7 === true){
             this.show7 = false,
-            this.show6 = true
+            this.show6 = true,
+            document.querySelector('#page-number-7').classList.add("active-page-btn");
           }
         }
         else if(x > screenHalf){
           this.currentTransition = 'right';
           if(this.show1 === true){
             this.show1 = false,
-            this.show2 = true
+            this.show2 = true,
+            document.querySelector('#page-number-1').classList.remove("active-page-btn");
           }
           else if(this.show2 === true){
             this.show2 = false,
-            this.show3 = true
+            this.show3 = true,
+            document.querySelector('#page-number-2').classList.remove("active-page-btn");
           }
           else if(this.show3 === true){
             this.show3 = false,
-            this.show4 = true
+            this.show4 = true,
+            document.querySelector('#page-number-3').classList.remove("active-page-btn");
           }
           else if(this.show4 === true){
             this.show4 = false,
-            this.show5 = true
+            this.show5 = true,
+            document.querySelector('#page-number-4').classList.remove("active-page-btn");
           }
           else if(this.show5 === true){
             this.show5 = false,
-            this.show6 = true
+            this.show6 = true,
+            document.querySelector('#page-number-5').classList.remove("active-page-btn");
           }
           else if(this.show6 === true){
             this.show6 = false,
-            this.show7 = true
+            this.show7 = true,
+            document.querySelector('#page-number-6').classList.remove("active-page-btn");
           }
           else if(this.show7 === true){
             this.show7 = false,
-            this.show1 = true
+            this.show1 = true,
+            document.querySelector('#page-number-7').classList.remove("active-page-btn");
           }
         }           
     }
@@ -135,13 +149,7 @@ export default {
   <h1>{{casename}}</h1> 
   <p>{{casetext}}</p>
     <div id="responsive-container">
-      <img class="resp-case-img" alt="" src="/src/assets/cases/hitech/_Hitech3.jpg"> 
-      <img class="resp-case-img" alt="" src="/src/assets/cases/hitech/_Hitech4.jpg"> 
-      <img class="resp-case-img" alt="" src="/src/assets/cases/hitech/_Hitech5.jpg"> 
-      <img class="resp-case-img" alt="" src="/src/assets/cases/hitech/_Hitech6.jpg"> 
-      <img class="resp-case-img" alt="" src="/src/assets/cases/hitech/_Hitech7.jpg"> 
-      <img class="resp-case-img" alt="" src="/src/assets/cases/hitech/_Hitech8.jpg"> 
-      <img class="resp-case-img" alt="" src="/src/assets/cases/hitech/_Hitech9.jpg"> 
+      
     </div>
   </div>
   <div class="desktop">
@@ -209,7 +217,7 @@ export default {
         </Transition>
     </div>
     <div id="page-numbers">
-      <button @click="show2 = false; show3 = false; show4 = false; show5 = false; show6 = false; show7 = false; show1 = true;" id="page-number-1">1 <div class="line"></div></button>
+      <button @click="show2 = false; show3 = false; show4 = false; show5 = false; show6 = false; show7 = false; show1 = true;" id="page-number-1">1</button>
       <button @click="show1 = false; show3 = false; show4 = false; show5 = false; show6 = false; show7 = false; show2 = true;" id="page-number-2">2</button>
       <button @click="show1 = false; show2 = false; show4 = false; show5 = false; show6 = false; show7 = false; show3 = true;" id="page-number-3">3</button>
       <button @click="show1 = false; show2 = false; show3 = false; show5 = false; show6 = false; show7 = false; show4 = true;" id="page-number-4">4</button>
@@ -258,7 +266,7 @@ export default {
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     height: 80vh;
     width: 90vw;
   }
@@ -270,24 +278,38 @@ export default {
 
   #page-numbers{
     position: absolute;
-    top: 90vh;
-    left: 73vw;
-    width: 50%;
+    top: 92vh;
+    left: 70vw;
+    width: 20%;
     display: flex;
+    justify-content: end;
+
   }
   button{
     border: none;
     margin: 1%;
-    width: 2vw;
+    width: 1vw;
     display: flex;
     align-items: center;
+    font-size: 1.2em;
+    transition: 1s all ease;
   }
-  .line{
-    width: 0;
+  .active-page-btn{
+    width: 2.5vw;
+    color: red;
+    border: 1px solid;
+    font-weight: 900;
   }
+  .active-page-btn::before{
+    height: 5px;
+    width: 5px;
+    border: 3px solid;
+    position: absolute;
+  }
+
   .back{
     position: absolute;
-    top: 90vh;
+    top: 92vh;
     text-decoration: underline;
   }
   

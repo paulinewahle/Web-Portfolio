@@ -1,5 +1,6 @@
 
 <script>
+
 export default {
     props:{
       links: Array,
@@ -15,8 +16,7 @@ export default {
         responsiveNav(){
             if(this.navActive === false){
                 this.navActive = true
-                document.querySelector(".header").style.backgroundColor = "rgba(0,0,0,0)"
-                document.querySelector("#responsive-nav").style.left = "-20vw"
+                document.querySelector("#responsive-nav").style.left = "0vw"
                 document.querySelector(".nav-content").style.left = "10vw"
                 document.querySelector("#header-title").style.color = "white"
                 const hamburger = document.getElementById("hamburger").children;
@@ -32,9 +32,8 @@ export default {
             }
             else{
                 this.navActive = false
-                document.querySelector(".header").style.backgroundColor = "white"
-                document.querySelector("#responsive-nav").style.left = "-150vw";
-                document.querySelector(".nav-content").style.left = "-150vw";
+                document.querySelector("#responsive-nav").style.left = "-100vw";
+                document.querySelector(".nav-content").style.left = "-100vw";
                 document.querySelector("#header-title").style.color = "#292929"
                 const hamburger = document.getElementById("hamburger").children;
                 hamburger[0].style.backgroundColor = "#292929";
@@ -52,14 +51,14 @@ export default {
 </script>
 
 <template>
-    <header class="header">
+    <header class="desktop desktop-header">
         <RouterLink to="/home">Pauline Wahle</RouterLink>
         <nav>
             <RouterLink to="/home#work" class="work navlink"> Work </RouterLink>
             <RouterLink to="/about" class="about navlink"> About </RouterLink>
         </nav>
     </header>
-    <header class="responsive header">
+    <header class="responsive responsive-header">
             <div id="hamburger" @click="responsiveNav()">
                 <span />
                 <span />
@@ -73,6 +72,7 @@ export default {
     <div class="nav-content responsive">
         <div>
             <a class="small-nav-link" target="_blank" href="https://linkedin.com/in/paulinewahle"> LinkedIn </a>
+            <a class="small-nav-link" target="_blank" href="https://www.behance.net/paulinewahle1"> Dribble </a>
             <a class="small-nav-link" target="_blank" href="https://www.behance.net/paulinewahle1"> Behance </a>
             <a class="small-nav-link" target="_blank" href="https://github.com/paulinewahle"> Github </a>
             <a class="small-nav-link" target="_blank" href="https://codepen.io/PaulineWahle"> CodePen </a>
@@ -92,7 +92,7 @@ export default {
 
 <style scoped>
 @media (min-width: 200px) {
-    /* .header{
+    .responsive-header{
         position: fixed;
         top: 0;
         left: 0;
@@ -102,11 +102,9 @@ export default {
         z-index: 150;
         display: flex;
         align-items: center;
-        background-color: white;
         padding: 10% 10vw;
     }
     #header-title{
-        font-family: 'title';
         font-size: 1.6em;
         font-style: normal;
         font-weight: 100;
@@ -137,10 +135,9 @@ export default {
         width: 100vw;
         position: fixed;
         top: 0;
-        left: -150vw;
+        left: -100vw;
         transition: all .5s ease;
         z-index: 140;
-        filter: blur(20px);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -149,7 +146,7 @@ export default {
         position: fixed;        
         top: 10vh;
         height: 80vh;
-        width: 50vw;
+        width: 80vw;
         z-index: 160;
         left: -100vw;
         transition: all .5s ease;
@@ -165,18 +162,18 @@ export default {
         text-align: center;
     }
     .big-nav-link{
-        font-family: "serif";
-        font-weight: 100;
+        font-family: "Articulat Thin";
         font-size: 2.5em;
         margin: 10%;
     }
     .small-nav-link, p{
         font-size: 1em;
-    } */
+        line-height: 1.6em;
+    } 
 }
 @media (min-width: 992px) {
     
-   .header{
+   .desktop-header{
     position: fixed;
     top: 0;
     left: 0;
@@ -188,7 +185,6 @@ export default {
     z-index: 4;
    }
    h1, a{
-    font-family: 'Articulat', sans-serif;
     font-size: 1em;
     text-decoration: none;
     margin: 0;

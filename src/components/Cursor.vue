@@ -26,6 +26,7 @@ export default{
             document.querySelector(".arrow-cursor").classList.remove("right");
         }
         else if(e.screenX > leftScreen){
+            console.log("right")
             document.querySelector(".arrow-cursor").classList.add("right");
             document.querySelector(".arrow-cursor").classList.remove("left");
         }
@@ -61,7 +62,7 @@ export default{
 <template>
     <div class="arrow-cursor desktop"></div>
     <div class="cursor desktop">
-        <svg class="blob" viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+        <svg class="blob desktop" viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
             <path id="d" fill="black"> 
             <animate attributeName="d"  dur="4000ms" repeatCount="indefinite" values="
             M432,307Q364,364,307,427.5Q250,491,214.5,406Q179,321,161.5,285.5Q144,250,148,201Q152,152,201,138Q250,124,293,144Q336,164,418,207Q500,250,432,307Z;
@@ -74,10 +75,6 @@ export default{
             </path>
         </svg>
     </div>
-
-    
-        
-
 </template>
 
 

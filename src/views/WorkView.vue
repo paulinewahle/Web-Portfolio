@@ -119,18 +119,7 @@ export default {
   #case-links{
     justify-content: space-between;
   }
-  .work-link{
-    font-style: normal; 
-    font-size: 1.5rem;
-    border-top: 2px solid #272727;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 0 5%;
-  }
-  .work-link:last-child{
-    border-bottom: 2px solid;
-  }
+  
   p{
     font-size: .5em;
     width: 40%;
@@ -149,6 +138,21 @@ export default {
     position: absolute;
     padding: 20vh 0vw;
     box-sizing: border-box;
+    margin: 0 5vw;
+    border: 1px solid;
+  }
+  .work-link{
+    height: 40%;
+    font-style: normal; 
+    font-size: 1.5rem;
+    border-top: 2px solid #272727;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+  }
+  .work-link:last-child{
+    border-bottom: 2px solid;
   }
   #descr{
     display: flex;
@@ -188,6 +192,9 @@ export default {
     font-size: 5rem;
   }
  
+}
+@media (min-width: 1200px) {
+
 }
 
 </style>

@@ -39,7 +39,7 @@ export default{
       let scrollTop = window.scrollY;
       let docHeight = document.body.offsetHeight;
       let scrollPercent = scrollTop / docHeight;
-      let scrollPercentRounded = Math.round(scrollPercent * 79);
+      let scrollPercentRounded = Math.round(scrollPercent * 83);
       percentLabel.innerHTML = scrollPercentRounded;
     });
   }
@@ -75,7 +75,7 @@ export default{
       <WorkView />
     </aside>
     
-    <!-- <Sphere /> -->
+    <Sphere />
   
 
 </template>
@@ -105,7 +105,6 @@ export default{
   }
   h1{
     position: relative;
-    font-size: 2rem;
     font-weight: 100;
   }
   #entrance-link{
@@ -130,7 +129,6 @@ export default{
   }
   main{
     max-height: 200vh;
-    border: 1px solid;
   }
   .home-view{
     height: 100vh;
@@ -155,6 +153,7 @@ export default{
     width: 20vw;
     left: 76vw;
     top: 90vh;
+    font-size: 1rem;
   }
   #scroll-percentage{
     position: fixed;
@@ -165,7 +164,9 @@ export default{
     text-align: start;
     margin: 0;
     opacity: 0;
+    font-size: 1rem;
   }
  
 }  
+
 </style>

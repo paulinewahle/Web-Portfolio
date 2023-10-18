@@ -33,8 +33,7 @@ export default {
 <template>
 
   
-  <main>
-    
+  <main class="desktop">
     <div class="section" :style="{ 'justify-content': 'flex-end' }"> 
       <div id="about-site">
         <p :style="{ 'font-size': '.7rem' }">
@@ -44,7 +43,6 @@ export default {
         <i ><a :style="{ 'font-size': '.7rem' }" target="_blank" href="https://github.com/paulinewahle/WebPortfolio"> View the code on Github </a></i>
     </div>
     </div>
-    
     <div id="about" class="section">
       <div class="line"></div>
       <div id="about-img"></div>
@@ -115,6 +113,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
+    height: 5rem;
   }
   .so-me-link{
     display: flex;

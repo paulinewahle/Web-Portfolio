@@ -14,7 +14,7 @@ export default {
     Cursor,
     HomeView,
     WorkView,
-    Header
+    Header,
     },
     data(){
         return{
@@ -31,7 +31,6 @@ export default {
     
     
     <Header :links="links"></Header>    
-    <!-- <SideNav :links="links" :caseNav="caseNav"/> -->
     
     <Cursor :links="links"/>
 
