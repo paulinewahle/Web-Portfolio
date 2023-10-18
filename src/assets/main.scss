@@ -24,11 +24,10 @@
     }
     body{
         background-color: #fafafa;
-        width: 90vw;
-        margin: 15vh 5vw 10vh 5vw;
+        width: 80vw;
+        margin: 15vh 10vw 5vh 10vw;
         box-sizing: border-box;
         overflow-x: hidden;
-        border: 1px solid;
     }
     h1{
         font-family: 'Articulat Thin', sans-serif;
@@ -37,10 +36,10 @@
         font-size: 5rem;
     }
     h2{
-        font-family: 'Articulat Thin', sans-serif;
+        font-family: 'Articulat Regular', sans-serif;
         font-weight: 200;
         margin: 0;
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     h3{
         font-family: 'Articulat Thin', sans-serif; 
@@ -141,6 +140,7 @@
         z-index: 50;
     }
     h2{
+        font-family: 'Articulat Thin', sans-serif;
         font-size: 2rem;
         margin: 0;
     }
