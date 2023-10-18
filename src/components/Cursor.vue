@@ -139,10 +139,12 @@ export default{
     .left{
         border-left: 2px solid black;
         border-bottom: 2px solid black;
+        box-shadow: -2px 2px 0 0px #fafafa;
     }
     .right{
         border-right: 2px solid black;
         border-top: 2px solid black;
+        box-shadow: 2px -2px 0 0px #fafafa;
     }
     
 }
