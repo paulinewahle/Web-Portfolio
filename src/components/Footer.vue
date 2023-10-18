@@ -1,95 +1,31 @@
-
 <script>
 
 export default {
     props:{
-      links: Array,
     },
     data(){
-        navActive: false
     },
     mounted(){
-      this.links.push(document.querySelector('.work'))
-      this.links.push(document.querySelector('.about'))
     },
     methods:{
-        responsiveNav(){
-            if(this.navActive === false){
-                this.navActive = true
-                document.querySelector("#responsive-nav").style.left = "0vw"
-                document.querySelector(".nav-content").style.left = "10vw"
-                document.querySelector("#header-title").style.color = "white"
-                const hamburger = document.getElementById("hamburger").children;
-                hamburger[0].style.backgroundColor = "white";
-                hamburger[1].style.backgroundColor = "white";
-                hamburger[2].style.backgroundColor = "white";
-                hamburger[0].style.transform = "rotate(45deg)";
-                hamburger[1].style.width = "0";
-                hamburger[2].style.transform = "rotate(-45deg)";
-                hamburger[0].style.marginTop = "-.6em";
-                hamburger[2].style.marginTop = "1em";
-                
-            }
-            else{
-                this.navActive = false
-                document.querySelector("#responsive-nav").style.left = "-100vw";
-                document.querySelector(".nav-content").style.left = "-100vw";
-                document.querySelector("#header-title").style.color = "#292929"
-                const hamburger = document.getElementById("hamburger").children;
-                hamburger[0].style.backgroundColor = "#292929";
-                hamburger[1].style.backgroundColor = "#292929";
-                hamburger[2].style.backgroundColor = "#292929";
-                hamburger[0].style.transform = "rotate(0deg)";
-                hamburger[1].style.width = "100%";
-                hamburger[2].style.transform = "rotate(0deg)";
-                hamburger[0].style.marginTop = "0";
-                hamburger[2].style.marginTop = "0";
-            }
-        }
     }
 }
 </script>
 
 <template>
-    <header class="desktop desktop-header">
-        <RouterLink to="/home">Pauline Wahle</RouterLink>
-        <nav>
-            <RouterLink to="/home#work" class="work navlink"> Work </RouterLink>
-            <RouterLink to="/about" class="about navlink"> About </RouterLink>
-        </nav>
-    </header>
-    <div id="header-bg"></div>
-    <header class="responsive responsive-header">
-        <div id="hamburger" @click="responsiveNav()">
-            <span />
-            <span />
-            <span />
-        </div>
-        <RouterLink id="header-title" to="/home">P - W</RouterLink>
-    </header>
 
-    <div id="responsive-nav" class="responsive">
-        <div class="nav-content responsive">
-        <div>
+    <footer class="responsive">
             <a class="small-nav-link" target="_blank" href="https://linkedin.com/in/paulinewahle"> LinkedIn </a>
             <a class="small-nav-link" target="_blank" href="https://www.behance.net/paulinewahle1"> Dribble </a>
             <a class="small-nav-link" target="_blank" href="https://www.behance.net/paulinewahle1"> Behance </a>
             <a class="small-nav-link" target="_blank" href="https://github.com/paulinewahle"> Github </a>
             <a class="small-nav-link" target="_blank" href="https://codepen.io/PaulineWahle"> CodePen </a>
             <a class="small-nav-link" target="_blank" href="https://www.pinterest.de/PaulineWahle/"> Pinterest </a>
-        </div>
-        <div>
-            <RouterLink class="big-nav-link" to="/work" @click="responsiveNav()"> WORK </RouterLink>
-            <RouterLink class="big-nav-link" to="/about" @click="responsiveNav()"> ABOUT </RouterLink>
-        </div>
-        <div>
+        
             <p>Get in touch</p>
             <a class="small-nav-link" target="_blank" to="/work"> pauline.wahle@web.de </a>
-        </div>
-        </div>
-    </div>
-    
-    
+    </footer>
+        
 </template>
 
 <style scoped>

@@ -32,7 +32,29 @@ export default {
 
 <template>
 
-  
+  <main class="responsive">
+      
+    <img src="src\assets\img\profile.jpg" alt="">
+
+    <p id="about-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div id="about-img"></div>
+    <h2> Design </h2>
+      <a target="_blank"> Behance </a>
+      <a target="_blank"> Dribble </a>
+      <a target="_blank"> Pinterest </a>
+    <h2> Code </h2>
+      <a target="_blank" href="https://codepen.io/PaulineWahle"> Github </a>
+      <a target="_blank" href="https://codepen.io/PaulineWahle"> Codepen </a>
+    <h2> Experience </h2>
+      <a  target="_blank" href="https://www.linkedin.com/in/paulinewahle/"> LinkedIn </a>
+
+      <p :style="{ 'font-size': '.7rem' }">
+        About this site<br> 
+        This is a Vue.js project designed and developed by ©Pauline Wahle, 2023. <br>No content is used for commercial purposes.
+    </p>
+    <i ><a :style="{ 'font-size': '.7rem' }" target="_blank" href="https://github.com/paulinewahle/WebPortfolio"> View the code on Github </a></i>
+  </main>
+
   <main class="desktop">
     <div class="section" :style="{ 'justify-content': 'flex-end' }"> 
       <div id="about-site">
@@ -93,6 +115,16 @@ export default {
 <style scoped>
 
 @media (min-width: 200px) {
+  img{
+    height: 100%;
+    width: 40%;
+  }
+  a{
+    font-style: italic;
+    display: block;
+    margin: 2% 0;
+    border: none;
+  }
   
 }
 @media (min-width: 992px) {

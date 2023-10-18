@@ -6,6 +6,7 @@ import LoadingScreen from '@/components/LoadingScreen.vue'
 import Cursor from '@/components/Cursor.vue'
 import HomeView from '@/views/HomeView.vue'
 import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
     props:{
@@ -15,6 +16,7 @@ export default {
     HomeView,
     WorkView,
     Header,
+    Footer
     },
     data(){
         return{
@@ -37,7 +39,7 @@ export default {
     <RouterView>
         
     </RouterView>
-        
+    <Footer> </Footer>
     
 </template>
 
