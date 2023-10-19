@@ -232,7 +232,7 @@ export default{
 <body>
     
 
-    <main>
+    <main class="desktop">
         <canvas class="webgl"></canvas>
     </main>
     

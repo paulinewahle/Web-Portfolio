@@ -50,7 +50,7 @@ export default{
   
   
     <main>
-      <div class="home-view start-view" id="scroll-top">
+      <div class="home-view start-view" id="landing">
         <h1 id="home-title">
           UI/UX <br> Design
           <br> <br>
@@ -63,17 +63,19 @@ export default{
           <p id="scroll-percentage" class="desktop">
             <span id="percent">0</span>%
           </p>
+
           <div class="responsive">
           <RouterLink to="/work" id="entrance-link"> View Portfolio  </RouterLink>
           <p :style="{ 'font-size': '.5em'}"> Curious to see this site on desktop? </p>
           </div>
-      </div>
 
+      </div>
       
     </main>
-    <aside id="work">
+
+    <div id="work">
       <WorkView />
-    </aside>
+    </div>
     
     <Sphere />
   
@@ -129,6 +131,9 @@ export default{
   }
   main{
     max-height: 200vh;
+  }
+  h1{
+    font-size: 3rem;;
   }
   .home-view{
     height: 100vh;

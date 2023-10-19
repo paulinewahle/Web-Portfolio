@@ -73,7 +73,7 @@ export default {
       <h3> Selected Work</h3>
       <div>
         <h1 id="case-title"></h1>
-        <p id="case-text"></p>
+        <div id="case-text"></div>
       </div>
     </div>
     <div class="section">
@@ -82,7 +82,7 @@ export default {
     <div id="case-links" class="section">
       <div>
         <router-link to="/nordik" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/nordik/Nordik.jpg"); revealCaseTitle("Nordik"); revealCaseText("Responsive, minimalist webshop concept.")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
-        <h2>Nordik</h2> <p> Webshop design</p>
+        <h2>Nordik</h2> <p> E-commerce design</p>
         </router-link>
         <router-link to="/gamel" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/gamel/Gamel.jpg"); revealCaseTitle("Gamél"); revealCaseText("Production agency website in modern minimalist grid style.")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
           <h2>Gamél</h2> <p> Web design</p>
@@ -106,8 +106,6 @@ export default {
         </div>
       </div>
     </div>
-    
-    
   </div>
 
 
@@ -116,15 +114,9 @@ export default {
 <style scoped>
 @media (min-width: 200px){
   
-  #case-links{
-    justify-content: space-between;
-  }
   
-  p{
-    font-size: .5em;
-    width: 40%;
-    text-align: end;
-  }
+  
+  
   
 }
 @media (min-width: 992px) {
@@ -135,11 +127,15 @@ export default {
     display: flex;
     flex-direction: row;
     z-index: 3;
-    position: absolute;
     padding: 20vh 0vw;
     box-sizing: border-box;
-    margin: 0 5vw;
     border: 1px solid;
+    position: absolute;
+  }
+  p{
+    font-size: .5em;
+    width: 40%;
+    text-align: end;
   }
   .work-link{
     height: 40%;
@@ -150,6 +146,9 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
+  }
+  #case-links{
+    justify-content: space-between;
   }
   .work-link:last-child{
     border-bottom: 2px solid;
@@ -175,9 +174,10 @@ export default {
     padding: 0 0 0 20%;
   }
   #case-text{
-    margin-top: 5%;
-    font-size: 1rem;
-    text-indent: 0;
+    margin-top: 5vh;
+    font-size: 1.2rem;
+    width: 20vw;
+
   }
   #case-img{
     height: 100%;
@@ -188,9 +188,7 @@ export default {
     transition: all .5s ease;
     filter: blur(10px);
   }
-  #case-title{
-    font-size: 5rem;
-  }
+
  
 }
 @media (min-width: 1200px) {

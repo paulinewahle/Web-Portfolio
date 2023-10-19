@@ -52,7 +52,7 @@ export default {
 
 <template>
     <header class="desktop desktop-header">
-        <RouterLink to="/home">Pauline Wahle</RouterLink>
+        <RouterLink to="/home#landing">Pauline Wahle</RouterLink>
         <nav>
             <RouterLink to="/home#work" class="work navlink"> Work </RouterLink>
             <RouterLink to="/about" class="about navlink"> About </RouterLink>
