@@ -8,7 +8,8 @@ components: {
 data() {
   return {
     casename: 'Concreate',
-    casetext: 'Download the zine here',
+    casetext: 'The CONCREATE zine is an exploration of brutalist style across graphic design, architecture, art, typography and web design. The one-time project was completed by five students from Jönköping University in 2021. ',
+    caselink: '/src/assets/cases/concreate/concreate.epub',
     content1: '/src/assets/cases/concreate/Concreate_1.jpg',
     content2: '/src/assets/cases/concreate/Concreate_2.jpg',
     content3: '/src/assets/cases/concreate/Concreate_3.jpg',
@@ -25,6 +26,7 @@ data() {
   <Case 
   :casename="casename" 
   :casetext="casetext" 
+  :caselink="caselink" 
   :content1="content1"
   :content2="content2"
   :content3="content3"

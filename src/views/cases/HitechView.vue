@@ -9,7 +9,7 @@ components: {
 data() {
   return {
     casename: 'HiTech',
-    casetext: 'Nordik is a webshop concept created in the course of the dailyUI challenge. See more its projects on Dribble.',
+    casetext: 'Conceptualised and developed as IT manager on the board of the engineering student association at Jönköping University, the website is dark themed and has a deep information structure. Launched in 2020, the site is build in elementor with custom code, MySQL database and FTP connection. Including anonymous voting systems, webshop and easy to update content.',
     content1: '/src/assets/cases/hitech/Hitech_1.jpg',
     content2: '/src/assets/cases/hitech/Hitech_2.mp4',
     content3: '/src/assets/cases/hitech/Hitech_3.jpg',

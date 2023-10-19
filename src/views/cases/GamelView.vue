@@ -8,7 +8,7 @@ components: {
 data() {
   return {
     casename: 'Gamél',
-    casetext: 'Flat responsive UI/UX design concept with minimalistic vector line illustrations.',
+    casetext: 'The web presence of the danish production agency Gamél centralises its photo- and videographic content in the modern minimalist grid style design in muted tones and with attention to detail elements in the animation of user interaction points such as buttons, cursor, sliders and overlays. The project build in CMS with custom code and launched July 2022. ',
     content1: '/src/assets/cases/gamel/Gamel_1.mp4',
     content2: '/src/assets/cases/gamel/Gamel_2.mp4',
     content3: '/src/assets/cases/gamel/Gamel_3.mp4',

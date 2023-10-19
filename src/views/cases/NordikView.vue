@@ -9,7 +9,7 @@ components: {
 data() {
   return {
     casename: 'Nordik',
-    casetext: 'Nordik is a webshop concept created in the course of the dailyUI challenge. See more its projects on Dribble.',
+    casetext: 'Nordik is a webshop concept in minimalistic grid design. With a compact top-down deep information structure the design is user intuitive according to the sites hierarchical task analysis. The Figma project is part of the DailyUI Challenge, more of which to see on Dribble.',
     content1: 'src/assets/cases/nordik/Nordik_1.mp4',
     content2: '/src/assets/cases/nordik/Nordik_2.jpg',
     content3: '/src/assets/cases/nordik/Nordik_3.jpg',

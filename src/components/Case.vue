@@ -148,6 +148,7 @@ export default {
   <div class="responsive">
   <h1>{{casename}}</h1> 
   <p>{{casetext}}</p>
+  
     <div id="responsive-container">
       
     </div>
@@ -158,6 +159,8 @@ export default {
     <div id="page-container">
         <h1>{{casename}}</h1>
         <p>{{casetext}}</p>
+        <a :href="caselink" download></a>
+
         
         <Transition :name="this.currentTransition">
         <div v-if="show1" class="page" id="page1">
