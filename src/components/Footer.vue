@@ -27,12 +27,12 @@ export default {
         <div class="line"></div>
 
         <div>
-            <a target="_blank" href="https://linkedin.com/in/paulinewahle"> LinkedIn </a>
-            <a target="_blank" href="https://www.behance.net/paulinewahle1"> Dribble </a>
-            <a target="_blank" href="https://www.behance.net/paulinewahle1"> Behance </a>
-            <a target="_blank" href="https://github.com/paulinewahle"> Github </a>
-            <a target="_blank" href="https://codepen.io/PaulineWahle"> CodePen </a>
-            <a target="_blank" href="https://www.pinterest.de/PaulineWahle/"> Pinterest </a>
+            <a target="_blank" href="https://linkedin.com/in/paulinewahle">  <img src="/src/assets/img/Linkedin.svg" alt="dribble"   width="20">  </a>
+            <a target="_blank" href="https://www.behance.net/paulinewahle1">  <img src="/src/assets/img/dribble.svg" alt="dribble"   width="20"> </a>
+            <a target="_blank" href="https://www.behance.net/paulinewahle1">  <img src="/src/assets/img/behance.svg" alt="dribble"   width="20"> </a>
+            <a target="_blank" href="https://github.com/paulinewahle">  <img src="/src/assets/img/Github.svg" alt="dribble"   width="20">  </a>
+            <a target="_blank" href="https://codepen.io/PaulineWahle">  <img src="/src/assets/img/Codepen.svg" alt="dribble"   width="20">  </a>
+            <a target="_blank" href="https://www.pinterest.de/PaulineWahle/">  <img src="/src/assets/img/Pinterest.svg" alt="dribble"   width="20">  </a>
         </div>
         
         
@@ -44,18 +44,21 @@ export default {
 <style scoped>
 @media (min-width: 200px) {
     footer{
-        height: 25vh;
+
         width: 100%;
         justify-content: space-between;
-        padding-top: 10vh;
+        padding: 10vh 0 1vh 0;
     }
     h2, a, p{
-        margin: 0 5%;
+        margin: 0 2%;
+    }
+    h2{
+        font-size: 1em;
     }
     a{
         font-size: 1.4em;
         border: none;
-        display: block;
+        display: inline;
     }
     p{
         text-indent: 0;
@@ -63,7 +66,10 @@ export default {
     .line{
         margin: 2% 0;
     }
-    
+    img{
+        margin-top: 5%;
+    }
+  
 }
 
 </style>

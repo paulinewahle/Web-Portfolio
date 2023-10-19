@@ -146,11 +146,46 @@ export default {
 <template>
 
   <div class="responsive">
+
+  <router-link to="/work" class="work-link">BACK</router-link>
   <h1>{{casename}}</h1> 
   <p>{{casetext}}</p>
   
-    <div id="responsive-container">
-      
+    <div class="responsive">
+      <video  autoplay loop muted>
+        <source :src="content1">
+      </video>
+      <img :src="content1" alt="">
+
+      <video  autoplay loop muted>
+        <source :src="content2">
+      </video>
+      <img :src="content2" alt="">
+
+      <video  autoplay loop muted>
+        <source :src="content3">
+      </video>
+      <img :src="content3" alt="">
+
+      <video  autoplay loop muted>
+        <source :src="content4">
+      </video>
+      <img :src="content4" alt="">
+
+      <video  autoplay loop muted>
+        <source :src="content5">
+      </video>
+      <img :src="content5" alt="">
+
+      <video  autoplay loop muted>
+        <source :src="content6">
+      </video>
+      <img :src="content6" alt="">
+
+      <video  autoplay loop muted>
+        <source :src="content7">
+      </video>
+      <img :src="content7" alt="">
     </div>
   </div>
   <div class="desktop">
@@ -161,7 +196,6 @@ export default {
         <p>{{casetext}}</p>
         <a :href="caselink" download></a>
 
-        
         <Transition :name="this.currentTransition">
         <div v-if="show1" class="page" id="page1">
           <video  autoplay loop muted>
@@ -234,7 +268,14 @@ export default {
 
 <style scoped>
 @media (min-width: 200px) {
-
+  img, video{
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  h1{
+    margin-top: 10vh;
+  }
 }
 @media (min-width: 992px) {
   h1, p{
