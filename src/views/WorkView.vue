@@ -177,7 +177,6 @@ export default {
     margin-top: 5vh;
     font-size: 1.2rem;
     width: 20vw;
-    text-indent: 0;
 
   }
   #case-img{

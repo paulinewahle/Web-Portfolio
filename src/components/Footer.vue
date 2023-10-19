@@ -15,11 +15,17 @@ export default {
 <template>
 
     <footer class="responsive">
-        <div>
-            <h3> Pauline Wahle</h3>
+      
+            <h2> Pauline Wahle</h2>
+        <div class="line"></div>
+            <RouterLink to="/about"> About </RouterLink>
+        <div class="line"></div>
+            <RouterLink to="/work"> Work </RouterLink>
+        <div class="line"></div>
             <p>Get in touch</p>
             <a target="_blank" to="/work"> pauline.wahle@web.de </a>
-        </div>
+        <div class="line"></div>
+
         <div>
             <a target="_blank" href="https://linkedin.com/in/paulinewahle"> LinkedIn </a>
             <a target="_blank" href="https://www.behance.net/paulinewahle1"> Dribble </a>
@@ -40,22 +46,22 @@ export default {
     footer{
         height: 25vh;
         width: 100%;
-        display: flex;
         justify-content: space-between;
         padding-top: 10vh;
     }
+    h2, a, p{
+        margin: 0 5%;
+    }
     a{
-        font-size: .7em;
+        font-size: 1.4em;
         border: none;
         display: block;
     }
-    h3{
-        font-size: 1em;
-        font-family: 'Articulat Regular', sans-serif;
-    }
     p{
-        text-indent: none;
-        margin: 10% 0 0 0;
+        text-indent: 0;
+    }
+    .line{
+        margin: 2% 0;
     }
     
 }

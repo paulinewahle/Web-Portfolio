@@ -72,7 +72,7 @@ export default{
       </div>
       
     </main>
-    
+
     <div id="work">
       <WorkView />
     </div>
@@ -131,6 +131,9 @@ export default{
   }
   main{
     max-height: 200vh;
+  }
+  h1{
+    font-size: 3rem;;
   }
   .home-view{
     height: 100vh;
