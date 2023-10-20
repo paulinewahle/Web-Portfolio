@@ -153,7 +153,6 @@ export default {
   }
 }
 @media (min-width: 992px) {
-  
   #page-wrapper{
     width: 90vw;
     height: 100vh;
@@ -169,6 +168,10 @@ export default {
     font-size: .5em;
     width: 40%;
     text-align: end;
+    margin:0;
+  }
+  h2{
+    margin:0;
   }
   .work-link{
     height: 40%;
@@ -203,8 +206,9 @@ export default {
     justify-content: start;
   }
   img{
-    display: inline;
+    display: inline-block;
     padding: 0 0 0 20%;
+    width: 2rem;
   }
   #case-text{
     margin-top: 5vh;

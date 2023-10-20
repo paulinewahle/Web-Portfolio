@@ -151,8 +151,9 @@ export default{
     position: fixed;
     text-align: left;
     height: 20vh;
+    width: auto;
     left: 5vw;
-    top: 40vh;
+    top: 30vh;
   }
   #scrollbutton{
     position: fixed;

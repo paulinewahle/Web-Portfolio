@@ -271,7 +271,6 @@ export default {
   img, video{
     width: 100%;
     height: auto;
-    margin: 0;
   }
   h1{
     margin-top: 10vh;
@@ -282,10 +281,12 @@ export default {
     position: absolute;
     left: 5vw;
     z-index: 100;
+    margin: 0;
   }
   h1{
     top: 40vh;
     left: 0;
+    margin: 0;
   }
   p{
     top: 55vh;
