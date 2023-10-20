@@ -161,7 +161,6 @@ export default {
     z-index: 3;
     padding: 20vh 0vw;
     box-sizing: border-box;
-    border: 1px solid;
     position: absolute;
   }
   p{
@@ -192,7 +191,7 @@ export default {
   #descr{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   #case-links, #more-links{
     padding: 0 0 0 5%;
@@ -224,6 +223,9 @@ export default {
     background-repeat: no-repeat;
     transition: all .5s ease;
     filter: blur(10px);
+  }
+  #case-title{
+    margin-top: 50%;
   }
 
  

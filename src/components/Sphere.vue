@@ -19,7 +19,7 @@ export default{
         
         //Loading
         const textureLoader = new THREE.TextureLoader();
-        const normalMap = new URL('../assets/textures/Blue_Ice_001_NORM.jpg', import.meta.url);
+        const normalMap = new URL('../assets/textures/Lava.png', import.meta.url);
         const normalTexture = textureLoader.load(normalMap);
 
         const hdrTextureURL = new URL('../assets/surfaces/swirl.hdr', import.meta.url);
@@ -42,15 +42,15 @@ export default{
             //emissive: new THREE.Color(0x707070),
             metalness: 1,
             roughness: 0,
-            envMapIntensity: 0.9,
+            envMapIntensity: 0.5,
             clearcoat: 1,
-            clearcoatRoughness: 0,
+            clearcoatRoughness: 1,
             transparent: true,
-            transmission: .5,
+            transmission: .6,
             opacity: 1,
-            reflectivity: 0.1,
+            //reflectivity: 0.1,
             ior: 0.9,
-            normalMap: normalTexture
+            normalMap: normalTexture,
         })
 
         // Mesh
@@ -178,7 +178,7 @@ export default{
 
         gsap.to(sphere.rotation, {
             scrollTrigger: {
-            trigger: ".start-view",
+            trigger: "body",
             start: "top top",
             end: "bottom top",
             duration: 2.5, 
@@ -190,7 +190,7 @@ export default{
         });
         gsap.to(sphere.material, {
             scrollTrigger: {
-            trigger: ".start-view",
+            trigger: "body",
             start: "top top",
             end: "bottom top",
             duration: 2.5, 
@@ -202,7 +202,7 @@ export default{
         });
         gsap.to(".webgl", {
             scrollTrigger: {
-            trigger: ".start-view",
+            trigger: "body",
             start: "top top",
             end: "center top",
             duration: 2.5, 

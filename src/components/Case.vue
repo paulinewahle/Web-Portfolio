@@ -4,6 +4,8 @@ export default {
     props: {
         casename: String,
         casetext: String,
+        caselink: String,
+        caselinktext: String,
         content1: String,
         content2: String,
         content3: String,
@@ -20,119 +22,115 @@ export default {
   },
   data() {
     return {
-      show1: true,
-      show2: false,
-      show3: false,
-      show4: false,
-      show5: false,
-      show6: false,
-      show7: false,
+      page1: true,
+      page2: false,
+      page3: false,
+      page4: false,
+      page5: false,
+      page6: false,
+      page7: false,
       currentTransition: '',
     }
   },
   mounted(){
 
+    console.log(this.page1)
+
     document.querySelector("#page-container").style.display = "block";
     document.querySelector("#page-container").style.opacity = "1";
+    
 
     const hideArrowCursor = () => {
       document.querySelector(".arrow-cursor").style.opacity = "0";
       document.querySelector(".cursor").style.scale = "1";
     }
-    const showArrowCursor = () => {
+    const pageArrowCursor = () => {
       document.querySelector(".arrow-cursor").style.opacity = "1";
       document.querySelector(".cursor").style.scale = "0";
     }
 
-    document.querySelector("#page-container").addEventListener("mouseover", showArrowCursor);
+    document.querySelector("#page-container").addEventListener("mouseover", pageArrowCursor);
     document.querySelector("#page-container").addEventListener("mouseleave", hideArrowCursor);
     document.querySelector("#page-numbers").addEventListener("mouseover", hideArrowCursor);
-    document.querySelector("#page-numbers").addEventListener("mouseleave", showArrowCursor);
-    
+    document.querySelector("#page-numbers").addEventListener("mouseleave", pageArrowCursor);
+
 
     const mouseDown = (e) => {
         let x = e.clientX;
         let screenHalf = window.screen.width/2
         if(x < screenHalf){
           this.currentTransition = 'left';
-          if(this.show1 === true){
-            this.show1 = false,
-            this.show7 = true,
-            document.querySelector('#page-number-1').classList.add("active-page-btn");
+          if(this.page1 === true){
+            this.page1 = false,
+            this.page7 = true
           }
-          else if(this.show2 === true){
-            this.show2 = false,
-            this.show1 = true,
-            document.querySelector('#page-number-2').classList.add("active-page-btn");
+          else if(this.page2 === true){
+            this.page2 = false,
+            this.page1 = true
           }
-          else if(this.show3 === true){
-            this.show3 = false,
-            this.show2 = true,
-            document.querySelector('#page-number-3').classList.add("active-page-btn");
+          else if(this.page3 === true){
+            this.page3 = false,
+            this.page2 = true
           }
-          else if(this.show4 === true){
-            this.show4 = false,
-            this.show3 = true,
-            document.querySelector('#page-number-4').classList.add("active-page-btn");
+          else if(this.page4 === true){
+            this.page4 = false,
+            this.page3 = true
           }
-          else if(this.show5 === true){
-            this.show5 = false,
-            this.show4 = true,
-            document.querySelector('#page-number-5').classList.add("active-page-btn");
+          else if(this.page5 === true){
+            this.page5 = false,
+            this.page4 = true
           }
-          else if(this.show6 === true){
-            this.show6 = false,
-            this.show5 = true,
-            document.querySelector('#page-number-6').classList.add("active-page-btn");
+          else if(this.page6 === true){
+            this.page6 = false,
+            this.page5 = true
           }
-          else if(this.show7 === true){
-            this.show7 = false,
-            this.show6 = true,
-            document.querySelector('#page-number-7').classList.add("active-page-btn");
+          else if(this.page7 === true){
+            this.page7 = false,
+            this.page6 = true
           }
         }
         else if(x > screenHalf){
           this.currentTransition = 'right';
-          if(this.show1 === true){
-            this.show1 = false,
-            this.show2 = true,
-            document.querySelector('#page-number-1').classList.remove("active-page-btn");
+          if(this.page1 === true){
+            this.page1 = false,
+            this.page2 = true
           }
-          else if(this.show2 === true){
-            this.show2 = false,
-            this.show3 = true,
-            document.querySelector('#page-number-2').classList.remove("active-page-btn");
+          else if(this.page2 === true){
+            this.page2 = false,
+            this.page3 = true
           }
-          else if(this.show3 === true){
-            this.show3 = false,
-            this.show4 = true,
-            document.querySelector('#page-number-3').classList.remove("active-page-btn");
+          else if(this.page3 === true){
+            this.page3 = false,
+            this.page4 = true
           }
-          else if(this.show4 === true){
-            this.show4 = false,
-            this.show5 = true,
-            document.querySelector('#page-number-4').classList.remove("active-page-btn");
+          else if(this.page4 === true){
+            this.page4 = false,
+            this.page5 = true
           }
-          else if(this.show5 === true){
-            this.show5 = false,
-            this.show6 = true,
-            document.querySelector('#page-number-5').classList.remove("active-page-btn");
+          else if(this.page5 === true){
+            this.page5 = false,
+            this.page6 = true
           }
-          else if(this.show6 === true){
-            this.show6 = false,
-            this.show7 = true,
-            document.querySelector('#page-number-6').classList.remove("active-page-btn");
+          else if(this.page6 === true){
+            this.page6 = false,
+            this.page7 = true
           }
-          else if(this.show7 === true){
-            this.show7 = false,
-            this.show1 = true,
-            document.querySelector('#page-number-7').classList.remove("active-page-btn");
+          else if(this.page7 === true){
+            this.page7 = false,
+            this.page1 = true
           }
         }           
     }
     
     const pageContainer = document.getElementById("page-container");
     pageContainer.addEventListener("click", mouseDown);
+
+    if (this.page1 === true ){
+      document.querySelector('#page-number-1').classList.add("active-page-btn");
+    }
+    else if(this.page1 === false){
+      document.querySelector('#page-number-2').classList.remove("active-page-btn");
+    }
 
   },
   methods:{
@@ -147,10 +145,12 @@ export default {
 
   <div class="responsive">
 
-  <router-link to="/work" class="work-link">BACK</router-link>
+  
   <h1>{{casename}}</h1> 
   <p>{{casetext}}</p>
-  
+  <a :href="caselink" download> {{caselinktext}}</a>
+  <router-link to="/work" class="work-link">BACK</router-link>
+
     <div class="responsive">
       <video  autoplay loop muted>
         <source :src="content1">
@@ -192,12 +192,15 @@ export default {
     <router-link to="/home#work" class="back"> Back to selected work</router-link>
     
     <div id="page-container">
+      <div id="descr">
         <h1>{{casename}}</h1>
         <p>{{casetext}}</p>
-        <a :href="caselink" download></a>
+        <a :href="caselink" download> {{caselinktext}} </a>
+      </div>
+        
 
         <Transition :name="this.currentTransition">
-        <div v-if="show1" class="page" id="page1">
+        <div v-if="page1" class="page" id="page1">
           <video  autoplay loop muted>
             <source :src="content1">
           </video>
@@ -205,7 +208,7 @@ export default {
         </div>
         </Transition>
         <Transition :name="this.currentTransition">
-        <div v-if="show2" class="page" id="page2">
+        <div v-if="page2" class="page" id="page2">
           <video  autoplay loop muted>
             <source :src="content2">
           </video>
@@ -213,7 +216,7 @@ export default {
         </div>
         </Transition>
         <Transition  :name="this.currentTransition">
-        <div v-if="show3" class="page" id="page3">
+        <div v-if="page3" class="page" id="page3">
           <video  autoplay loop muted>
             <source :src="content3">
           </video>
@@ -221,7 +224,7 @@ export default {
         </div>
         </Transition>
         <Transition :name="this.currentTransition">
-        <div v-if="show4" class="page" id="page4">
+        <div v-if="page4" class="page" id="page4">
           <video  autoplay loop muted>
             <source :src="content4">
           </video>
@@ -229,7 +232,7 @@ export default {
         </div>
         </Transition>
         <Transition :name="currentTransition">
-        <div v-if="show5" class="page" id="page5">
+        <div v-if="page5" class="page" id="page5">
           <video  autoplay loop muted>
             <source :src="content5">
           </video>
@@ -237,7 +240,7 @@ export default {
         </div>
         </Transition>
         <Transition :name="this.currentTransition">
-        <div v-if="show6" class="page" id="page6">
+        <div v-if="page6" class="page" id="page6">
           <video  autoplay loop muted>
             <source :src="content6">
           </video>
@@ -245,7 +248,7 @@ export default {
         </div>
         </Transition>
         <Transition :name="this.currentTransition">
-        <div v-if="show7" class="page" id="page7">
+        <div v-if="page7" class="page" id="page7">
           <video  autoplay loop muted>
             <source :src="content7">
           </video>
@@ -254,13 +257,13 @@ export default {
         </Transition>
     </div>
     <div id="page-numbers">
-      <button @click="show2 = false; show3 = false; show4 = false; show5 = false; show6 = false; show7 = false; show1 = true;" id="page-number-1">1</button>
-      <button @click="show1 = false; show3 = false; show4 = false; show5 = false; show6 = false; show7 = false; show2 = true;" id="page-number-2">2</button>
-      <button @click="show1 = false; show2 = false; show4 = false; show5 = false; show6 = false; show7 = false; show3 = true;" id="page-number-3">3</button>
-      <button @click="show1 = false; show2 = false; show3 = false; show5 = false; show6 = false; show7 = false; show4 = true;" id="page-number-4">4</button>
-      <button @click="show1 = false; show2 = false; show3 = false; show4 = false; show6 = false; show7 = false; show5 = true;" id="page-number-5">5</button>
-      <button @click="show1 = false; show2 = false; show3 = false; show4 = false; show5 = false; show7 = false; show6 = true;" id="page-number-6">6</button>
-      <button @click="show1 = false; show2 = false; show3 = false; show4 = false; show5 = false; show6 = false; show7 = true;" id="page-number-7">7</button>
+      <button @click="page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page1 = true;" id="page-number-1">1</button>
+      <button @click="page1 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page2 = true;" id="page-number-2">2</button>
+      <button @click="page1 = false; page2 = false; page4 = false; page5 = false; page6 = false; page7 = false; page3 = true;" id="page-number-3">3</button>
+      <button @click="page1 = false; page2 = false; page3 = false; page5 = false; page6 = false; page7 = false; page4 = true;" id="page-number-4">4</button>
+      <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page6 = false; page7 = false; page5 = true;" id="page-number-5">5</button>
+      <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page5 = false; page7 = false; page6 = true;" id="page-number-6">6</button>
+      <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = true;" id="page-number-7">7</button>
     </div>
   </div>
 
@@ -277,23 +280,22 @@ export default {
   }
 }
 @media (min-width: 992px) {
-  h1, p{
+
+  #descr{
     position: absolute;
-    left: 5vw;
     z-index: 100;
     margin: 0;
+    top: 40vh;
+    width: 20vw;
   }
   h1{
-    top: 40vh;
-    left: 0;
-    margin: 0;
+    margin: 0 0 5vh 0;
   }
-  p{
-    top: 55vh;
-    left: 0;
-    width: 20%;
-    text-indent: none;
+  a{
+    font-style: italic;
+    text-decoration: underline;
   }
+  
   #page-container{
     /* width: 90vw;
     height: 90vh; */

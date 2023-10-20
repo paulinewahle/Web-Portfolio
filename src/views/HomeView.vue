@@ -39,7 +39,7 @@ export default{
       let scrollTop = window.scrollY;
       let docHeight = document.body.offsetHeight;
       let scrollPercent = scrollTop / docHeight;
-      let scrollPercentRounded = Math.round(scrollPercent * 83);
+      let scrollPercentRounded = Math.round(scrollPercent * 123);
       percentLabel.innerHTML = scrollPercentRounded;
     });
   }
@@ -83,11 +83,11 @@ export default{
 
 <style scoped>
 @media (min-width: 200px) {
+
   #home-title {
     width: 100%;
     margin: 10vh 0 0 0;
     position: relative;
-
   }
   .home-view{
     height: 80vh;
@@ -128,9 +128,6 @@ export default{
   }
 }
 @media (min-width: 992px) {
-  body{
-    /*padding: 0 !important;*/
-  }
   main{
     max-height: 200vh;
   }
@@ -138,14 +135,15 @@ export default{
     font-size: 3rem;;
   }
   .home-view{
-    height: 100vh;
-    width: 100vw;
+    height: 60vh;
+    width: 90vw;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
   } 
   #home-title{
     position: fixed;

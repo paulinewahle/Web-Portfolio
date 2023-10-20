@@ -5,9 +5,6 @@ export default {
     props:{
       links: Array,
     },
-    data(){
-        navActive: false
-    },
     mounted(){
       this.links.push(document.querySelector('.work'))
       this.links.push(document.querySelector('.about'))

@@ -26,7 +26,6 @@ export default{
             document.querySelector(".arrow-cursor").classList.remove("right");
         }
         else if(e.screenX > leftScreen){
-            console.log("right")
             document.querySelector(".arrow-cursor").classList.add("right");
             document.querySelector(".arrow-cursor").classList.remove("left");
         }
