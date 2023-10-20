@@ -65,7 +65,7 @@ export default {
             <span />
             <span />
         </div>
-        <RouterLink id="header-title" to="/home">P - W</RouterLink>
+        <RouterLink id="header-title" to="/home" @click="responsiveNav()"> P - W </RouterLink>
     </header>
 
     <div id="responsive-nav" class="responsive">

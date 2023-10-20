@@ -33,19 +33,18 @@ export default {
 <template>
 
   <main class="responsive">
-      
     
-    <div id="wrapper">
-      <img src="src\assets\img\profile.jpg" alt="">
+     
       <div>
+        <img src="src\assets\img\profile.jpg" alt="">
         <p id="about-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        
-        
+
         <p>
         About this site<br> 
         This is a Vue.js project designed and developed by ©Pauline Wahle, 2023. <br>No content is used for commercial purposes.
     </p>
     <i ><a :style="{ 'font-size': '.7rem' }" target="_blank" href="https://github.com/paulinewahle/WebPortfolio"> View the code on Github </a></i>
+
     <div id="wrapper">
           <div>
             <h2> Design </h2>
@@ -63,7 +62,7 @@ export default {
         </div>
       </div>
       
-    </div>
+    
 
   </main>
 
@@ -129,12 +128,12 @@ export default {
 @media (min-width: 200px) {
   #wrapper{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 20%;
   }
   img{
     height: 100%;
-    width: 30%;
+    width: 40%;
     margin: 5%;
   }
   a{

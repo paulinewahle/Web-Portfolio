@@ -47,15 +47,14 @@ export default{
 </script>
 
 <template>
-  
-  
+
     <main>
       <div class="home-view start-view" id="landing">
         <h1 id="home-title">
           UI/UX <br> Design
-          <br> <br>
+          <br class="desktop"> <br>
           <div class="line"> </div>
-          <br> 
+          <br class="desktop"> 
           Frontend <br> Code
         </h1>
           <a href="#work" class="desktop" id="scrollbutton">Scroll to continue . . .</a>
@@ -73,7 +72,7 @@ export default{
       
     </main>
 
-    <div id="work">
+    <div id="work" class="desktop">
       <WorkView />
     </div>
     
@@ -84,10 +83,12 @@ export default{
 
 <style scoped>
 @media (min-width: 200px) {
-  /* body{
-    max-height: 100vh;
-  } */
- 
+  #home-title {
+    width: 100%;
+    margin: 10vh 0 0 0;
+    position: relative;
+
+  }
   .home-view{
     height: 80vh;
     width: 80vw;
@@ -108,6 +109,7 @@ export default{
   h1{
     position: relative;
     font-weight: 100;
+    z-index: 0;
   }
   #entrance-link{
     width: 80vw;
@@ -127,7 +129,7 @@ export default{
 }
 @media (min-width: 992px) {
   body{
-    padding: 0 !important;
+    /*padding: 0 !important;*/
   }
   main{
     max-height: 200vh;
