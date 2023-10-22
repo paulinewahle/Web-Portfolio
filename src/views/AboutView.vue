@@ -48,13 +48,13 @@ export default {
     <div id="wrapper">
           <div>
             <h2> Design </h2>
-            <a target="_blank"> Behance </a>
-            <a target="_blank"> Dribble </a>
-            <a target="_blank"> Pinterest </a>
+            <a href="https://www.behance.net/paulinewahle1" target="_blank"> Behance </a>
+            <a href="https://dribbble.com/PaulineWahle" target="_blank"> Dribble </a>
+            <a href="https://www.pinterest.de/PaulineWahle/" target="_blank"> Pinterest </a>
           </div>
           <div>
             <h2> Code </h2>
-            <a target="_blank" href="https://codepen.io/PaulineWahle"> Github </a>
+            <a target="_blank" href="https://github.com/paulinewahle"> Github </a>
             <a target="_blank" href="https://codepen.io/PaulineWahle"> Codepen </a>
             <h2> Experience </h2>
             <a target="_blank" href="https://www.linkedin.com/in/paulinewahle/"> LinkedIn </a>
@@ -87,16 +87,16 @@ export default {
         <div class="link-container">
           <h2> Design </h2>
           <div class="so-me-link">
-            <a target="_blank" class="about-link"><p> Behance <p class="responsive arrow">&#8227;</p> </p></a>
-            <a target="_blank" class="about-link"><p> Dribble <p class="responsive arrow">&#8227;</p> </p></a>
-            <a target="_blank" class="about-link"><p> Pinterest <p class="responsive arrow">&#8227;</p> </p></a>
+            <a href="https://www.behance.net/paulinewahle1" target="_blank" class="about-link"><p> Behance <p class="responsive arrow">&#8227;</p> </p></a>
+            <a href="https://dribbble.com/PaulineWahle" target="_blank" class="about-link"><p> Dribble <p class="responsive arrow">&#8227;</p> </p></a>
+            <a href="https://www.pinterest.de/PaulineWahle/" target="_blank" class="about-link"><p> Pinterest <p class="responsive arrow">&#8227;</p> </p></a>
           </div>
         </div>
         <div class="line"></div>
         <div  class="link-container">
           <h2> Code </h2>
           <div class="so-me-link">
-            <a target="_blank" href="https://codepen.io/PaulineWahle" class="about-link" @mouseover="width3 = '80%'" @mouseleave="width3 = '40%'"><p> Github <p class="responsive arrow">&#8227;</p> </p></a>
+            <a target="_blank" href="https://github.com/paulinewahle" class="about-link" ><p> Github <p class="responsive arrow">&#8227;</p> </p></a>
             <a target="_blank" href="https://codepen.io/PaulineWahle" class="about-link"><p> CodePen<p class="responsive arrow">&#8227;</p> </p></a>
           </div>
         </div>
@@ -114,7 +114,7 @@ export default {
         <div  class="link-container">
           <h2> Get In Touch<span class="responsive">:</span></h2>
           <div class="so-me-link">
-            <a target="_blank" class="about-link"><p>Pauline.wahle@web.de<p class="responsive arrow">&#8227;</p> </p></a>
+            <a target="_blank" href="mailto:pauline.wahle@web.de" class="about-link"><p>Pauline.wahle@web.de</p></a>
           </div>
         </div>
       </div>

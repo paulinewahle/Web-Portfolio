@@ -285,7 +285,7 @@ export default {
     position: absolute;
     z-index: 100;
     margin: 0;
-    top: 40vh;
+    top: 30vh;
     width: 20vw;
   }
   h1{

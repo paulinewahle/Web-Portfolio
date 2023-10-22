@@ -76,7 +76,7 @@ export default{
       <WorkView />
     </div>
     
-    <Sphere />
+    <!-- <Sphere /> -->
   
 
 </template>
