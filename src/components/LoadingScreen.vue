@@ -9,14 +9,14 @@ export default {
   mounted() {
     let id = 0
     
-    const loadingInterval = setInterval(displayIntroItem, 1900)
+    const loadingInterval = setInterval(displayIntroItem, 1500)
     function displayIntroItem() {
       id++
       let item = document.getElementById("intro-loop-item"+id)
       item.style.display = "block"
       setTimeout(() => {
         item.style.display = "none"
-      }, 1900)
+      }, 1500)
 
       if (id>=6){
       clearInterval(loadingInterval)
@@ -31,25 +31,25 @@ export default {
 </script>
 
 <template>
-    <div id="loading">
+    <div id="loading" class="desktop">
       <ul>
         <li class="intro-loop-item" id="intro-loop-item1">
-          <span class="a">Design</span> <span class="b">Concepts</span>
+          Design Concepts
         </li>
         <li class="intro-loop-item" id="intro-loop-item2">
-          <span class="b">Creative</span> <span class="a">Development</span>
+          User Experience
         </li>
         <li class="intro-loop-item" id="intro-loop-item3">
-          <span class="a">Web</span> <span class="b">Design</span>
+          Web Design
         </li>
         <li class="intro-loop-item" id="intro-loop-item4">
-          <span class="b">User</span> <span class="a">Experience</span>
+          Frontend Development
         </li>
         <li class="intro-loop-item" id="intro-loop-item5">
-          <span class="a">Graphic</span> <span class="b">Design</span>
+          Graphic Design
         </li>
         <li class="intro-loop-item" id="intro-loop-item6">
-          <span class="b">Digital</span> <span class="a">Interfaces</span>
+          Digital Interfaces
         </li>
       </ul>
     </div>
@@ -57,6 +57,10 @@ export default {
   
 <style scoped>
 @media (min-width: 200px) {
+  
+}
+
+@media (min-width: 992px) {
   #loading {
     position: fixed;
     z-index: 10000000;
@@ -82,6 +86,10 @@ export default {
     position: relative;
     animation: fade 2s;
   }
+  li{
+    font-family: "serif", serif;
+    src: url('./fonts/Mediga.otf')  format('opentype');
+  }
   @keyframes fade{
     0%   {
       filter: blur(5px);
@@ -96,20 +104,5 @@ export default {
       opacity: 0;
     }
   }
-  .a{
-    font-family: "title";
-    src: url('/src/assets/fonts/Ade-Display.otf')  format('opentype');
-    text-transform: uppercase;
-
-  }
-  .b{
-    font-family: "title";
-    src: url('/src/assets/fonts/Ade-Display.otf')  format('opentype');
-    text-transform: uppercase;
-
-  }
-}
-
-@media (min-width: 992px) {
 }
   </style>

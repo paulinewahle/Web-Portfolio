@@ -36,6 +36,7 @@ export default {
     
      
       <div>
+        <h1>About</h1>
         <img src="src\assets\img\profile.jpg" alt="">
         <p id="about-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
@@ -67,7 +68,9 @@ export default {
   </main>
 
   <main class="desktop">
-    <div class="section" :style="{ 'justify-content': 'flex-end' }"> 
+    <div class="section" :style="{ 'justify-content': 'space-between' }"> 
+      <div class="line"></div>
+      <h1>About</h1>
       <div id="about-site">
         <p :style="{ 'font-size': '.7rem' }">
         About this site<br> 
@@ -167,10 +170,14 @@ export default {
     padding: 0 5%;
     height: 5rem;
   }
+  h2{
+    margin: 0;
+  }
   .so-me-link{
     display: flex;
     width: 50%;
     justify-content: flex-end;
+    border: 1px solid;
   }
   a{
     margin: 0 5%;
@@ -184,13 +191,13 @@ export default {
   }
   #about{
     height: 100%;
-    padding: 0 0 0 5%;
+    padding: 0 0 0 0%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
   #about-text{
-    padding: 0 20% 0 0;
+    padding: 0 10% 0 0;
   }
   #about-site{
     width: 50%;
