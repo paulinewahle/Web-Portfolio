@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Serif";
-    src: url('./fonts/Mediga.otf')  format('opentype');
+    src: url('./fonts/Butler/Butler_Light.otf')  format('opentype');
+    /* src: url('./fonts/Mediga.otf')  format('opentype'); */
     /*src: url('./fonts/ReciaSerifDisplay-Bold.ttf')  format('opentype');*/
 }
 @font-face {
@@ -168,7 +169,7 @@
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
     }
    
 }

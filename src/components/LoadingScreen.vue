@@ -86,7 +86,7 @@ export default {
   }
   li{
     font-family: "serif", serif;
-    src: url('./fonts/Mediga.otf')  format('opentype');
+    src: url('./fonts/Butler/Butler_Light.otf')  format('opentype');
   }
   @keyframes fade{
     0%   {
