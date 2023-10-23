@@ -34,8 +34,6 @@ export default {
   },
   mounted(){
 
-    console.log(this.page1)
-
     document.querySelector("#page-container").style.display = "block";
     document.querySelector("#page-container").style.opacity = "1";
     
@@ -119,23 +117,21 @@ export default {
             this.page7 = false,
             this.page1 = true
           }
-        }           
+        }    
+             
     }
     
     const pageContainer = document.getElementById("page-container");
     pageContainer.addEventListener("click", mouseDown);
 
-    if (this.page1 === true ){
-      document.querySelector('#page-number-1').classList.add("active-page-btn");
-    }
-    else if(this.page1 === false){
-      document.querySelector('#page-number-2').classList.remove("active-page-btn");
-    }
+    
+    
+    
 
   },
   methods:{
-
-  }
+    }
+    
   
 }
 
@@ -257,13 +253,13 @@ export default {
         </Transition>
     </div>
     <div id="page-numbers">
-      <button @click="page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page1 = true;" id="page-number-1">1</button>
-      <button @click="page1 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page2 = true;" id="page-number-2">2</button>
-      <button @click="page1 = false; page2 = false; page4 = false; page5 = false; page6 = false; page7 = false; page3 = true;" id="page-number-3">3</button>
-      <button @click="page1 = false; page2 = false; page3 = false; page5 = false; page6 = false; page7 = false; page4 = true;" id="page-number-4">4</button>
-      <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page6 = false; page7 = false; page5 = true;" id="page-number-5">5</button>
-      <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page5 = false; page7 = false; page6 = true;" id="page-number-6">6</button>
-      <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = true;" id="page-number-7">7</button>
+      <button id="page-number-1" @click="this.page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page1 = true;">1</button>
+      <button id="page-number-2" @click="page1 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page2 = true;">2</button>
+      <button id="page-number-3" @click="page1 = false; page2 = false; page4 = false; page5 = false; page6 = false; page7 = false; page3 = true;">3</button>
+      <button id="page-number-4" @click="page1 = false; page2 = false; page3 = false; page5 = false; page6 = false; page7 = false; page4 = true;">4</button>
+      <button id="page-number-5" @click="page1 = false; page2 = false; page3 = false; page4 = false; page6 = false; page7 = false; page5 = true;">5</button>
+      <button id="page-number-6" @click="page1 = false; page2 = false; page3 = false; page4 = false; page5 = false; page7 = false; page6 = true;">6</button>
+      <button id="page-number-7" @click="page1 = false; page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = true;">7</button>
     </div>
   </div>
 
@@ -359,6 +355,7 @@ export default {
     top: 92vh;
     text-decoration: underline;
   }
+
   
 
 }
