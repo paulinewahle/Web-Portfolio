@@ -9,13 +9,13 @@ export default{
     },
     data(){
         return {
-            //isLoading: true,
+            isLoading: true,
         }
     },
     mounted(){
         setTimeout(() => {
         this.isLoading = false
-      }, 15000)
+      }, 12000)
     }
 }
 </script>

@@ -46,7 +46,7 @@ export default{
             clearcoat: 1,
             clearcoatRoughness: 1,
             transparent: true,
-            transmission: .6,
+            //transmission: .6,
             opacity: 1,
             //reflectivity: 0.1,
             ior: 0.9,

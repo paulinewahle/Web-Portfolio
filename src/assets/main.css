@@ -44,12 +44,13 @@
   }
   h3 {
     font-family: "Articulat Thin", sans-serif;
-    font-weight: bold;
+    font-weight: 200;
     margin: 0;
     text-transform: uppercase;
   }
   h4 {
     font-family: "Articulat Thin", sans-serif;
+    font-weight: 200;
   }
   a {
     text-decoration: none;

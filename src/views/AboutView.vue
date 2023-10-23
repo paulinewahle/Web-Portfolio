@@ -36,6 +36,7 @@ export default {
     
      
       <div>
+        <h1>About</h1>
         <img src="src\assets\img\profile.jpg" alt="">
         <p id="about-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
@@ -48,13 +49,13 @@ export default {
     <div id="wrapper">
           <div>
             <h2> Design </h2>
-            <a target="_blank"> Behance </a>
-            <a target="_blank"> Dribble </a>
-            <a target="_blank"> Pinterest </a>
+            <a href="https://www.behance.net/paulinewahle1" target="_blank"> Behance </a>
+            <a href="https://dribbble.com/PaulineWahle" target="_blank"> Dribble </a>
+            <a href="https://www.pinterest.de/PaulineWahle/" target="_blank"> Pinterest </a>
           </div>
           <div>
             <h2> Code </h2>
-            <a target="_blank" href="https://codepen.io/PaulineWahle"> Github </a>
+            <a target="_blank" href="https://github.com/paulinewahle"> Github </a>
             <a target="_blank" href="https://codepen.io/PaulineWahle"> Codepen </a>
             <h2> Experience </h2>
             <a target="_blank" href="https://www.linkedin.com/in/paulinewahle/"> LinkedIn </a>
@@ -67,7 +68,9 @@ export default {
   </main>
 
   <main class="desktop">
-    <div class="section" :style="{ 'justify-content': 'flex-end' }"> 
+    <div class="section" :style="{ 'justify-content': 'space-between' }"> 
+      <div class="line"></div>
+      <h1>About</h1>
       <div id="about-site">
         <p :style="{ 'font-size': '.7rem' }">
         About this site<br> 
@@ -87,16 +90,16 @@ export default {
         <div class="link-container">
           <h2> Design </h2>
           <div class="so-me-link">
-            <a target="_blank" class="about-link"><p> Behance <p class="responsive arrow">&#8227;</p> </p></a>
-            <a target="_blank" class="about-link"><p> Dribble <p class="responsive arrow">&#8227;</p> </p></a>
-            <a target="_blank" class="about-link"><p> Pinterest <p class="responsive arrow">&#8227;</p> </p></a>
+            <a href="https://www.behance.net/paulinewahle1" target="_blank" class="about-link"><p> Behance <p class="responsive arrow">&#8227;</p> </p></a>
+            <a href="https://dribbble.com/PaulineWahle" target="_blank" class="about-link"><p> Dribble <p class="responsive arrow">&#8227;</p> </p></a>
+            <a href="https://www.pinterest.de/PaulineWahle/" target="_blank" class="about-link"><p> Pinterest <p class="responsive arrow">&#8227;</p> </p></a>
           </div>
         </div>
         <div class="line"></div>
         <div  class="link-container">
           <h2> Code </h2>
           <div class="so-me-link">
-            <a target="_blank" href="https://codepen.io/PaulineWahle" class="about-link" @mouseover="width3 = '80%'" @mouseleave="width3 = '40%'"><p> Github <p class="responsive arrow">&#8227;</p> </p></a>
+            <a target="_blank" href="https://github.com/paulinewahle" class="about-link" ><p> Github <p class="responsive arrow">&#8227;</p> </p></a>
             <a target="_blank" href="https://codepen.io/PaulineWahle" class="about-link"><p> CodePen<p class="responsive arrow">&#8227;</p> </p></a>
           </div>
         </div>
@@ -114,7 +117,7 @@ export default {
         <div  class="link-container">
           <h2> Get In Touch<span class="responsive">:</span></h2>
           <div class="so-me-link">
-            <a target="_blank" class="about-link"><p>Pauline.wahle@web.de<p class="responsive arrow">&#8227;</p> </p></a>
+            <a target="_blank" href="mailto:pauline.wahle@web.de" class="about-link"><p>Pauline.wahle@web.de</p></a>
           </div>
         </div>
       </div>
@@ -167,10 +170,14 @@ export default {
     padding: 0 5%;
     height: 5rem;
   }
+  h2{
+    margin: 0;
+  }
   .so-me-link{
     display: flex;
     width: 50%;
     justify-content: flex-end;
+    border: 1px solid;
   }
   a{
     margin: 0 5%;
@@ -184,13 +191,13 @@ export default {
   }
   #about{
     height: 100%;
-    padding: 0 0 0 5%;
+    padding: 0 0 0 0%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
   #about-text{
-    padding: 0 20% 0 0;
+    padding: 0 10% 0 0;
   }
   #about-site{
     width: 50%;

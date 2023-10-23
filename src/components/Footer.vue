@@ -18,7 +18,7 @@
 
         <div>
             <a target="_blank" href="https://linkedin.com/in/paulinewahle">  <img src="/src/assets/img/Linkedin.svg" alt="dribble"   width="20">  </a>
-            <a target="_blank" href="https://www.behance.net/paulinewahle1">  <img src="/src/assets/img/dribble.svg" alt="dribble"   width="20"> </a>
+            <a target="_blank" href="https://dribbble.com/PaulineWahle">  <img src="/src/assets/img/dribble.svg" alt="dribble"   width="20"> </a>
             <a target="_blank" href="https://www.behance.net/paulinewahle1">  <img src="/src/assets/img/behance.svg" alt="dribble"   width="20"> </a>
             <a target="_blank" href="https://github.com/paulinewahle">  <img src="/src/assets/img/Github.svg" alt="dribble"   width="20">  </a>
             <a target="_blank" href="https://codepen.io/PaulineWahle">  <img src="/src/assets/img/Codepen.svg" alt="dribble"   width="20">  </a>
