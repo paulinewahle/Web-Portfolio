@@ -135,7 +135,7 @@ export default{
     font-size: 3rem;;
   }
   .home-view{
-    height: 60vh;
+    height: 80vh;
     width: 90vw;
     padding: 0;
     margin: 0;
@@ -144,7 +144,7 @@ export default{
     align-items: center;
     justify-content: center;
     border: 1px solid;
-
+    margin-top: -20vh;
   } 
   #home-title{
     position: fixed;

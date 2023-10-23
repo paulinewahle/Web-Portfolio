@@ -174,7 +174,7 @@ export default {
     margin:0;
   }
   .work-link{
-    height: 40%;
+    height: 35%;
     font-style: normal; 
     font-size: 1.5rem;
     border-top: 2px solid #272727;
