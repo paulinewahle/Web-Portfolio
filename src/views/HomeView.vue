@@ -20,11 +20,11 @@ export default{
 
     window.onscroll = function() {scrollTransition()};
     function scrollTransition() {
-      if (document.documentElement.scrollTop < 5) {
+      if (document.documentElement.scrollTop < 300) {
         document.getElementById("home-title").style.opacity = "1";
         document.getElementById("scrollbutton").style.opacity = "1";
       }
-      else if (document.documentElement.scrollTop > 400){
+      else if (document.documentElement.scrollTop > 300){
         document.getElementById("scroll-percentage").style.opacity = "1";
         document.getElementById("scrollbutton").style.opacity = "0";
         document.getElementById("home-title").style.opacity = "0";
@@ -143,6 +143,7 @@ export default{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    border: 1px solid;
 
   } 
   #home-title{

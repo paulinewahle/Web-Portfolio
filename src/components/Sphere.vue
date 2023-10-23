@@ -112,7 +112,7 @@ export default{
             alpha: true
         })
         renderer.setSize(sizes.width, sizes.height)
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+        renderer.setPixelRatio(devicePixelRatio)
 
         //hdr decoding
         renderer.outputEncoding = THREE.sRGBEncoding;
@@ -210,7 +210,7 @@ export default{
             scrub: true,
             toggleActions: "restart pause reverse none",
         },
-            scale: 4
+            scale: 3
         });
         
         

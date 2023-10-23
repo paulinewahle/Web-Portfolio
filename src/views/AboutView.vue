@@ -69,23 +69,24 @@ Coming from a degree in graphic design, and a following degree focusing on digit
   </main>
 
   <main class="desktop">
-    <div class="section" :style="{ 'justify-content': 'space-between' }"> 
+    <div class="section"> 
+      <div class="line"></div>
+      
+    </div>
+    <div id="about" class="section">
       <div class="line"></div>
       <h1>About</h1>
-      <div id="about-site">
+      <p id="about-text"> Hello, I’m Pauline Wahle - user experience designer and frontend developer. <br>
+      Coming from a degree in graphic design, and a following degree focusing on digital spaces with studies in user experience and front-end development, I draw from a wholistic view on design, usability and technology. Always considering the usability aspect, I find it fascinating to explore and reimagine digital spaces in new ways that surprise, simplify and create lasting impressions. By taking opportunities to establish original ideas, each design can get a unique look and feel. My basis for both design and development is creative thinking, to stay flexible, keep moving and find alternative paths.</p>
+    <div id="about-site">
         <p :style="{ 'font-size': '.7rem' }">
         About this site<br> 
         This is a Vue.js project designed and developed by ©Pauline Wahle, 2023. <br>No content is used for commercial purposes.
         </p>
         <i ><a :style="{ 'font-size': '.7rem' }" target="_blank" href="https://github.com/paulinewahle/WebPortfolio"> View the code on Github </a></i>
+    </div>    
     </div>
-    </div>
-    <div id="about" class="section">
-      <div class="line"></div>
-      <div id="about-img"></div>
-      <p id="about-text"> Hello, I’m Pauline Wahle - user experience designer and frontend developer.
-Coming from a degree in graphic design, and a following degree focusing on digital spaces with studies in user experience and front-end development, I draw from a wholistic view on design, usability and technology. Always considering the usability aspect, I find it fascinating to explore and reimagine digital spaces in new ways that surprise, simplify and create lasting impressions. By taking opportunities to establish original ideas, each design can get a unique look and feel. My basis for both design and development is creative thinking, to stay flexible, keep moving and find alternative paths.</p>
-    </div>
+    
     <div id="about-links" class="section">
       <div id="links-wrapper">
         <div class="line"></div>
@@ -162,7 +163,6 @@ Coming from a degree in graphic design, and a following degree focusing on digit
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 0 0 0 0;
   }
   .link-container{
@@ -189,7 +189,6 @@ Coming from a degree in graphic design, and a following degree focusing on digit
     padding: 0 0 0 0%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
   #about-text{
     padding: 0 10% 0 0;
