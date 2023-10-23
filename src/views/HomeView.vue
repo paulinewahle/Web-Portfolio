@@ -130,7 +130,7 @@ export default{
     align-items: center;
     justify-content: center;
     border: 1px solid;
-    margin-top: -20vh;
+
   } 
   #home-title{
     position: fixed;
