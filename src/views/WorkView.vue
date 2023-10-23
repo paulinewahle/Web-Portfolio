@@ -162,7 +162,6 @@ export default {
     padding: 20vh 0vw;
     box-sizing: border-box;
     position: absolute;
-    border: solid 1px;
   }
   p{
     font-size: .5em;

@@ -143,7 +143,6 @@ export default{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 1px solid;
 
   } 
   #home-title{
