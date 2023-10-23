@@ -14,12 +14,6 @@ export default {
         content6: String,
         content7: String,
     },
-    // props:[
-    //     'casename'
-    // ],
-
-  components: {
-  },
   data() {
     return {
       page1: true,
@@ -33,8 +27,6 @@ export default {
     }
   },
   mounted(){
-
-    console.log(this.page1)
 
     document.querySelector("#page-container").style.display = "block";
     document.querySelector("#page-container").style.opacity = "1";
@@ -122,19 +114,25 @@ export default {
         }           
     }
     
+  
     const pageContainer = document.getElementById("page-container");
     pageContainer.addEventListener("click", mouseDown);
-
-    if (this.page1 === true ){
-      document.querySelector('#page-number-1').classList.add("active-page-btn");
-    }
-    else if(this.page1 === false){
-      document.querySelector('#page-number-2').classList.remove("active-page-btn");
-    }
+    
+    
 
   },
-  methods:{
-
+  methods:{ 
+    // pageNumber(e) {
+    //   if (this.page1 === true ){
+    //   console.log("page1")
+    //   document.querySelector('#page-number-1').classList.add("active-page-btn");
+    // }
+    // else if(this.page2 === true){
+    //   console.log("page2")
+    //   document.querySelector('#page-number-2').classList.remove("active-page-btn");
+    // }
+    //   }
+    
   }
   
 }
@@ -257,7 +255,7 @@ export default {
         </Transition>
     </div>
     <div id="page-numbers">
-      <button @click="page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page1 = true;" id="page-number-1">1</button>
+      <button @click="page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page1 = true;" id="page-number-1">1  </button> <div v-if="this.page1===true" class="number-line"> </div>
       <button @click="page1 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page2 = true;" id="page-number-2">2</button>
       <button @click="page1 = false; page2 = false; page4 = false; page5 = false; page6 = false; page7 = false; page3 = true;" id="page-number-3">3</button>
       <button @click="page1 = false; page2 = false; page3 = false; page5 = false; page6 = false; page7 = false; page4 = true;" id="page-number-4">4</button>
@@ -330,7 +328,7 @@ export default {
     width: 20%;
     display: flex;
     justify-content: end;
-
+    align-items: center;
   }
   button{
     border: none;
@@ -340,6 +338,11 @@ export default {
     align-items: center;
     font-size: 1.2em;
     transition: 1s all ease;
+  }
+  .number-line{
+    width: 10px;
+    height: 5px;
+    background-color: #272727;
   }
   .active-page-btn{
     width: 2.5vw;
