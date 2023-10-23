@@ -119,13 +119,6 @@ export default {
     const pageContainer = document.getElementById("page-container");
     pageContainer.addEventListener("click", mouseDown);
 
-    if (this.page1 === true ){
-      document.querySelector('#page-number-1').classList.add("active-page-btn");
-    }
-    else if(this.page1 === false){
-      document.querySelector('#page-number-2').classList.remove("active-page-btn");
-    }
-
   },
   methods:{ 
     // pageNumber(e) {
@@ -202,7 +195,6 @@ export default {
         <a :href="caselink" download> {{caselinktext}} </a>
       </div>
         
-
         <Transition :name="this.currentTransition">
         <div v-if="page1" class="page" id="page1">
           <video  autoplay loop muted>
@@ -261,12 +253,12 @@ export default {
         </Transition>
     </div>
     <div id="page-numbers">
-      <button @click="page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page1 = true;" id="page-number-1">1</button>
-      <button @click="page1 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page2 = true;" id="page-number-2">2</button>
-      <button @click="page1 = false; page2 = false; page4 = false; page5 = false; page6 = false; page7 = false; page3 = true;" id="page-number-3">3</button>
-      <button @click="page1 = false; page2 = false; page3 = false; page5 = false; page6 = false; page7 = false; page4 = true;" id="page-number-4">4</button>
-      <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page6 = false; page7 = false; page5 = true;" id="page-number-5">5</button>
-      <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page5 = false; page7 = false; page6 = true;" id="page-number-6">6</button>
+      <button @click="page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page1 = true;" id="page-number-1">1</button>  <div v-if="page1" class="number-line"></div>
+      <button @click="page1 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page2 = true;" id="page-number-2">2 </button> <div v-if="page2" class="number-line"></div>
+      <button @click="page1 = false; page2 = false; page4 = false; page5 = false; page6 = false; page7 = false; page3 = true;" id="page-number-3">3</button> <div v-if="page3" class="number-line"></div>
+      <button @click="page1 = false; page2 = false; page3 = false; page5 = false; page6 = false; page7 = false; page4 = true;" id="page-number-4">4</button> <div v-if="page4" class="number-line"></div>
+      <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page6 = false; page7 = false; page5 = true;" id="page-number-5">5</button> <div v-if="page5" class="number-line"></div>
+      <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page5 = false; page7 = false; page6 = true;" id="page-number-6">6</button> <div v-if="page6" class="number-line"></div>
       <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = true;" id="page-number-7">7</button>
     </div>
   </div>
@@ -330,10 +322,10 @@ export default {
   #page-numbers{
     position: absolute;
     top: 92vh;
-    left: 70vw;
+    left: 75vw;
     width: 20%;
     display: flex;
-    justify-content: end;
+    justify-content: start;
     align-items: center;
   }
   button{
@@ -346,23 +338,19 @@ export default {
     transition: 1s all ease;
   }
   .number-line{
-    width: 10px;
-    height: 5px;
+    width: 10%;
+    height: 1px;
     background-color: #272727;
+    animation: expand 1s;
   }
-  .active-page-btn{
-    width: 2.5vw;
-    color: red;
-    border: 1px solid;
-    font-weight: 900;
+  @keyframes expand{
+    from{
+      width: 0%;
+    }
+    to{
+      width: 10%;
+    }
   }
-  .active-page-btn::before{
-    height: 5px;
-    width: 5px;
-    border: 3px solid;
-    position: absolute;
-  }
-
   .back{
     position: absolute;
     top: 92vh;
