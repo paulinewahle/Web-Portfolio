@@ -88,6 +88,8 @@ export default{
     width: 100%;
     margin: 10vh 0 0 0;
     position: relative;
+    z-index: 0;
+    font-weight: 100;
   }
   .home-view{
     height: 80vh;
@@ -99,17 +101,6 @@ export default{
     align-items: center;
     justify-content: space-between;
     display: flex !important;
-  }
-  #home-bg{
-    position: relative;
-    opacity: .7;
-    height: 50vh;
-    width: 100vw;
-  }
-  h1{
-    position: relative;
-    font-weight: 100;
-    z-index: 0;
   }
   #entrance-link{
     width: 80vw;
@@ -123,19 +114,14 @@ export default{
     text-indent: 0;
     text-align: center;
   }
-  #scroll-up{
-    opacity: 0;
-  }
+
 }
 @media (min-width: 992px) {
   main{
     max-height: 200vh;
   }
-  h1{
-    font-size: 3rem;;
-  }
   .home-view{
-    height: 60vh;
+    height: 80vh;
     width: 90vw;
     padding: 0;
     margin: 0;
@@ -143,6 +129,7 @@ export default{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    border: 1px solid;
 
   } 
   #home-title{
@@ -152,6 +139,7 @@ export default{
     width: auto;
     left: 5vw;
     top: 30vh;
+    font-size: 3rem;
   }
   #scrollbutton{
     position: fixed;
