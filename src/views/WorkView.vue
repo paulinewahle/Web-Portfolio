@@ -70,7 +70,7 @@ export default {
 
   <div class="responsive">
     <router-link to="/nordik" class="case-card">
-      <img src="/src\assets\cases\nordik\Nordik.jpg" alt="">
+      <img src="/src/assets/cases/nordik/Nordik.jpg" alt="">
       <h2> Nordik </h2>
       <p>Responsive, minimalist webshop concept.</p>
     </router-link>
