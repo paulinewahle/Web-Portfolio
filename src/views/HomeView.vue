@@ -16,7 +16,6 @@ export default{
       this.isLoading = false;
     }, 15000);
 
-    
 
     window.onscroll = function() {scrollTransition()};
     function scrollTransition() {
@@ -50,11 +49,11 @@ export default{
 
     <main>
       <div class="home-view start-view" id="landing">
-        <h1 id="home-title">
+        <h1 id="home-title" class="desktop">
           UI/UX <br> Design
-          <br class="desktop"> <br>
+          <br> <br>
           <div class="line"> </div>
-          <br class="desktop"> 
+          <br> 
           Frontend <br> Code
         </h1>
           <a href="#work" class="desktop" id="scrollbutton">Scroll to continue . . .</a>
@@ -64,6 +63,10 @@ export default{
           </p>
 
           <div class="responsive">
+          <h1> UI/UX Design
+          <div class="line"> </div>
+          Frontend Code
+          </h1>
           <RouterLink to="/work" id="entrance-link"> View Portfolio  </RouterLink>
           <p :style="{ 'font-size': '.5em'}"> Curious to see this site on desktop? </p>
           </div>
@@ -84,12 +87,8 @@ export default{
 <style scoped>
 @media (min-width: 200px) {
 
-  #home-title {
-    width: 100%;
-    margin: 10vh 0 0 0;
-    position: relative;
-    z-index: 0;
-    font-weight: 100;
+  h1{
+    margin: 15vh 0;
   }
   .home-view{
     height: 80vh;
