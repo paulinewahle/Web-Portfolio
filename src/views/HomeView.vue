@@ -19,11 +19,11 @@ export default{
 
     window.onscroll = function() {scrollTransition()};
     function scrollTransition() {
-      if (document.documentElement.scrollTop < 100) {
-        document.getElementById("home-title").style.opacity = "1";
-      }
-      else if (document.documentElement.scrollTop > 100){
+      if (document.documentElement.scrollTop > 100) {
         document.getElementById("home-title").style.opacity = "0";
+      }
+      else if (document.documentElement.scrollTop < 100){
+        document.getElementById("home-title").style.opacity = "1";
       }
       else{
 
