@@ -17,7 +17,7 @@ export default{
 
    mounted(){
         
-    const hdrTextureURL = new URL('../assets/surfaces/swirl.hdr', import.meta.url);
+    const hdrTextureURL = new URL('/src/assets/surfaces/swirl.hdr', import.meta.url);
     
     //Loading
     const textureLoader = new THREE.TextureLoader()
