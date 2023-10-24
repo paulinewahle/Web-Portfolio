@@ -131,10 +131,9 @@ export default{
   #home-title{
     position: fixed;
     text-align: left;
-    height: 20vh;
     width: auto;
     left: 5vw;
-    top: 30vh;
+    top: 25vh;
     font-size: 3rem;
   }
   #scrollbutton{
