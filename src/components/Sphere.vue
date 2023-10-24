@@ -17,160 +17,146 @@ export default{
 
    mounted(){
         
-        //Loading
-        const textureLoader = new THREE.TextureLoader();
-        const normalMap = new URL('../assets/textures/Lava.png', import.meta.url);
-        const normalTexture = textureLoader.load(normalMap);
+    const hdrTextureURL = new URL('../assets/surfaces/swirl.hdr', import.meta.url);
+    
+    //Loading
+    const textureLoader = new THREE.TextureLoader()
 
-        const hdrTextureURL = new URL('../assets/surfaces/swirl.hdr', import.meta.url);
+    const normalTexture = textureLoader.load('src/assets/textures/Lava.png')
 
-        // Debug
-        //const gui = new dat.GUI()
+    // Canvas
+    const canvas = document.querySelector('canvas.webgl')
 
-        // Canvas
-        const canvas = document.querySelector('canvas.webgl')
-
-        // Scene
-        const scene = new THREE.Scene()
-
-        // Objects
-        const geometry = new THREE.SphereGeometry( 1, 60, 60 );
-
-        // Materials
-        const material = new THREE.MeshPhysicalMaterial({
-            color: new THREE.Color(0xffffff),
-            //emissive: new THREE.Color(0x707070),
-            metalness: 1,
-            roughness: 0,
-            envMapIntensity: 0.5,
-            clearcoat: 1,
-            clearcoatRoughness: 1,
-            transparent: true,
-            //transmission: .6,
-            opacity: 1,
-            //reflectivity: 0.1,
-            ior: 0.9,
-            normalMap: normalTexture,
-        })
-
-        // Mesh
-        const sphere = new THREE.Mesh( geometry, material );
-        scene.add(sphere)
+    // Scene
+    const scene = new THREE.Scene()
 
 
-        // Lights
-        
-        const light = new THREE.DirectionalLight(0xffffff, 1.5);
-        light.position.set(5, 5, 10);
-        light.target.position.set(-5, 0, 0);
-        scene.add(light);
-        scene.add(light.target);
-        
+    // Objects
+    const geometry = new THREE.SphereGeometry( 1, 60, 60 );
 
-        // const pointLight = new THREE.PointLight(0xffffff, 1)
-        // pointLight.position.x = 2
-        // pointLight.position.y = 3
-        // pointLight.position.z = 4
-        // scene.add(pointLight)
+    // Materials
+    const material = new THREE.MeshPhysicalMaterial({
+        color: new THREE.Color(0xffffff),
+        //emissive: new THREE.Color(0x707070),
+        wireframe: false,
+        metalness: 1,
+        roughness: 0,
+        envMapIntensity: 0.9,
+        clearcoat: 1,
+        clearcoatRoughness: 0,
+        transparent: true,
+        // transmission: .95,
+        reflectivity: 0.2,
+        ior: 0.9,
+        normalMap: normalTexture
+    })
 
-        //Sizes
-        const sizes = {
-            width: window.innerWidth,
-            height: window.innerHeight
-        }
 
-        window.addEventListener('resize', () =>
-        {
-            // Update sizes
-            sizes.width = window.innerWidth
-            sizes.height = window.innerHeight
+    // Mesh
+    const sphere = new THREE.Mesh( geometry, material );
+    scene.add(sphere)
 
-            // Update camera
-            camera.aspect = sizes.width / sizes.height
-            camera.updateProjectionMatrix()
 
-            // Update renderer
-            renderer.setSize(sizes.width, sizes.height)
-            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-        })
+    // Lights
 
-        //Camera
-        // Base camera
-        const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
-        camera.position.x = 0
-        camera.position.y = 0
-        camera.position.z = 2
-        scene.add(camera)
+    const light = new THREE.DirectionalLight(0xffffff, 1.5);
+    light.position.set(5, 5, -10);
+    light.target.position.set(-5, 0, 0);
+    scene.add(light);
+    scene.add(light.target);
 
-        // Controls
-        // const controls = new OrbitControls(camera, canvas)
-        // controls.enableDamping = true
 
-        //Renderer
-        const renderer = new THREE.WebGLRenderer({
-            canvas: canvas,
-            alpha: true
-        })
+    const pointLight = new THREE.PointLight(0xffffff, 1)
+    pointLight.position.x = 2
+    pointLight.position.y = 3
+    pointLight.position.z = 4
+    scene.add(pointLight)
+
+    /**
+     * Sizes
+     */
+    const sizes = {
+        width: window.innerWidth,
+        height: window.innerHeight
+    }
+
+    window.addEventListener('resize', () =>
+    {
+        // Update sizes
+        sizes.width = window.innerWidth
+        sizes.height = window.innerHeight
+
+        // Update camera
+        camera.aspect = sizes.width / sizes.height
+        camera.updateProjectionMatrix()
+
+        // Update renderer
         renderer.setSize(sizes.width, sizes.height)
-        renderer.setPixelRatio(devicePixelRatio)
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    })
 
-        //hdr decoding
-        renderer.outputEncoding = THREE.sRGBEncoding;
-        renderer.toneMapping = THREE.ACESFilmicToneMapping;
-        renderer.toneMappingExposure = 1.8;
+    /**
+     * Camera
+     */
+    // Base camera
+    const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
+    camera.position.x = 0
+    camera.position.y = 0
+    camera.position.z = 2
+    scene.add(camera)
 
-        //RGBELoader
-        const loader = new RGBELoader();
-        loader.load(hdrTextureURL, function(texture){
-            texture.mapping = THREE. EquirectangularReflectionMapping;
-            //scene.background = texture;
-             scene.environment = texture;
+    // Controls
+    // const controls = new OrbitControls(camera, canvas)
+    // controls.enableDamping = true
 
-        })
+    /**
+     * Renderer
+     */
+    const renderer = new THREE.WebGLRenderer({
+        canvas: canvas,
+        alpha: true
+    })
+    renderer.setSize(sizes.width, sizes.height)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
-        //Animate
-        // const clock = new THREE.Clock()
-        // document.addEventListener('mousemove', onDocumentMouseMove)
+    //hdr decoding
+    renderer.outputEncoding = THREE.sRGBEncoding;
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.8;
 
-        // let mouseX = 0
-        // let mouseY = 0
+    //RGBELoader
+    const loader = new RGBELoader();
+    loader.load(hdrTextureURL, function(texture){
+        texture.mapping = THREE. EquirectangularReflectionMapping;
+        //scene.background = texture;
+        scene.environment = texture;
+    })
 
-        // let targetX = 0
-        // let targetY = 0
-        // let targetZ = 0
+    /**
+     * Animate
+     */
 
-        // const windowX = window.innerWidth / 2;
-        // const windowY = window.innerHeight / 2;
+    const clock = new THREE.Clock()
 
-        // function onDocumentMouseMove(event){
-        //     mouseX = (event.clientX - windowX)
-        //     mouseY = (event.clientY - windowY)
-        // }
+    const tick = () =>
+    {
 
+        const elapsedTime = clock.getElapsedTime()
 
-        const tick = () =>
-        {
-            // targetX = mouseX * .001;
-            // targetY = mouseY * .001;
-            // const elapsedTime = clock.getElapsedTime()
+        // Update objects
+        //sphere.rotation.y = .5 * elapsedTime
 
-            // Update objects
-            // sphere.rotation.y += .5 * (targetY - sphere.rotation.y)
-            // sphere.rotation.x += .5 * (targetX - sphere.rotation.x)
+        // Update Orbital Controls
+        //controls.update()
 
-            // Update objects
-            // sphere.rotation.y = .22 * elapsedTime
+        // Render
+        renderer.render(scene, camera)
 
-            // Update Orbital Controls
-            // controls.update()
+        // Call tick again on the next frame
+        window.requestAnimationFrame(tick)
+    }
 
-            // Render
-            renderer.render(scene, camera)
-
-            // Call tick again on the next frame
-            window.requestAnimationFrame(tick)
-        }
-        tick()
+    tick()
 
 
         ////////
@@ -200,23 +186,19 @@ export default{
         },
             opacity: 0,
         });
-        gsap.to(".webgl", {
-            scrollTrigger: {
-            trigger: "body",
-            start: "top top",
-            end: "center top",
-            duration: 2.5, 
-            yoyoEase: true,
-            scrub: true,
-            toggleActions: "restart pause reverse none",
-        },
-            scale: 3
-        });
-        
-        
-        // requestAnimationFrame(animate);
-        // renderer.render(scene, camera);
-    
+        // gsap.to(".webgl", {
+        //     scrollTrigger: {
+        //     trigger: "body",
+        //     start: "top top",
+        //     end: "center top",
+        //     duration: 2.5, 
+        //     yoyoEase: true,
+        //     scrub: true,
+        //     toggleActions: "restart pause reverse none",
+        // },
+        //     scale: 3
+        // });
+
  
    }
    
