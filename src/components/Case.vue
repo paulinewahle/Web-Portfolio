@@ -150,37 +150,37 @@ export default {
 
     <div class="responsive">
       <video  autoplay loop muted>
-        <source :src="content1">
+        <source :src="content1"  type="video/mp4">
       </video>
       <img :src="content1" alt="">
 
       <video  autoplay loop muted>
-        <source :src="content2">
+        <source :src="content2" type="video/mp4">
       </video>
       <img :src="content2" alt="">
 
       <video  autoplay loop muted>
-        <source :src="content3">
+        <source :src="content3" type="video/mp4">
       </video>
       <img :src="content3" alt="">
 
       <video  autoplay loop muted>
-        <source :src="content4">
+        <source :src="content4" type="video/mp4">
       </video>
       <img :src="content4" alt="">
 
       <video  autoplay loop muted>
-        <source :src="content5">
+        <source :src="content5" type="video/mp4">
       </video>
       <img :src="content5" alt="">
 
       <video  autoplay loop muted>
-        <source :src="content6">
+        <source :src="content6" type="video/mp4">
       </video>
       <img :src="content6" alt="">
 
       <video  autoplay loop muted>
-        <source :src="content7">
+        <source :src="content7" type="video/mp4">
       </video>
       <img :src="content7" alt="">
     </div>
@@ -198,7 +198,7 @@ export default {
         <Transition :name="this.currentTransition">
         <div v-if="page1" class="page" id="page1">
           <video  autoplay loop muted>
-            <source :src="content1">
+            <source :src="content1" type="video/mp4">
           </video>
           <img :src="content1" alt="">
         </div>
@@ -206,7 +206,7 @@ export default {
         <Transition :name="this.currentTransition">
         <div v-if="page2" class="page" id="page2">
           <video  autoplay loop muted>
-            <source :src="content2">
+            <source :src="content2" type="video/mp4">
           </video>
           <img :src="content2" alt="">
         </div>
@@ -214,7 +214,7 @@ export default {
         <Transition  :name="this.currentTransition">
         <div v-if="page3" class="page" id="page3">
           <video  autoplay loop muted>
-            <source :src="content3">
+            <source :src="content3" type="video/mp4">
           </video>
           <img :src="content3" alt="">
         </div>
@@ -222,7 +222,7 @@ export default {
         <Transition :name="this.currentTransition">
         <div v-if="page4" class="page" id="page4">
           <video  autoplay loop muted>
-            <source :src="content4">
+            <source :src="content4" type="video/mp4">
           </video>
           <img :src="content4" alt="">
         </div>
@@ -230,7 +230,7 @@ export default {
         <Transition :name="currentTransition">
         <div v-if="page5" class="page" id="page5">
           <video  autoplay loop muted>
-            <source :src="content5">
+            <source :src="content5" type="video/mp4">
           </video>
           <img :src="content5" alt="">
         </div>
@@ -238,7 +238,7 @@ export default {
         <Transition :name="this.currentTransition">
         <div v-if="page6" class="page" id="page6">
           <video  autoplay loop muted>
-            <source :src="content6">
+            <source :src="content6" type="video/mp4">
           </video>
           <img :src="content6" alt="">
         </div>
@@ -246,7 +246,7 @@ export default {
         <Transition :name="this.currentTransition">
         <div v-if="page7" class="page" id="page7">
           <video  autoplay loop muted>
-            <source :src="content7">
+            <source :src="content7" type="video/mp4">
           </video>
           <img :src="content7" alt="">
         </div>
