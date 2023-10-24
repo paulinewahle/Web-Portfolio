@@ -17,12 +17,12 @@ export default{
 
    mounted(){
         
-    const hdrTextureURL = new URL('/src/assets/surfaces/swirl.hdr', import.meta.url);
+    const hdrTextureURL = new URL('../assets/surfaces/swirl.hdr', import.meta.url);
     
     //Loading
     const textureLoader = new THREE.TextureLoader()
 
-    const normalTexture = textureLoader.load('/src/assets/textures/Lava.png')
+    const normalTexture = textureLoader.load('../assets/textures/Lava.png')
 
     // Canvas
     const canvas = document.querySelector('canvas.webgl')
