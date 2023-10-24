@@ -21,7 +21,6 @@ export default{
     
     //Loading
     const textureLoader = new THREE.TextureLoader()
-
     const normalTexture = textureLoader.load('/src/assets/textures/Lava.png')
 
     // Canvas
