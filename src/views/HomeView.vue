@@ -19,13 +19,10 @@ export default{
 
     window.onscroll = function() {scrollTransition()};
     function scrollTransition() {
-      if (document.documentElement.scrollTop < 300) {
+      if (document.documentElement.scrollTop < 100) {
         document.getElementById("home-title").style.opacity = "1";
-        document.getElementById("scrollbutton").style.opacity = "1";
       }
-      else if (document.documentElement.scrollTop > 300){
-        document.getElementById("scroll-percentage").style.opacity = "1";
-        document.getElementById("scrollbutton").style.opacity = "0";
+      else if (document.documentElement.scrollTop > 100){
         document.getElementById("home-title").style.opacity = "0";
       }
       else{
@@ -128,7 +125,7 @@ export default{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    border: 1px solid;
+    margin-top: -20vh;
 
   } 
   #home-title{
@@ -144,7 +141,7 @@ export default{
     position: fixed;
     z-index: 150;
     width: 20vw;
-    left: 76vw;
+    left: 70.8vw;
     top: 90vh;
     font-size: 1rem;
   }
@@ -152,11 +149,10 @@ export default{
     position: fixed;
     width: 10vw;
     top: 90vh;
-    left: 88vw;
+    left: 85vw;
     z-index: 150;
     text-align: start;
     margin: 0;
-    opacity: 0;
     font-size: 1rem;
   }
  
