@@ -70,27 +70,27 @@ export default {
 
   <div class="responsive">
     <router-link to="/nordik" class="case-card">
-      <img src="/src/assets/cases/nordik/Nordik.jpg" alt="">
+      <img src="/cases/nordik/Nordik.jpg" alt="">
       <h2> Nordik </h2>
       <p>Responsive, minimalist webshop concept.</p>
     </router-link>
     <router-link to="/gamel" class="case-card">
-      <img src="/src/assets/cases/gamel/Gamel.jpg" alt="">
+      <img src="/cases/gamel/Gamel.jpg" alt="">
       <h2> Gamél </h2>
       <p>Production agency website in modern minimalist grid style.</p>
     </router-link>
     <router-link to="/skilled" class="case-card">
-      <img src="/src/assets/cases/skilled/Skilled.jpg" alt="">
+      <img src="/cases/skilled/Skilled.jpg" alt="">
       <h2> Skilled </h2>
       <p>User experience design concept for an educational platform app in flat duotone line style.</p>
     </router-link>
     <router-link to="/concreate" class="case-card">
-      <img src="/src/assets/cases/concreate/Concreate.jpg" alt="">
+      <img src="/cases/concreate/Concreate.jpg" alt="">
       <h2> Concreate </h2>
       <p>Collaborative brutalist zine project with graphic design and photographic elements.</p>
     </router-link>
     <router-link to="/hitech" class="case-card">
-      <img src="/src/assets/cases/hitech/Hitech.jpg" alt="">
+      <img src="/cases/hitech/Hitech.jpg" alt="">
       <h2> HiTech </h2>
       <p>Responsive association website redesign concept and development.</p>
     </router-link>
