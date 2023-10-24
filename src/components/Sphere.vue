@@ -32,7 +32,7 @@ export default{
 
 
     // Objects
-    const geometry = new THREE.SphereGeometry( 1, 60, 60 );
+    const geometry = new THREE.SphereGeometry( 1, 64, 32 );
 
     // Materials
     const material = new THREE.MeshPhysicalMaterial({
@@ -186,18 +186,18 @@ export default{
         },
             opacity: 0,
         });
-        // gsap.to(".webgl", {
-        //     scrollTrigger: {
-        //     trigger: "body",
-        //     start: "top top",
-        //     end: "center top",
-        //     duration: 2.5, 
-        //     yoyoEase: true,
-        //     scrub: true,
-        //     toggleActions: "restart pause reverse none",
-        // },
-        //     scale: 3
-        // });
+        gsap.to(".webgl", {
+            scrollTrigger: {
+            trigger: "body",
+            start: "top top",
+            end: "center top",
+            duration: 2.5, 
+            yoyoEase: true,
+            scrub: true,
+            toggleActions: "restart pause reverse none",
+        },
+            scale: 3
+        });
 
  
    }
