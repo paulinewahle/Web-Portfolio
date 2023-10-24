@@ -10,13 +10,13 @@ data() {
   return {
     casename: 'Nordik',
     casetext: 'Nordik is a webshop concept in minimalistic grid design. With a compact top-down deep information structure the design is user intuitive according to the sites hierarchical task analysis. The Figma project is part of the DailyUI Challenge, more of which to see on Dribble.',
-    content1: '\src\assets\cases\nordik\Nordik_1.mp4',
-    content2: './src/assets/cases/nordik/Nordik_2.jpg',
-    content3: '../src/assets/cases/nordik/Nordik_3.jpg',
-    content4: "/src/assets/cases/nordik/Nordik_4.jpg",
+    content1: '/public/favicon.png',
+    content2: '/favicon.png',
+    content3: '/src/assets/cases/nordik/Nordik_3.jpg',
+    content4: '/src/assets/cases/nordik/Nordik_4.jpg',
     content5: '/src/assets/cases/nordik/Nordik_5.jpg',
     content6: '/src/assets/cases/nordik/Nordik_6.jpg',
-    content7: '/src/assets/cases/nordik/Nordik_7.jpg', 
+    content7: '/src/assets/cases/nordik/Nordik_7.jpg',
   }
 }
 }
