@@ -177,6 +177,9 @@ export default {
         font-size: 1em;
         line-height: 1.6em;
     } 
+    p{
+        text-indent: 0;
+    }
 }
 @media (min-width: 992px) {
     
