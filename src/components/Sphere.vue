@@ -21,8 +21,9 @@ export default{
     
     //Loading
     const textureLoader = new THREE.TextureLoader();
-    const normalTexture = textureLoader.load('../assets/textures/Lava.png');
-    console.log(normalTexture)
+    const normalMap = new URL('../assets/textures/Lava.png', import.meta.url);
+    const normalTexture = textureLoader.load(normalMap);
+    
 
     // Canvas
     const canvas = document.querySelector('canvas.webgl')

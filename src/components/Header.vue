@@ -168,7 +168,8 @@ export default {
         text-align: center;
     }
     .big-nav-link{
-        font-family: "Articulat Thin";
+        font-family: "Serif";
+        src: url('./fonts/Butler/Butler_Ultra_Light.otf')  format('opentype');
         font-size: 2.5em;
         margin: 10%;
     }
@@ -176,6 +177,9 @@ export default {
         font-size: 1em;
         line-height: 1.6em;
     } 
+    p{
+        text-indent: 0;
+    }
 }
 @media (min-width: 992px) {
     
