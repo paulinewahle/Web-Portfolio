@@ -35,8 +35,11 @@ export default {
   <main class="responsive">
 
       <div>
+        <div id="profile-img" >
+        </div>
+
         <h1>About</h1>
-        <img src="/src/assets/img/profile.jpg" alt="">
+        
         <p id="about-text"> Hello, I’m Pauline Wahle - user experience designer and frontend developer.
 Coming from a degree in graphic design, and a following degree focusing on digital spaces with studies in user experience and front-end development, I draw from a wholistic view on design, usability and technology. Always considering the usability aspect, I find it fascinating to explore and reimagine digital spaces in new ways that surprise, simplify and create lasting impressions. By taking opportunities to establish original ideas, each design can get a unique look and feel. My basis for both design and development is creative thinking, to stay flexible, keep moving and find alternative paths.</p>
 
@@ -44,25 +47,36 @@ Coming from a degree in graphic design, and a following degree focusing on digit
         About this site<br> 
         This is a Vue.js project designed and developed by ©Pauline Wahle, 2023. <br>No content is used for commercial purposes.
     </p>
-    <i ><a :style="{ 'font-size': '.7rem' }" target="_blank" href="https://github.com/paulinewahle/WebPortfolio"> View the code on Github </a></i>
+    <i ><a target="_blank" href="https://github.com/paulinewahle/WebPortfolio"> View the code on Github </a></i>
 
-    <div id="wrapper">
-          <div>
+    
+
+        <div id="wrapper">
             <h2> Design </h2>
-            <a href="https://www.behance.net/paulinewahle1" target="_blank"> Behance </a>
-            <a href="https://dribbble.com/PaulineWahle" target="_blank"> Dribble </a>
-            <a href="https://www.pinterest.de/PaulineWahle/" target="_blank"> Pinterest </a>
-          </div>
-          <div>
-            <h2> Code </h2>
-            <a target="_blank" href="https://github.com/paulinewahle"> Github </a>
-            <a target="_blank" href="https://codepen.io/PaulineWahle"> Codepen </a>
+            <div>
+              <a href="https://www.behance.net/paulinewahle1" target="_blank"> Behance </a>
+              <a href="https://dribbble.com/PaulineWahle" target="_blank"> Dribble </a>
+              <a href="https://www.pinterest.de/PaulineWahle/" target="_blank"> Pinterest </a>
+            </div>
+        </div>
+        <div id="wrapper">
+              <h2> Code </h2>
+              <div>
+                <a target="_blank" href="https://github.com/paulinewahle"> Github </a>
+                <a target="_blank" href="https://codepen.io/PaulineWahle"> Codepen </a>
+              </div>
+        </div>
+        <div id="wrapper">
             <h2> Experience </h2>
             <a target="_blank" href="https://www.linkedin.com/in/paulinewahle/"> LinkedIn </a>
-          </div>
         </div>
+        <div id="wrapper">
+            <h2> Recognition </h2>
+            <a href="https://www.webguruawards.com/sites/paulinewahle-com" style="background: url(http://webguruawards.com/awards/Nominee/img_webguruawards_nominee_gray.png) no-repeat; background-position: center right; background-size: contain; width:80px; height:80px; margin-top: 10%; " target="_blank" class="about-link"></a>
+        </div>
+        
       </div>
-
+      
   </main>
 
   <main class="desktop">
@@ -75,9 +89,10 @@ Coming from a degree in graphic design, and a following degree focusing on digit
     <div id="about-site">
         <p :style="{ 'font-size': '.7rem' }">
         About this site<br> 
-        This is a Vue.js project designed and developed by ©Pauline Wahle, 2023. <br>No content is used for commercial purposes.
+        No content is used for commercial purposes.
+        This is a Vue.js project designed and developed by ©Pauline Wahle, 2023. <br>
         </p>
-        <i ><a :style="{ 'font-size': '.7rem' }" target="_blank" href="https://github.com/paulinewahle/WebPortfolio"> View the code on Github </a></i>
+        <i ><a :style="{ 'margin': '0'  }" target="_blank" href="https://github.com/paulinewahle/WebPortfolio"> View the code on Github </a></i>
     </div>    
     </div>
     
@@ -107,6 +122,13 @@ Coming from a degree in graphic design, and a following degree focusing on digit
             <a  target="_blank" href="https://www.linkedin.com/in/paulinewahle/" class="about-link"><p> LinkedIn<p class="responsive arrow">&#8227;</p> </p></a>
           </div>
           </div>
+          <div class="line"></div>
+        <div @mouseover="width1 = '80%'" @mouseleave="width1 = '40%'" class="link-container">
+          <h2> Recognition </h2>
+          <div class="so-me-link">
+            <a href="https://www.webguruawards.com/sites/paulinewahle-com" style="background: url(http://webguruawards.com/awards/Nominee/img_webguruawards_nominee_gray.png) no-repeat; background-position: center right; background-size: contain; width:80px; height:80px; margin-top: 10%; " target="_blank" class="about-link"></a>
+          </div>
+          </div>
       </div>
 
       <div  href = "mailto:pauline.wahle@web.de">
@@ -128,23 +150,26 @@ Coming from a degree in graphic design, and a following degree focusing on digit
 @media (min-width: 200px) {
   #wrapper{
     display: flex;
-    justify-content: space-around;
-    margin-top: 20%;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 10%;
+    width: 70%;
   }
-  img{
-    height: 100%;
-    width: 40%;
-    margin: 5%;
+  #profile-img{
+    background-image: url('/src/assets/img/profile.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    margin: 5% 0 10vh;
   }
   a{
     font-style: italic;
     display: block;
-    margin: 2% 0;
     border: none;
   }
-  h2{
-    margin: 10% 10% 10% 0;
-  }
+  
   
 }
 @media (min-width: 992px) {
@@ -184,15 +209,12 @@ Coming from a degree in graphic design, and a following degree focusing on digit
 
   #about{
     height: 100%;
-    padding: 0 0 0 0%;
+    padding: 0 5% 0 0;
     display: flex;
     flex-direction: column;
   }
-  #about-text{
-    padding: 0 10% 0 0;
-  }
   #about-site{
-    width: 50%;
+    width: 100%;
   }
 }
 

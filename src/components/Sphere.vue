@@ -17,7 +17,7 @@ export default{
 
    mounted(){
         
-    const hdrTextureURL = new URL('../assets/surfaces/swirl.hdr', import.meta.url);
+    const hdrTextureURL = new URL('../assets/surfaces/swirl1.hdr', import.meta.url);
     
     //Loading
     const textureLoader = new THREE.TextureLoader();
@@ -37,18 +37,18 @@ export default{
 
     // Materials
     const material = new THREE.MeshPhysicalMaterial({
-        color: new THREE.Color(0xffffff),
-        //emissive: new THREE.Color(0x707070),
-        wireframe: false,
+        color: 0xffffff,
+        //emissive: 0x707070,
+        // wireframe: false,
         metalness: 1,
         roughness: 0,
         envMapIntensity: 0.9,
         clearcoat: 1,
         clearcoatRoughness: 0,
         transparent: true,
-        // transmission: .95,
+        //transmission: .95,
         reflectivity: 0.2,
-        ior: 0.9,
+        // ior: 0.9,
         normalMap: normalTexture
     })
 

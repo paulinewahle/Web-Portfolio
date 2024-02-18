@@ -45,6 +45,7 @@ export default{
 <template>
 
     <main>
+      <a id="webguru" href="https://www.webguruawards.com/sites/paulinewahle-com" target="_blank"></a>
       <div class="home-view start-view" id="landing">
         <h1 id="home-title" class="desktop">
           UI/UX <br> Design
@@ -115,6 +116,16 @@ export default{
 @media (min-width: 992px) {
   main{
     max-height: 200vh;
+  }
+  #webguru{
+    background: url(http://webguruawards.com/awards/Nominee/img_nominee_left.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background-size: contain;
+    width:75px; 
+    height: 20vh;
+    position:fixed;
+    top:80vh;
+    left:0;
+    z-index:99999;
   }
   .home-view{
     height: 80vh;
