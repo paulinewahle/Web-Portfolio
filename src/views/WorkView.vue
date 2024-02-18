@@ -129,8 +129,8 @@ export default {
       <div id="more-links">
         <h4>More Projects </h4> 
         <div>
-          <a href="/"> <img src="/src/assets/img/dribble.svg" alt="dribble"   width="40"></a>
-          <a href="/"> <img src="/src/assets/img/behance.svg" alt="behance" width="40"></a>
+          <a href="https://dribbble.com/PaulineWahle"> <img src="/src/assets/img/dribble.svg" alt="dribble"   width="40"></a>
+          <a href="https://www.behance.net/paulinewahle1"> <img src="/src/assets/img/behance.svg" alt="behance" width="40"></a>
         </div>
       </div>
     </div>
