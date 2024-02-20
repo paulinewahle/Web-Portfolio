@@ -85,13 +85,13 @@ export default{
 <style scoped>
 @media (min-width: 200px) {
   #webguru{
-    background: url(http://webguruawards.com/awards/GOTD/img_guru_of_the_day_left.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url(http://webguruawards.com/awards/GOTD/img_guru_of_the_day_right.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     background-size: contain;
-    width:75px; 
+    width: 10vw; 
     height: 20vh;
     position:fixed;
-    top:80vh;
-    left:0;
+    top: 1vh;
+    left: 90vw;
     z-index:99999;
   }
   h1{
@@ -123,6 +123,10 @@ export default{
 
 }
 @media (min-width: 992px) {
+  #webguru{
+    width: 3vw;
+    left: 97vw;
+  }
   main{
     max-height: 200vh;
   }
