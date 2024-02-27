@@ -29,8 +29,9 @@ export default{
             document.querySelector(".arrow-cursor").classList.add("right");
             document.querySelector(".arrow-cursor").classList.remove("left");
         }
+
         }
-       
+
         this.links.forEach((link) => {
         link.addEventListener("mouseleave", () => {
             blob.style.scale = 0;
@@ -97,7 +98,7 @@ export default{
         justify-content: center;
         background-color: black;
         border-radius: 50%;
-        filter: blur(7px);  
+        filter: blur(7px) grayscale(1);  
         transition: scale 0.3s ease-in-out;
         position: fixed;
         z-index: 5;
@@ -112,7 +113,7 @@ export default{
         margin-left: 25px;
         transform: scale(1, 1);
         transform-origin: center center;
-        filter: blur(7px);  
+        filter: blur(7px) grayscale(1);  
         transition: all 0.3s ease-in-out;
         transition-property: scale, filter;
     }
@@ -125,12 +126,14 @@ export default{
         z-index: 1001;
         pointer-events: none;
         text-transform: uppercase;
-        color: #fafafa;
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
         transform: rotate(45deg);
-        margin-top: -25px;
-        margin-left: -25px;
+        margin-top: -40px;
+        margin-left: -40px;
+        background-color: black;
+        mix-blend-mode: difference;
+        filter: grayscale(1);
     }
     .left{
         border-left: 2px solid black;

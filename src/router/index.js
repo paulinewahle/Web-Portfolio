@@ -8,6 +8,7 @@ import ConcreateView from '/src/views/cases/ConcreateView.vue'
 import HitechView from '/src/views/cases/HitechView.vue'
 import GamelView from '/src/views/cases/GamelView.vue'
 import SkilledView from '/src/views/cases/SkilledView.vue'
+import CorianderView from '/src/views/cases/CorianderView.vue'
 
 
 
@@ -67,6 +68,11 @@ const router = createRouter({
       path: '/skilled',
       name: 'skilled',
       component: SkilledView
+    },
+    {
+      path: '/coriander',
+      name: 'coriander',
+      component: CorianderView
     }
     
   ]

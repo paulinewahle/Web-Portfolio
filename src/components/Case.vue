@@ -2,8 +2,16 @@
 
 export default {
     props: {
+        pagetitle1: String,
+        pagetitle2: String,
+        pagetitle3: String,
+        pagetitle4: String,
+        pagetitle5: String,
+        pagetitle6: String,
+        pagetitle7: String,
         casename: String,
         casetext: String,
+        casetype: String,
         caselink: String,
         caselinktext: String,
         content1: String,
@@ -45,6 +53,8 @@ export default {
     document.querySelector("#page-container").addEventListener("mouseleave", hideArrowCursor);
     document.querySelector("#page-numbers").addEventListener("mouseover", hideArrowCursor);
     document.querySelector("#page-numbers").addEventListener("mouseleave", pageArrowCursor);
+    document.querySelector(".back").addEventListener("mouseover", hideArrowCursor);
+    document.querySelector(".back").addEventListener("mouseleave", pageArrowCursor);
 
 
     const mouseDown = (e) => {
@@ -142,9 +152,10 @@ export default {
 
   <div class="responsive">
 
-  
+   
   <h1>{{casename}}</h1> 
   <p>{{casetext}}</p>
+
   <a :href="caselink" download> {{caselinktext}}</a>
   <router-link to="/work" class="work-link">BACK</router-link>
 
@@ -186,15 +197,30 @@ export default {
     </div>
   </div>
   <div class="desktop">
-    <router-link to="/home#work" class="back"> Back to selected work</router-link>
     
-    <div id="page-container">
-      <div id="descr">
+    <div id="descr">
+      <div>
+        <h4>{{casetype}}</h4>
         <h1>{{casename}}</h1>
         <p>{{casetext}}</p>
         <a :href="caselink" download> {{caselinktext}} </a>
       </div>
-        
+        <router-link to="/home#work" class="back"> Back to selected work</router-link>
+
+        <div id="page-numbers">
+        <button @click="page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page1 = true;" id="page-number-1">1</button>  <div v-if="page1" class="number-text"> <div class="number-line"> </div> {{pagetitle1}} </div>
+        <button @click="page1 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page2 = true;" id="page-number-2">2 </button> <div v-if="page2" class="number-text"> <div class="number-line"> </div> {{pagetitle2}} </div>
+        <button @click="page1 = false; page2 = false; page4 = false; page5 = false; page6 = false; page7 = false; page3 = true;" id="page-number-3">3</button>  <div v-if="page3" class="number-text"> <div class="number-line"> </div> {{pagetitle3}} </div>
+        <button @click="page1 = false; page2 = false; page3 = false; page5 = false; page6 = false; page7 = false; page4 = true;" id="page-number-4">4</button>  <div v-if="page4" class="number-text"> <div class="number-line"> </div> {{pagetitle4}} </div>
+        <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page6 = false; page7 = false; page5 = true;" id="page-number-5">5</button>  <div v-if="page5" class="number-text"> <div class="number-line"> </div> {{pagetitle5}} </div>
+        <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page5 = false; page7 = false; page6 = true;" id="page-number-6">6</button>  <div v-if="page6" class="number-text"> <div class="number-line"> </div> {{pagetitle6}} </div>
+        <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = true;" id="page-number-7">7</button>  <div v-if="page7" class="number-text"> <div class="number-line"> </div> {{pagetitle7}} </div>
+       </div>
+    </div>
+
+      
+
+    <div id="page-container">
         <Transition :name="this.currentTransition">
         <div v-if="page1" class="page" id="page1">
           <video  autoplay loop muted>
@@ -252,15 +278,7 @@ export default {
         </div>
         </Transition>
     </div>
-    <div id="page-numbers">
-      <button @click="page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page1 = true;" id="page-number-1">1</button>  <div v-if="page1" class="number-line"></div>
-      <button @click="page1 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page2 = true;" id="page-number-2">2 </button> <div v-if="page2" class="number-line"></div>
-      <button @click="page1 = false; page2 = false; page4 = false; page5 = false; page6 = false; page7 = false; page3 = true;" id="page-number-3">3</button> <div v-if="page3" class="number-line"></div>
-      <button @click="page1 = false; page2 = false; page3 = false; page5 = false; page6 = false; page7 = false; page4 = true;" id="page-number-4">4</button> <div v-if="page4" class="number-line"></div>
-      <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page6 = false; page7 = false; page5 = true;" id="page-number-5">5</button> <div v-if="page5" class="number-line"></div>
-      <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page5 = false; page7 = false; page6 = true;" id="page-number-6">6</button> <div v-if="page6" class="number-line"></div>
-      <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = true;" id="page-number-7">7</button>
-    </div>
+    
   </div>
 
 </template>
@@ -281,8 +299,12 @@ export default {
     position: absolute;
     z-index: 100;
     margin: 0;
-    top: 30vh;
-    width: 20vw;
+    top: 15vh;
+    width: 25vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   h1{
     margin: 0 0 5vh 0;
@@ -293,13 +315,12 @@ export default {
   }
   
   #page-container{
-    /* width: 90vw;
-    height: 90vh; */
     box-sizing: border-box;
     overflow: hidden;
     top: 10vh;
+    left: 30vw;
     height: 80vh;
-    width: 90vw;
+    width: 65vw;
     position: absolute;
   }
   .page{
@@ -310,8 +331,8 @@ export default {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    height: 80vh;
-    width: 90vw;
+    height: 100%;
+    width: 100%;
   }
   img, video{
     height: 100%;
@@ -320,13 +341,15 @@ export default {
   }
 
   #page-numbers{
-    position: absolute;
-    top: 92vh;
-    left: 75vw;
-    width: 20%;
+    position: fixed;
+    top: 75vh;
+    left: 5vw;
+    width: 25vw;
     display: flex;
     justify-content: start;
     align-items: center;
+    font-size: 1em;
+
   }
   button{
     border: none;
@@ -334,27 +357,42 @@ export default {
     width: 1vw;
     display: flex;
     align-items: center;
-    font-size: 1.2em;
     transition: 1s all ease;
+    font-size: 1.2em;
+    font-family: 'Serif', serif;
+
+  }
+  .number-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.2em;
+    width: 40%;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: expand 1s;
+    font-family: 'Serif', serif;
+    font-style: italic;
   }
   .number-line{
-    width: 10%;
     height: 1px;
+    width: 20%;
+    margin: 0 5%;
     background-color: #272727;
-    animation: expand 1s;
   }
   @keyframes expand{
     from{
       width: 0%;
     }
     to{
-      width: 10%;
+      width: 40%;
     }
   }
   .back{
-    position: absolute;
-    top: 92vh;
-    text-decoration: underline;
+    display: block;
+    margin-top: 15vh;
+    text-decoration: none; 
+    font-size: 1em;
   }
 
   

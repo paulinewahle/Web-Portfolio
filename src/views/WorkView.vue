@@ -109,6 +109,9 @@ export default {
     </div>
     <div id="case-links" class="section">
       <div>
+        <router-link to="/coriander" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/coriander/Coriander.jpg"); revealCaseTitle("Coriander"); revealCaseText("Recipe app conceptualised around a strong community sense with user generated content. ")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
+        <h2>Coriander</h2> <p> App design</p>
+        </router-link>
         <router-link to="/nordik" class="work-link" @mouseover=' revealCaseImg("/cases/nordik/Nordik.jpg"); revealCaseTitle("Nordik"); revealCaseText("Responsive, minimalist webshop concept.")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
         <h2>Nordik</h2> <p> E-commerce design</p>
         </router-link>
@@ -121,9 +124,9 @@ export default {
         <router-link to="/concreate" class="work-link" @mouseover=' revealCaseImg("/cases/concreate/Concreate.jpg"); revealCaseTitle("Concreate"); revealCaseText("Collaborative brutalist zine project with graphic design and photographic elements.")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
           <h2>Concreate</h2> <p> Graphic design</p>
         </router-link>
-        <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/cases/hitech/Hitech.jpg"); revealCaseTitle("HiTech"); revealCaseText("Responsive association website redesign concept and development.")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
+        <!-- <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/cases/hitech/Hitech.jpg"); revealCaseTitle("HiTech"); revealCaseText("Responsive association website redesign concept and development.")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
           <h2>HiTech</h2> <p> Web design</p>
-        </router-link>
+        </router-link> -->
         
       </div>
       <div id="more-links">
