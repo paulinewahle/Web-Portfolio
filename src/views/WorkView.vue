@@ -89,10 +89,10 @@ export default {
       <h2> Concreate </h2>
       <p>Collaborative brutalist zine project with graphic design and photographic elements.</p>
     </router-link>
-    <router-link to="/hitech" class="case-card">
-      <img src="/cases/hitech/Hitech.jpg" alt="">
-      <h2> HiTech </h2>
-      <p>Responsive association website redesign concept and development.</p>
+    <router-link to="/coriander" class="case-card">
+      <img src="/cases/hitech/Coriander.jpg" alt="">
+      <h2> Coriander </h2>
+      <p>Recipe app conceptualised around a strong community sense with user generated content. </p>
     </router-link>
     
   </div>

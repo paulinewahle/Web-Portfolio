@@ -11,7 +11,9 @@ export default{
     WorkView
   },
   mounted() {
-    document.querySelector(".arrow-cursor").style.opacity = "0";
+    document.querySelector(".arrow-cursor").style.display = "none";
+
+
     setTimeout(() => {
       this.isLoading = false;
     }, 15000);
@@ -140,15 +142,14 @@ export default{
     align-items: center;
     justify-content: center;
     margin-top: -20vh;
-
   } 
   #home-title{
     position: fixed;
     text-align: left;
     width: auto;
     left: 5vw;
-    top: 25vh;
-    font-size: 3rem;
+    top: 20vh;
+    font-size: 4.5rem;
   }
   #scrollbutton{
     position: fixed;

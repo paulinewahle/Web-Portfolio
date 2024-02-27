@@ -182,7 +182,9 @@ export default {
     }
 }
 @media (min-width: 992px) {
-    
+    #header-bg{
+        background-color: rgba(0,0,0,0);
+    }
    .desktop-header{
     position: fixed;
     top: 0;
@@ -193,6 +195,7 @@ export default {
     display: flex;
     justify-content: space-between;
     z-index: 4;
+    
    }
    h1, a{
     font-size: 1em;

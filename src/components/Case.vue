@@ -154,12 +154,14 @@ export default {
 
    
   <h1>{{casename}}</h1> 
+  <h4>{{casetype}}</h4>
   <p>{{casetext}}</p>
 
   <a :href="caselink" download> {{caselinktext}}</a>
   <router-link to="/work" class="work-link">BACK</router-link>
 
     <div class="responsive">
+
       <video  autoplay loop muted>
         <source :src="content1"  type="video/mp4">
       </video>
@@ -194,6 +196,8 @@ export default {
         <source :src="content7" type="video/mp4">
       </video>
       <img :src="content7" alt="">
+
+
     </div>
   </div>
   <div class="desktop">
@@ -285,12 +289,18 @@ export default {
 
 <style scoped>
 @media (min-width: 200px) {
+  .responsive{
+    margin-top: 10vh;
+  }
+  
   img, video{
     width: 100%;
-    height: auto;
+    height: inherit;
+    margin: 1vh 0;
+   
   }
   h1{
-    margin-top: 10vh;
+    margin-top: 20vh;
   }
 }
 @media (min-width: 992px) {

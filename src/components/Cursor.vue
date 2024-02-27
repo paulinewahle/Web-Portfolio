@@ -12,12 +12,14 @@ export default{
         let arrowCursor = document.querySelector(".arrow-cursor");
         let blob = document.querySelector(".blob");
 
+
         window.addEventListener("mousemove", mouseFollow);
         function mouseFollow(e) {
         mouseCursor.style.left = e.clientX + "px";
         mouseCursor.style.top = e.clientY + "px";
         arrowCursor.style.left = e.clientX + "px";
         arrowCursor.style.top = e.clientY + "px";
+
 
         let rightScreen = window.screen.width/2
         let leftScreen = window.screen.width/2
@@ -61,6 +63,7 @@ export default{
 
 <template>
     <div class="arrow-cursor desktop"></div>
+
     <div class="cursor desktop">
         <svg class="blob desktop" viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
             <path id="d" fill="black"> 
@@ -74,7 +77,9 @@ export default{
             </animate>
             </path>
         </svg>
+        
     </div>
+  
 </template>
 
 
@@ -94,8 +99,6 @@ export default{
         margin-top: -15px;
         margin-left: -15px;
         pointer-events: none;
-        display: flex;
-        justify-content: center;
         background-color: black;
         border-radius: 50%;
         filter: blur(7px) grayscale(1);  
@@ -145,6 +148,7 @@ export default{
         border-top: 2px solid black;
         box-shadow: 2px -2px 0 0px #fafafa;
     }
+
     
 }
 </style>
