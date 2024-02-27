@@ -12,7 +12,7 @@ export default{
   },
   mounted() {
     document.querySelector(".arrow-cursor").style.display = "none";
-
+    document.querySelector(".text-cursor").style.display = "block";
 
     setTimeout(() => {
       this.isLoading = false;
@@ -23,9 +23,11 @@ export default{
     function scrollTransition() {
       if (document.documentElement.scrollTop > 100) {
         document.getElementById("home-title").style.opacity = "0";
+        document.querySelector(".text-cursor").style.display = "none";
       }
       else if (document.documentElement.scrollTop < 100){
         document.getElementById("home-title").style.opacity = "1";
+        document.querySelector(".text-cursor").style.display = "block";
       }
       else{
 

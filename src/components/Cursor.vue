@@ -9,6 +9,7 @@ export default{
     mounted(){
 
         let mouseCursor = document.querySelector(".cursor");
+        let textCursor = document.querySelector(".text-cursor");
         let arrowCursor = document.querySelector(".arrow-cursor");
         let blob = document.querySelector(".blob");
 
@@ -19,6 +20,8 @@ export default{
         mouseCursor.style.top = e.clientY + "px";
         arrowCursor.style.left = e.clientX + "px";
         arrowCursor.style.top = e.clientY + "px";
+        textCursor.style.left = e.clientX + "px";
+        textCursor.style.top = e.clientY + "px";
 
 
         let rightScreen = window.screen.width/2
@@ -63,7 +66,7 @@ export default{
 
 <template>
     <div class="arrow-cursor desktop"></div>
-
+    <div class="text-cursor desktop">Drag / Scroll</div>
     <div class="cursor desktop">
         <svg class="blob desktop" viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
             <path id="d" fill="black"> 
@@ -147,6 +150,17 @@ export default{
         border-right: 2px solid black;
         border-top: 2px solid black;
         box-shadow: 2px -2px 0 0px #fafafa;
+    }
+    .text-cursor{
+        position: fixed;
+        z-index: 1000;
+        pointer-events: none;
+        font-size: 1.2em;
+        margin-top: 30px;
+        margin-left: -50px;
+        transition: top .07s ease, left .07s ease;
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     

@@ -38,6 +38,7 @@ export default {
 
     document.querySelector("#page-container").style.display = "block";
     document.querySelector("#page-container").style.opacity = "1";
+    document.querySelector(".arrow-cursor").style.display = "block";
     
 
     const hideArrowCursor = () => {
@@ -51,10 +52,12 @@ export default {
 
     document.querySelector("#page-container").addEventListener("mouseover", pageArrowCursor);
     document.querySelector("#page-container").addEventListener("mouseleave", hideArrowCursor);
-    document.querySelector("#page-numbers").addEventListener("mouseover", hideArrowCursor);
-    document.querySelector("#page-numbers").addEventListener("mouseleave", pageArrowCursor);
-    document.querySelector(".back").addEventListener("mouseover", hideArrowCursor);
-    document.querySelector(".back").addEventListener("mouseleave", pageArrowCursor);
+    document.querySelector("#descr").addEventListener("mouseover", hideArrowCursor);
+    document.querySelector("#descr").addEventListener("mouseleave", pageArrowCursor);
+    // document.querySelector("#page-numbers").addEventListener("mouseover", hideArrowCursor);
+    // document.querySelector("#page-numbers").addEventListener("mouseleave", pageArrowCursor);
+    // document.querySelector(".back").addEventListener("mouseover", hideArrowCursor);
+    // document.querySelector(".back").addEventListener("mouseleave", pageArrowCursor);
 
 
     const mouseDown = (e) => {
