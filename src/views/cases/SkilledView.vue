@@ -17,13 +17,13 @@ data() {
     casename: 'Skilled',
     casetext: 'Skilled is the concept of an educational platform app with all aspects reduced to the optimal usability. The user experience is build on a brand identity in flat primary blue duotone design with an icon category system in vector line style. ',
     casetype: 'App Design',
-    content1: '/src/assets/cases/skilled/Skilled_1.jpg',
-    content2: '/src/assets/cases/skilled/Skilled_2.jpg',
-    content3: '/src/assets/cases/skilled/Skilled_3.mp4',
-    content4: '/src/assets/cases/skilled/Skilled_4.mp4',
-    content5: '/src/assets/cases/skilled/Skilled_5.jpg',
-    content6: '/src/assets/cases/skilled/Skilled_1.mp4',
-    content7: '/src/assets/cases/skilled/Skilled_7.jpg'
+    content1: '/cases/skilled/Skilled_1.jpg',
+    content2: '/cases/skilled/Skilled_2.jpg',
+    content3: '/cases/skilled/Skilled_3.mp4',
+    content4: '/cases/skilled/Skilled_4.mp4',
+    content5: '/cases/skilled/Skilled_5.jpg',
+    content6: '/cases/skilled/Skilled_1.mp4',
+    content7: '/cases/skilled/Skilled_7.jpg'
   }
 }
 }

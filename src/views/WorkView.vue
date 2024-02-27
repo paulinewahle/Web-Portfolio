@@ -109,7 +109,7 @@ export default {
     </div>
     <div id="case-links" class="section">
       <div>
-        <router-link to="/coriander" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/coriander/Coriander.jpg"); revealCaseTitle("Coriander"); revealCaseText("Recipe app conceptualised around a strong community sense with user generated content. ")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
+        <router-link to="/coriander" class="work-link" @mouseover=' revealCaseImg("/cases/coriander/Coriander.jpg"); revealCaseTitle("Coriander"); revealCaseText("Recipe app conceptualised around a strong community sense with user generated content. ")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
         <h2>Coriander</h2> <p> App design</p>
         </router-link>
         <router-link to="/nordik" class="work-link" @mouseover=' revealCaseImg("/cases/nordik/Nordik.jpg"); revealCaseTitle("Nordik"); revealCaseText("Responsive, minimalist webshop concept.")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
