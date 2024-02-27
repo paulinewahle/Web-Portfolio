@@ -19,13 +19,13 @@ data() {
     casetext: 'Coriander is there to discover and share recipes. The interface and information architecture of the app are designed to accommodate for the wide range of user generated content. ',
     caselink: '',
     caselinktext: '',
-    content1: '/src/assets/cases/coriander/Coriander_1.png',
-    content2: '/src/assets/cases/coriander/Coriander_2.png',
-    content3: '/src/assets/cases/coriander/Coriander_3.png',
-    content4: '/src/assets/cases/coriander/Coriander_4.png',
-    content5: '/src/assets/cases/coriander/Coriander_5.png',
-    content6: '/src/assets/cases/coriander/Coriander_6.png',
-    content7: '/src/assets/cases/coriander/Coriander_7.png',
+    content1: 'src/assets/cases/coriander/Coriander_1.png',
+    content2: 'src/assets/cases/coriander/Coriander_2.png',
+    content3: 'src/assets/cases/coriander/Coriander_3.png',
+    content4: 'src/assets/cases/coriander/Coriander_4.png',
+    content5: 'src/assets/cases/coriander/Coriander_5.png',
+    content6: 'src/assets/cases/coriander/Coriander_6.png',
+    content7: 'src/assets/cases/coriander/Coriander_7.png',
   }/src/assets
 }
 }
