@@ -87,8 +87,10 @@ export default{
 <style scoped>
 @media (min-width: 200px) {
   #webguru{
-    background: url(http://webguruawards.com/awards/GOTD/img_guru_of_the_day_right.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background-image: url(http://webguruawards.com/awards/GOTD/img_guru_of_the_day_right.png);
     background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
     width: 10vw; 
     height: 20vh;
     position:fixed;
