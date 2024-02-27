@@ -26,7 +26,7 @@ data() {
     content5: '/cases/coriander/Coriander_5.png',
     content6: '/cases/coriander/Coriander_6.png',
     content7: '/cases/coriander/Coriander_7.png',
-  }/src/assets
+  }
 }
 }
 </script>
