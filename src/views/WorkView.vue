@@ -121,7 +121,7 @@ export default {
         <router-link to="/skilled" class="work-link" @mouseover=' revealCaseImg("/cases/skilled/Skilled.jpg"); revealCaseTitle("Skilled"); revealCaseText("User experience design concept for an educational platform app in flat duotone line style.")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
           <h2>Skilled</h2> <p> App design</p>
         </router-link>
-        <router-link to="/concreate" class="work-link" @mouseover=' revealCaseImg("/cases/concreate/Concreate.jpg"); revealCaseTitle("Concreate"); revealCaseText("Collaborative brutalist zine project with graphic design and photographic elements.")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
+        <router-link to="/concreate" class="work-link" @mouseover=' revealCaseImg("/src/assets/cases/coriander/Coriander.jpg"); revealCaseTitle("Concreate"); revealCaseText("Collaborative brutalist zine project with graphic design and photographic elements.")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">
           <h2>Concreate</h2> <p> Graphic design</p>
         </router-link>
         <!-- <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/cases/hitech/Hitech.jpg"); revealCaseTitle("HiTech"); revealCaseText("Responsive association website redesign concept and development.")' @mouseleave="hideCaseImg(); hideCaseTitle(); hideCaseText()">

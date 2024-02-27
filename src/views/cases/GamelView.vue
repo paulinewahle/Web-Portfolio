@@ -18,7 +18,7 @@ data() {
     casetext: 'The web presence of the danish production agency Gamél centralises its photo- and videographic content in the modern minimalist grid style design in muted tones and with attention to detail elements in the animation of user interaction points such as buttons, cursor, sliders and overlays. The project build in CMS with custom code and launched July 2022. ',
     casetype: 'Web Design',
     content1: '/cases/gamel/Gamel_1.mp4',
-    content2: '/src/assets/cases/gamel/Gamel_2.jpg',
+    content2: '/cases/gamel/Gamel_2.jpg',
     content3: '/cases/gamel/Gamel_3.mp4',
     content4: '/cases/gamel/Gamel_2.mp4',
     content5: '/cases/gamel/Gamel_5.mp4',
