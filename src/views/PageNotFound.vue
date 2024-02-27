@@ -1,6 +1,6 @@
 <script lang>
 export default{
-    method() {
+    mounted() {
         document.querySelector(".arrow-cursor").style.opacity = "0";
         document.querySelector(".text-cursor").style.opacity = "0";
     }
