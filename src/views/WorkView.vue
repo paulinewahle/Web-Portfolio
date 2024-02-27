@@ -90,7 +90,7 @@ export default {
       <p>Collaborative brutalist zine project with graphic design and photographic elements.</p>
     </router-link>
     <router-link to="/coriander" class="case-card">
-      <img src="/cases/coriander/Coriander.jpg" alt="">
+      <img src="/src/assets/cases/coriander/Coriander.jpg" alt="">
       <h2> Coriander </h2>
       <p>Recipe app conceptualised around a strong community sense with user generated content. </p>
     </router-link>
