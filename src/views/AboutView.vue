@@ -19,8 +19,9 @@ export default {
     }
   },
   mounted(){
-    let container = document.querySelector("#container")
-    document.querySelector(".arrow-cursor").style.opacity = "0"
+    let container = document.querySelector("#container");
+    document.querySelector(".arrow-cursor").style.display = "none";
+    document.querySelector(".text-cursor").style.display = "none"
   },
   methods:{
  
