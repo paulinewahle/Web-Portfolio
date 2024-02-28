@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import PageNotFound from '/src/views/PageNotFound.vue'
 import LoadingView from '/src/views/LoadingView.vue'
 import HomeView from '/src/views/HomeView.vue'
 import AboutView from '/src/views/AboutView.vue'
@@ -24,6 +25,11 @@ const router = createRouter({
     }
   },
   routes: [
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'PageNotFound',
+      component: PageNotFound
+    },
     {
       path: '/',
       name: 'loading',

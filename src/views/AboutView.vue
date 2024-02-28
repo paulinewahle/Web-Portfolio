@@ -36,8 +36,8 @@ export default {
   <main class="responsive">
 
       <div>
-        <div id="profile-img" >
-        </div>
+        <!-- <div id="profile-img" >
+        </div> -->
 
         <h1>About</h1>
         
@@ -149,6 +149,16 @@ Coming from a degree in graphic design, and a following degree focusing on digit
 <style scoped>
 
 @media (min-width: 200px) {
+  #bg{
+    height: 100vh;
+    width: 200vw;
+    position: absolute;
+    z-index: -10;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    opacity: .5;
+  }
   #wrapper{
     display: flex;
     justify-content: space-between;

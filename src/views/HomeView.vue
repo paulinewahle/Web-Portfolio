@@ -11,7 +11,9 @@ export default{
     WorkView
   },
   mounted() {
-    document.querySelector(".arrow-cursor").style.opacity = "0";
+    document.querySelector(".arrow-cursor").style.display = "none";
+    document.querySelector(".text-cursor").style.display = "block";
+
     setTimeout(() => {
       this.isLoading = false;
     }, 15000);
@@ -21,9 +23,11 @@ export default{
     function scrollTransition() {
       if (document.documentElement.scrollTop > 100) {
         document.getElementById("home-title").style.opacity = "0";
+        document.querySelector(".text-cursor").style.display = "none";
       }
       else if (document.documentElement.scrollTop < 100){
         document.getElementById("home-title").style.opacity = "1";
+        document.querySelector(".text-cursor").style.display = "block";
       }
       else{
 
@@ -85,8 +89,10 @@ export default{
 <style scoped>
 @media (min-width: 200px) {
   #webguru{
-    background: url(http://webguruawards.com/awards/GOTD/img_guru_of_the_day_right.png) no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background-image: url(http://webguruawards.com/awards/GOTD/img_guru_of_the_day_right.png);
     background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
     width: 10vw; 
     height: 20vh;
     position:fixed;
@@ -140,15 +146,14 @@ export default{
     align-items: center;
     justify-content: center;
     margin-top: -20vh;
-
   } 
   #home-title{
     position: fixed;
     text-align: left;
     width: auto;
     left: 5vw;
-    top: 25vh;
-    font-size: 3rem;
+    top: 20vh;
+    font-size: 4.5rem;
   }
   #scrollbutton{
     position: fixed;

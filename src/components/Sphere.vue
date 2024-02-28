@@ -2,7 +2,7 @@
 <script>
 import '@/assets/main.css';
 import * as THREE from 'three'
-// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 // import * as dat from 'dat.gui'; 
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
 // import { mergeWithCustomize } from 'webpack-merge';
@@ -39,16 +39,16 @@ export default{
     const material = new THREE.MeshPhysicalMaterial({
         color: 0xffffff,
         //emissive: 0x707070,
-        // wireframe: false,
+        wireframe: false,
         metalness: 1,
         roughness: 0,
-        envMapIntensity: 0.9,
-        clearcoat: 1,
+        envMapIntensity: 1,
+        clearcoat: .1,
         clearcoatRoughness: 0,
         transparent: true,
-        //transmission: .95,
-        reflectivity: 0.2,
-        // ior: 0.9,
+        transmission: .001,
+        reflectivity: 1,
+        ior: 0.9,
         normalMap: normalTexture
     })
 
@@ -107,8 +107,22 @@ export default{
     scene.add(camera)
 
     // Controls
-    // const controls = new OrbitControls(camera, canvas)
-    // controls.enableDamping = true
+    
+    class CustomOrbitControls extends OrbitControls {
+    constructor(camera, canvas) {
+        super(camera, canvas);
+
+        // Disable zoom (scroll) functionality
+        this.enableZoom = false;
+
+        
+    }
+    }
+
+    const controls = new CustomOrbitControls(camera, canvas)
+    controls.enableDamping = true
+
+    
 
     /**
      * Renderer
@@ -148,7 +162,7 @@ export default{
         //sphere.rotation.y = .5 * elapsedTime
 
         // Update Orbital Controls
-        //controls.update()
+        controls.update()
 
         // Render
         renderer.render(scene, camera)
