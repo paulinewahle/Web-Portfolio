@@ -34,11 +34,23 @@ export default {
       currentTransition: '',
     }
   },
+  methods:{ 
+    hideElement(content, imgId, vidId) {
+      if (content.includes('.mp4')) {
+        document.querySelector(imgId).style.display = 'none';
+      } 
+      else if (content.includes('.jpg') || content.includes('.png')) {
+        document.querySelector(vidId).style.display = 'none';
+      }
+    }
+    
+  },
   mounted(){
 
     document.querySelector("#page-container").style.display = "block";
     document.querySelector("#page-container").style.opacity = "1";
     document.querySelector(".arrow-cursor").style.display = "block";
+    document.querySelector(".text-cursor").style.display = "none";
     
 
     const hideArrowCursor = () => {
@@ -132,20 +144,20 @@ export default {
     const pageContainer = document.getElementById("page-container");
     pageContainer.addEventListener("click", mouseDown);
 
-  },
-  methods:{ 
-    // pageNumber(e) {
-    //   if (this.page1 === true ){
-    //   console.log("page1")
-    //   document.querySelector('#page-number-1').classList.add("active-page-btn");
-    // }
-    // else if(this.page2 === true){
-    //   console.log("page2")
-    //   document.querySelector('#page-number-2').classList.remove("active-page-btn");
-    // }
-    //   }
     
-  }
+
+    this.hideElement(this.content1, "#img1", "#vid1");
+    this.hideElement(this.content2, "#img2", "#vid2");
+    this.hideElement(this.content3, "#img3", "#vid3");
+    this.hideElement(this.content4, "#img4", "#vid4");
+    this.hideElement(this.content5, "#img5", "#vid5");
+    this.hideElement(this.content6, "#img6", "#vid6");
+    this.hideElement(this.content7, "#img7", "#vid7");
+
+
+
+  },
+  
   
 }
 
@@ -165,40 +177,40 @@ export default {
 
     <div class="responsive">
 
-      <video  autoplay loop muted>
+      <video id="vid1" autoplay loop muted>
         <source :src="content1"  type="video/mp4">
       </video>
-      <img :src="content1" alt="">
+      <img id="img1" :src="content1" alt="">
 
-      <video  autoplay loop muted>
+      <video id="vid2" autoplay loop muted>
         <source :src="content2" type="video/mp4">
       </video>
-      <img :src="content2" alt="">
+      <img id="img2" :src="content2" alt="">
 
-      <video  autoplay loop muted>
+      <video id="vid3" autoplay loop muted>
         <source :src="content3" type="video/mp4">
       </video>
-      <img :src="content3" alt="">
+      <img id="img3" :src="content3" alt="">
 
-      <video  autoplay loop muted>
+      <video id="vid4" autoplay loop muted>
         <source :src="content4" type="video/mp4">
       </video>
-      <img :src="content4" alt="">
+      <img id="img4" :src="content4" alt="">
 
-      <video  autoplay loop muted>
+      <video id="vid5" autoplay loop muted>
         <source :src="content5" type="video/mp4">
       </video>
-      <img :src="content5" alt="">
+      <img id="img5" :src="content5" alt="">
 
-      <video  autoplay loop muted>
+      <video id="vid6" autoplay loop muted>
         <source :src="content6" type="video/mp4">
       </video>
-      <img :src="content6" alt="">
+      <img id="img6" :src="content6" alt="">
 
-      <video  autoplay loop muted>
+      <video id="vid7" autoplay loop muted>
         <source :src="content7" type="video/mp4">
       </video>
-      <img :src="content7" alt="">
+      <img id="img7" :src="content7" alt="">
 
 
     </div>
@@ -297,10 +309,9 @@ export default {
   }
   
   img, video{
-    width: 100%;
-    height: inherit;
+    height: auto;
+    width: 80vw;
     margin: 1vh 0;
-   
   }
   h1{
     margin-top: 20vh;

@@ -35,6 +35,7 @@ export default {
   },
   mounted(){
     document.querySelector(".arrow-cursor").style.opacity = "0";
+    document.querySelector(".text-cursor").style.display = "none";
   },
   methods:{
     revealCaseImg: (image) => {
