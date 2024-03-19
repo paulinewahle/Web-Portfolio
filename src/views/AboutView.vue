@@ -19,8 +19,8 @@ export default {
     }
   },
   mounted(){
-    let container = document.querySelector("#container")
-    document.querySelector(".arrow-cursor").style.display = "none"
+    let container = document.querySelector("#container");
+    document.querySelector(".arrow-cursor").style.display = "none";
     document.querySelector(".text-cursor").style.display = "none";
   },
   methods:{
@@ -73,7 +73,7 @@ Coming from a degree in graphic design, and a following degree focusing on digit
         </div>
         <div id="wrapper">
             <h2> Recognition </h2>
-            <a href="https://www.webguruawards.com/sites/paulinewahle-com" style="background: url(http://webguruawards.com/awards/GOTD/img_guru_of_the_day_gray.png) no-repeat; background-position: center right; background-size: contain; width:80px; height:80px; margin-top: 10%; " target="_blank" class="about-link"></a>
+            <a href="https://www.webguruawards.com/sites/paulinewahle-com" style="background: url(http://webguruawards.com/awards/GOTM/img_guru_of_the_month_gray.png) no-repeat; background-position: center right; background-size: contain; width:80px; height:80px; margin-top: 10%; " target="_blank" class="about-link"></a>
         </div>
         
       </div>
@@ -127,7 +127,7 @@ Coming from a degree in graphic design, and a following degree focusing on digit
         <div @mouseover="width1 = '80%'" @mouseleave="width1 = '40%'" class="link-container">
           <h2> Recognition </h2>
           <div class="so-me-link">
-            <a href="https://www.webguruawards.com/sites/paulinewahle-com" style="background: url(http://webguruawards.com/awards/GOTD/img_guru_of_the_day_gray.png) no-repeat; background-position: center right; background-size: contain; width:80px; height:80px; margin-top: 10%; " target="_blank" class="about-link"></a>
+            <a href="https://www.webguruawards.com/sites/paulinewahle-com" style="background: url(http://webguruawards.com/awards/GOTM/img_guru_of_the_month_gray.png) no-repeat; background-position: center right; background-size: contain; width:80px; height:80px; margin-top: 10%; " target="_blank" class="about-link"></a>
           </div>
           </div>
       </div>

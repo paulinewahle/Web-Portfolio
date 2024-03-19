@@ -46,6 +46,7 @@ export default {
     
   },
   mounted(){
+    document.querySelector(".text-cursor").style.display = "none";
 
     document.querySelector("#page-container").style.display = "block";
     document.querySelector("#page-container").style.opacity = "1";

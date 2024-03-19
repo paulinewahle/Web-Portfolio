@@ -89,7 +89,7 @@ export default{
 <style scoped>
 @media (min-width: 200px) {
   #webguru{
-    background-image: url(http://webguruawards.com/awards/GOTD/img_guru_of_the_day_right.png);
+    background-image: url(http://webguruawards.com/awards/GOTM/img_guru_of_the_month_right.png);
     background-size: contain;
     background-repeat: no-repeat;
     border: none;
