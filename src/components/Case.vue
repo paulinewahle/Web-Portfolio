@@ -220,8 +220,9 @@ export default {
     
     <div id="descr">
       <div>
-        <h4>{{casetype}}</h4>
+        
         <h1>{{casename}}</h1>
+        <h4>{{casetype}}</h4>
         <p>{{casetext}}</p>
         <a :href="caselink" download> {{caselinktext}} </a>
       </div>
@@ -332,12 +333,13 @@ export default {
     justify-content: space-between;
   }
   h1{
-    margin: 0 0 5vh 0;
+    margin: 20% 0 5vh 0;
   }
   a{
     font-style: italic;
     text-decoration: underline;
   }
+  
   
   #page-container{
     box-sizing: border-box;

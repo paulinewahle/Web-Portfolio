@@ -196,6 +196,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+   
   }
   #case-links, #more-links{
     padding: 0 0 0 5%;
@@ -215,7 +216,7 @@ export default {
   }
   #case-text{
     margin-top: 5vh;
-    font-size: 1.2rem;
+    font-size: 1.5em;
     width: 20vw;
 
   }
